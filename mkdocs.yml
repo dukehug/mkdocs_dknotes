@@ -1,0 +1,58 @@
+site_name: Duke's Study notes
+site_author: DukeHsu
+site_description: dukes study notes on adamson unievrsity - Information Technology
+theme:
+  name: material
+  features:
+  #  - navigation.tabs
+    - navigation.sections
+  #  - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+
+    - search.highlight
+    - search.share
+    - search.suggest
+
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    # 淺色模式設定
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # 深色模式設定 (預設開啟)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+    - search
+    - mermaid2
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - meta
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

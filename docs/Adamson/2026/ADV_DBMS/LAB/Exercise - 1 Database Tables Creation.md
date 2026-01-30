@@ -1,0 +1,169 @@
+2026-01-27 22:18
+
+Tags: #ADV_DBMS 
+Student name: Yong Lou, Xu
+
+---
+Exercise - 1 Database Tables Creation
+
+## Table creation 
+#### REGIONS Table
+```sql
+--TABLE CREATE
+CREATE TABLE regions(
+	REGION_ID NUMERIC(4) NOT NULL,
+	REGION_NAME VARCHAR(25)
+);
+
+
+--CONSTRAINT Use ALTER TABLE to add the primary key constraint
+ALTER TABLE regions
+	ADD CONSTRAINT PK_Region_ID PRIMARY KEY (REGION_ID); --primary key 
+
+```
+
+#### COUNTRIES Table
+
+```sql
+--TABLE CREATE 
+CREATE TABLE countries(
+
+	COUNTRY_ID CHAR(2) NOT NULL,
+
+	COUNTRY_NAME VARCHAR(40),
+
+	REGION_ID NUMERIC(4)
+);
+
+-- Use ALTER TABLE to add the primary key and foreign key constraint
+ALTER TABLE countries
+	ADD CONSTRAINT PK_Country_ID PRIMARY KEY (COUNTRY_ID);  --primary key
+
+ALTER TABLE countries
+	ADD CONSTRAINT FK_REGION_ID
+		FOREIGN KEY (REGION_ID)
+		REFERENCES regeions(REGION_ID); --forrign key
+```
+
+#### LOCATIONS Table
+```sql
+--CREATE TABLE
+CREATE TABLE locations(
+	LOCATION_ID NUMERIC(4) NOT NULL,
+	STREET_ADDRESS VARCHAR(40),
+	POST_CODE VARCHAR(12),
+	CITY VARCHAR(30) NOT NULL,
+	STATE_PROVINCE VARCHAR(25),
+	COUNTRY_ID CHAR(2)
+);
+
+--CONSTRAINT 
+ALTER TABLE locations
+	ADD CONSTRAINT PK_Location_ID PRIMARY KEY (LOCATION_ID); --pk
+	
+
+-- FK
+ALTER TABLE locations
+
+	ADD CONSTRAINT FK_Country_ID
+	FOREIGN KEY (COUNTRY_ID)
+	REFERENCES countries(COUNTRY_ID); --fk
+```
+
+#### DEPARTMENTS Table
+```sql
+-- TABLE CREATE
+CREATE TABLE departments(
+	DEPARTMENT_ID NUMERIC(4) NOT NULL,
+	DEPARTMENT_NAME VARCHAR(30) NOT NULL,
+	MANAGER_ID NUMERIC(6), --foreign key references emp_id
+	LOCATION_ID NUMERIC(4) --foreign key references location_id
+);
+
+--PK and FK
+ALTER TABLE departments
+	ADD CONSTRAINT PK_Department_ID PRIMARY KEY (DEPARTMENT_ID);--pk
+
+ALTER TABLE departments
+	ADD CONSTRAINT FK_Location_ID
+	FOREIGN KEY (LOCATION_ID)
+	REFERENCES locations(LOCATION_ID); --fk
+
+
+```
+
+#### JOBS Table
+```sql
+--TABLE CREATE  
+-- Define the primary key and not nll constraints inline
+CREATE TABLE jobs(
+	JOB_ID VARCHAR(10) NOT NULL PRIMARY KEY,
+	JOB_TITLE VARCHAR(35) NOT NULL,
+	MIN_SALARY NUMERIC(6),
+	MAX_SALARY NUMERIC(6)
+);
+```
+
+
+#### EMPLOYEES Table
+```sql
+--Add all constraints inline or via ALTER TABLE
+--Department managers are linked via DEPARTMENTS.MANAGER_ID
+CREATE TABLE employees(
+	EMPLOYEE_ID NUMERIC(6) NOT NULL PRIMARY KEY,
+	FIRST_NAME VARCHAR(20),
+	LAST_NAME VARCHAR(25) NOT NULL,
+	EMAIL VARCHAR(25) NOT NULL UNIQUE,
+	PHONE_NUMBER VARCHAR(20),
+	HIRE_DATE DATE NOT NULL,
+	JOB_ID VARCHAR(10) NOT NULL, --fk ref table jobs
+	SALARY NUMERIC(8,2) CHECK(SALARY >0),
+	COMMISSION_PCT NUMERIC(2,2),
+	MANAGER_ID NUMERIC(6), --fk ref table employee
+	DEPARTMENT_ID NUMERIC(4), --fk ref table department
+	
+	CONSTRAINT FK_Manager_ID
+		FOREIGN KEY (MANAGER_ID)
+		REFERENCES employees(EMPLOYEE_ID),
+	CONSTRAINT FK_Department_ID
+		FOREIGN KEY (DEPARTMENT_ID)
+		REFERENCES departments(DEPARTMENT_ID)
+);
+```
+
+#### JOB_HISTORY Table
+```sql
+CREATE TABLE job_history(
+	EMPLOYEE_ID NUMERIC(6) NOT NULL,
+	START_DATE DATE NOT NULL,
+	END_DATA DATE NOT NULL CHECK(END_DATE > START_DATE),
+	JOB_ID VARCHAR(10),
+	DEPARTMENT_ID NUMERIC(4),
+	
+	
+	
+	CONSTRAINT FK_Empolyee_ID
+		FOREIGN KEY (EMPLOYEE_ID)
+		REFERENCES employees(EMPLOYEE_ID),
+	
+	CONSTRAINT FK_Job_ID
+		FOREIGN KEY (JOB_ID)
+		REFERENCE job_history(JOB_ID),
+		
+	CONSTRAINT FK_Department_ID
+		FOREIGN KEY (DEPARTMENT_ID)
+		REFERENCE departments(DEPARTMENT_ID)
+);
+
+```
+
+
+
+
+
+
+----
+References: 
+
+ Exercise #1 Document 
+ 
