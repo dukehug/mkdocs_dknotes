@@ -1,7 +1,8 @@
 2026-01-27 22:18
 
-Tags: #ADV_DBMS 
-Student name: Yong Lou, Xu
+Tags: #ADV_DBMS #Activity
+
+Student name: Duke Hsu
 
 ---
 Exercise - 1 Database Tables Creation
