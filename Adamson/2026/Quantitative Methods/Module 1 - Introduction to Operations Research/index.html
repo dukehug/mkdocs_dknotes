@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="dukes study notes on adamson unievrsity - Information Technology" name="description"/>
+<meta content="DukeHsu" name="author"/>
+<link href="../../OOP%20Java/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/" rel="prev"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>Module 1 Introduction to Operations Research - Duke's Study notes</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#quantitativemethods">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Duke's Study notes" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Duke's Study notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Duke's Study notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Module 1   Introduction to Operations Research
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Duke's Study notes" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Duke's Study notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Duke's Study notes
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Welcome To duke's study note
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Adamson
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Adamson
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    2026
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    ADV DBMS
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    ADV DBMS
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ADV_DBMS/Module%201%20-%20Introduction%20SQL/">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction SQL
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ADV_DBMS/Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/">
+<span class="md-ellipsis">
+    
+  
+    Module 2   Data Definition Language  (DDL)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1_3" id="__nav_2_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    LAB
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ADV_DBMS/LAB/Exercise%20-%201%20Database%20Tables%20Creation/">
+<span class="md-ellipsis">
+    
+  
+    Exercise   1 Database Tables Creation
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    OOP Java
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    OOP Java
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../OOP%20Java/Java%20Tutorial/">
+<span class="md-ellipsis">
+    
+  
+    Java Tutorial
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../OOP%20Java/Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction to Object Oriented Programming
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../OOP%20Java/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/">
+<span class="md-ellipsis">
+    
+  
+    OOP Introduction and   UML Class Diagram
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Quantitative Methods
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Quantitative Methods
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction to Operations Research
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction to Operations Research
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-1-introduction-to-operations-research">
+<span class="md-ellipsis">
+      
+        Module 1 Introduction to Operations Research
+      
+    </span>
+</a>
+<nav aria-label="Module 1 Introduction to Operations Research" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-operations-research-or">
+<span class="md-ellipsis">
+      
+        What is Operations Research (OR)?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-of-operations-research">
+<span class="md-ellipsis">
+      
+        Development of Operations Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#focus-of-or-study">
+<span class="md-ellipsis">
+      
+        Focus of OR study
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits-of-operations-research">
+<span class="md-ellipsis">
+      
+        Benefits of Operations Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#limitations-of-operations-research">
+<span class="md-ellipsis">
+      
+        Limitations of Operations Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-an-or-study">
+<span class="md-ellipsis">
+      
+        Phases of an OR study
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-models">
+<span class="md-ellipsis">
+      
+        Types of Models
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structure-of-mathematical-models">
+<span class="md-ellipsis">
+      
+        Structure of Mathematical Models
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operations-research-operational-research">
+<span class="md-ellipsis">
+      
+        Operations Research / Operational Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-do-we-need-operations-research">
+<span class="md-ellipsis">
+      
+        Why do we need Operations Research ?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-operations-research-process-involves-an-iterative-modeling-of-the-real-world">
+<span class="md-ellipsis">
+      
+        The Operations Research Process involves an iterative modeling of the real world
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-1-introduction-to-operations-research">
+<span class="md-ellipsis">
+      
+        Module 1 Introduction to Operations Research
+      
+    </span>
+</a>
+<nav aria-label="Module 1 Introduction to Operations Research" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-operations-research-or">
+<span class="md-ellipsis">
+      
+        What is Operations Research (OR)?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-of-operations-research">
+<span class="md-ellipsis">
+      
+        Development of Operations Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#focus-of-or-study">
+<span class="md-ellipsis">
+      
+        Focus of OR study
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits-of-operations-research">
+<span class="md-ellipsis">
+      
+        Benefits of Operations Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#limitations-of-operations-research">
+<span class="md-ellipsis">
+      
+        Limitations of Operations Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-an-or-study">
+<span class="md-ellipsis">
+      
+        Phases of an OR study
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-models">
+<span class="md-ellipsis">
+      
+        Types of Models
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structure-of-mathematical-models">
+<span class="md-ellipsis">
+      
+        Structure of Mathematical Models
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operations-research-operational-research">
+<span class="md-ellipsis">
+      
+        Operations Research / Operational Research
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-do-we-need-operations-research">
+<span class="md-ellipsis">
+      
+        Why do we need Operations Research ?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-operations-research-process-involves-an-iterative-modeling-of-the-real-world">
+<span class="md-ellipsis">
+      
+        The Operations Research Process involves an iterative modeling of the real world
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<p>01/23/2026</p>
+<h1 id="quantitativemethods">QuantitativeMethods</h1>
+<hr/>
+<h2 id="module-1-introduction-to-operations-research">Module 1  Introduction to Operations Research</h2>
+<p>note </p>
+<h3 id="what-is-operations-research-or">What is Operations Research (OR)?</h3>
+<p>Operations Research /Management Science is the application of scientific methods, techniques, and tools to problems involving the operation of systems so as to provide those in control of the operations with optimum, or practically optimum, solutions to the problems. </p>
+<p>Operations Research 通過科學方法，技術，工具應用於涉及系統運作的問題為運營控制者提供最優或最實際的解決方案。 </p>
+<ul>
+<li>National Research Council in Great Britain defines"The application of the scientific method to the study of the operations of large, complex organizations or activities"</li>
+<li>Operation Research is typically used to denote the study and development of the mathematics that underlie the techniques. </li>
+</ul>
+<h3 id="development-of-operations-research">Development of Operations Research</h3>
+<ul>
+<li>History <ul>
+<li>WWII: England  - Tactical problems  associated with air and land defense of the Country / Determine the most effective utilization of limited military resources. / From military operations.</li>
+<li>從英國的軍事運用轉換到商業運用 / 英國軍事 運用 --- 美國商業運用</li>
+<li>Simplex Method of Liner Programing </li>
+<li><strong>1947 by American mathematician George B. Dantzig</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="focus-of-or-study">Focus of OR study</h3>
+<ul>
+<li>How to allocate scarce / limited resources</li>
+<li>Operations Research is  a decision-making tool an right hands.</li>
+<li>It's can could save an organization a lot of time and resources. </li>
+</ul>
+<h3 id="benefits-of-operations-research">Benefits of Operations Research</h3>
+<ol>
+<li>Provides a systematic and logical approach to decision-making.</li>
+<li>Helps communication within an organization through consultation with experts in various areas.</li>
+<li>Permits a thorough analysis of a large number of alternative options. </li>
+<li>Enables evaluation of situations involving uncertainty. </li>
+<li>Allows decision  makers to judge how much information to gather in a given problem .</li>
+<li>Increases the effectiveness of the decision.</li>
+<li>Enables quick identification of the best available solution.</li>
+<li>Allows quick and inexpensive examination of a large(sometimes infinite) number of alternatives</li>
+<li>Enables experimentation with different alternatives using models, thus eliminating the cost of making errors while experimenting with reality .</li>
+</ol>
+<h3 id="limitations-of-operations-research">Limitations of Operations Research</h3>
+<ol>
+<li>Time-consuming</li>
+<li>Probable lack of acceptance by decision makers.</li>
+<li>Assessments of uncertainties are difficult to obtain.</li>
+<li>Evaluates the decision in terms of a sometimes oversimplified model of reality, possibly leading to erroneous recommendations.</li>
+<li>Can be expensive to undertake, relative to the size of the problem.</li>
+<li>Studies may be abandoned for various reasons, resulting in an unproductive expense. </li>
+</ol>
+<h3 id="phases-of-an-or-study">Phases of an OR study</h3>
+<ol>
+<li>Problem Formulation .</li>
+<li>Construction of the Mathematical Model.</li>
+<li>Derivation of the Solution.</li>
+<li>Testing of the Model and the Solution.</li>
+<li>Establishing Control over the Solution.</li>
+<li>Implementation of the Final Results .</li>
+</ol>
+<h3 id="types-of-models">Types of Models</h3>
+<ol>
+<li>Iconic or scale models</li>
+<li>Analog models</li>
+<li>Mathematical models </li>
+</ol>
+<h3 id="structure-of-mathematical-models">Structure of Mathematical Models</h3>
+<ol>
+<li><strong>Decision variables and parameters</strong> <ul>
+<li>Unknowns to be determined from the solution of the model .</li>
+<li>Example: For this project / tasks , how many worker we need, how much we need to pay . (time , cost, resource)</li>
+<li>Key words: Unknowns , Parameters</li>
+</ul>
+</li>
+<li>
+<p><strong>Structural constraints or restrictions</strong> </p>
+<ul>
+<li>To account for the physical limitations of the system, the model must include constraints which limit the decision variables to their feasible values.</li>
+<li>Example:  FDA verify / BIR / Shipping capacity  / Time limited / Working time </li>
+<li>Key words: Constraints 
+Formular：
+$<span class="arithmatex">\(g_i(X_1,\ldots,X_n)\le b_i, \quad i = 1,2, \ldots  \quad X_i \ge 0\)</span>$
+'g_i' is variables,  'i'  is the constraint,  where 'b_i ' is a known constant.
+ 某些條件g_i 不能超過已知上限 b_i </li>
+</ul>
+</li>
+<li>
+<p><strong>Object function</strong> </p>
+<ul>
+<li>This defines the measure of effectiveness of the system as a mathematical function of its decision variables.  Single goal to maximize or minimize .</li>
+<li>Example:  Minimize Cost / Maximize Profit / Minimize Time</li>
+<li>Key words: Object  function /  Mathematical function / Decision variables / Single goal
+Formular:
+$<span class="arithmatex">\(X_0 = f(X1, \ldots X_n)\)</span>$
+'X_0 ' is your goal, 'f(x)' is a mathematical formula </li>
+</ul>
+</li>
+</ol>
+<h3 id="operations-research-operational-research">Operations Research / Operational Research</h3>
+<ul>
+<li>Scientific approach to managerial decision-making <ol>
+<li>Characterized by its use of mathematical models. </li>
+<li>Study is undertaken to help in solving a decision problem. - for decision problem</li>
+</ol>
+</li>
+</ul>
+<p>用理性、算數據、做比較的方式，做比較聰明的決定。
+- 科學方法 = 數據 / 比較 / 計算 / 推理
+- 數學方法 =  把問題轉換成數學公式或者規則 / 錢/ 時間 / 人力/ 成本 / 利潤</p>
+<h3 id="why-do-we-need-operations-research">Why do we need Operations Research ?</h3>
+<p><strong>When problems:</strong>
+- Get Complicated; -  當問題變的複雜
+- Involve trading of quantifiable factors; - 當問題涉及可量化的交易 
+- Require comparison of qualitative with quantitative measures; - 當問題需要將定性指標與定量指標進行比較
+- Involve uncertainties. - 當問題存在不確定性時
+That why we need Operations Research .  </p>
+<blockquote>
+<p>Operations Research is the use of scientific and mathematical methods to help make better decisions, especially when problems are complex, involve trade-offs, and contain uncertainty.</p>
+</blockquote>
+<h3 id="the-operations-research-process-involves-an-iterative-modeling-of-the-real-world">The Operations Research Process involves an iterative modeling of the real world</h3>
+<div class="mermaid">flowchart LR
+    A[Abstraction] --&gt; B[OR Models]
+    B --&gt; C[Results and<br/>Recommendation]
+    C --&gt; D[Real World]
+    D --&gt; A
+
+    classDef green fill:#9ACD32,color:#000,stroke:#333,stroke-width:2px;
+    class A,B,C,D green;
+
+</div>
+<ol>
+<li><strong>Real World</strong> <ul>
+<li>The problem in our life </li>
+<li>Example: Shipping fee / Cost high / Worker </li>
+<li>這些問題都是很複雜 / 亂 / 很多細節</li>
+</ul>
+</li>
+<li>
+<p><strong>Abstraction</strong> </p>
+<ul>
+<li>What is the topic / important </li>
+<li>Witch one can be ignore </li>
+<li>Example: Money / Time / Worker is important /</li>
+<li>抽象化 / 解析問題 / 區分重要和不重要的</li>
+</ul>
+</li>
+<li>
+<p><strong>Operations Research Models</strong></p>
+<ul>
+<li>Mathematical / Data / Logical </li>
+</ul>
+</li>
+<li>
+<p><strong>Result &amp; Recommendation</strong> </p>
+<ul>
+<li>通過計算結果與現實世界相比對 / 是否符合事實 / </li>
+</ul>
+</li>
+</ol>
+<p><strong>為什麼是迴圈？</strong>
+- 結果可能不實際
+- 現實會改變
+- 有些條件一開始沒有考慮周到
+- 要回去調整模型
+- 再計算一次
+- 再做一次決定
+- 再看一次結果
+- 所以這是一個循壞的過程。 </p>
+<h3 id="summary">Summary</h3>
+<p>The Operations Research Analyst translates real world problems into models and recommends real world solutions. </p>
+<p>![[Pasted image 20260123104050.png]]</p>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: OOP Introduction and   UML Class Diagram" class="md-footer__link md-footer__link--prev" href="../../OOP%20Java/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                OOP Introduction and   UML Class Diagram
+              </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="../../../../javascripts/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
