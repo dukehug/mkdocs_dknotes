@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="dukes study notes on adamson unievrsity - Information Technology" name="description"/>
+<meta content="DukeHsu" name="author"/>
+<link href="../../../.." rel="prev"/>
+<link href="../Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
+<title>Module 1 Introduction SQL - Duke's Study notes</title>
+<link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#adv_dbms">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Duke's Study notes" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Duke's Study notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Duke's Study notes
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Module 1   Introduction SQL
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Duke's Study notes" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Duke's Study notes">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Duke's Study notes
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    Welcome To duke's study note
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Adamson
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Adamson
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    2026
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    ADV DBMS
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    ADV DBMS
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction SQL
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction SQL
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#history-of-sql">
+<span class="md-ellipsis">
+      
+        History of SQL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-sql">
+<span class="md-ellipsis">
+      
+        What is SQL?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uses-of-sql">
+<span class="md-ellipsis">
+      
+        Uses of SQL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-sql-works">
+<span class="md-ellipsis">
+      
+        How SQL Works
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components-of-a-sql-system">
+<span class="md-ellipsis">
+      
+        Key Components of a SQL System
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules-for-writing-sql-queries">
+<span class="md-ellipsis">
+      
+        Rules for Writing SQL Queries
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-environment">
+<span class="md-ellipsis">
+      
+        SQL Environment
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#different-sql-commands-or-queries">
+<span class="md-ellipsis">
+      
+        Different SQL Commands or Queries
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-data-types">
+<span class="md-ellipsis">
+      
+        SQL Data types
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/">
+<span class="md-ellipsis">
+    
+  
+    Module 2   Data Definition Language  (DDL)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1_3" id="__nav_2_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    LAB
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    LAB
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/">
+<span class="md-ellipsis">
+    
+  
+    Exercise   1 Database Tables Creation
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    OOP Java
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    OOP Java
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../OOP%20Java/Java%20Tutorial/">
+<span class="md-ellipsis">
+    
+  
+    Java Tutorial
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../OOP%20Java/Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/">
+<span class="md-ellipsis">
+    
+  
+    Module 1   Introduction to Object Oriented Programming
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../OOP%20Java/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/">
+<span class="md-ellipsis">
+    
+  
+    OOP Introduction and   UML Class Diagram
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#history-of-sql">
+<span class="md-ellipsis">
+      
+        History of SQL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-sql">
+<span class="md-ellipsis">
+      
+        What is SQL?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uses-of-sql">
+<span class="md-ellipsis">
+      
+        Uses of SQL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-sql-works">
+<span class="md-ellipsis">
+      
+        How SQL Works
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components-of-a-sql-system">
+<span class="md-ellipsis">
+      
+        Key Components of a SQL System
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules-for-writing-sql-queries">
+<span class="md-ellipsis">
+      
+        Rules for Writing SQL Queries
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-environment">
+<span class="md-ellipsis">
+      
+        SQL Environment
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#different-sql-commands-or-queries">
+<span class="md-ellipsis">
+      
+        Different SQL Commands or Queries
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql-data-types">
+<span class="md-ellipsis">
+      
+        SQL Data types
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<p>01/22/2026</p>
+<h1 id="adv_dbms">ADV_DBMS</h1>
+<p>Made by Duke Hsu</p>
+<hr/>
+<h3 id="history-of-sql">History of SQL</h3>
+<ul>
+<li>1970 -  E.F.Codd Develops Relational database concept </li>
+<li>1974-1979  - System R with Sequel(Later SQL) created at IBM Research Lab</li>
+<li>1979 - Oracle markets first Relational DB with SQL </li>
+<li>1981 - SQL /DS First available RDBMS system on DOS / VSE</li>
+<li>Others followed: INGRES(1981),IDM(1982),DG/SGL(1984),Sybase(1986)</li>
+<li>1986 - American National Standard Institute (ANSI) SQL Standard released </li>
+<li>1989,1992,1999,2003,2006,2008 - Major ANSI Standard Updates</li>
+<li>Current: SQL is Supported by major database vendors</li>
+</ul>
+<h3 id="what-is-sql">What is SQL?</h3>
+<ul>
+<li>Structured Query Language(SQL) is the standard language used to interact with relational database. </li>
+<li>It allows users to store , retrieve, update and manage data efficiently through simple commands. </li>
+<li>It is known for its user-friendly syntax and powerful capabilities , SQL is widely used across industries.</li>
+</ul>
+<p>SQL is pronounce "Sequel" or sometimes "ess-cue-ell"</p>
+<p><strong>Before SQL</strong>
+    - Manual file systems
+    - Slow retrieval
+    - Inconsistent storaage
+<strong>After SQL</strong>
+    - Structure data
+    - Fast querying
+    - Data integrity</p>
+<h3 id="uses-of-sql">Uses of SQL</h3>
+<p>SQL is used by organizations to interact with databases which store and manage data in a structured and efficient way . </p>
+<p><strong>Use SQL for:</strong>
+- Creating , Modifying, and deleting database tables and records
+- Inserting, updating, and deleting data in a database
+- Retrieving data from a database with SELECT statements
+- Grouping and aggregating data
+- Joining data from multiple tables
+- Creating views and stored procedures
+- Performing data analysis and data mining
+- Managing the security and permissions of a database
+- Monitoring and optimizing database performance
+- Backing up and restoring databases</p>
+<h3 id="how-sql-works">How SQL Works</h3>
+<div class="mermaid">flowchart LR
+    A[Writer SQL query] --&gt; B[Send to database Server]
+    B --&gt; C[Execute query]
+    C --&gt; D[Return results]
+    classDef green fill:#9ACD32,color:#000,stroke:#333,stroke-width:2px;
+    class A,B,C,D green;
+
+</div>
+<h3 id="key-components-of-a-sql-system">Key Components of a SQL System</h3>
+<ul>
+<li><strong>Databases:</strong> A databases is a structured collection of data. It organizes data into <strong>tables</strong>, which are like spreadsheets with rows(records) and columns(fields).</li>
+<li><strong>Tables:</strong> Each table enforces rules and relationships among its columns for data integrity.</li>
+<li><strong>Indexes:</strong> Indexes speed up queries by allowing the database to quickly locate data without scanning the entire table.</li>
+<li><strong>Views:</strong> A view is a virtual table basically a saved SELECT statement you can query like a table.</li>
+<li><strong>Transactions:</strong>  A transaction groups multiple SQL operations into a single unit. It ensures all changes are applied successfully or none are, preserving data integrity (ACID properties)</li>
+<li><strong>Security and Permissions:</strong> SQL includes tools to restrict access, letting DBAs assign who can do what whether it's accessing tables, executing procedures, or changing structures. </li>
+<li><strong>Joins:</strong> Joins combine data from multiple tables based on relationships essential for querying across related datasets. </li>
+<li><strong>Whitespace Allowed:</strong>  Queries can span multiple lines but use spaces between keywords and names. </li>
+<li><strong>Reserved Words:</strong> Avoid using SQL keywords as names. If needed, wrap them in quotes<code>"</code>or backticks<code>''</code></li>
+</ul>
+<p><strong>SQL Reserved Words:</strong></p>
+<blockquote>
+<p>https://support.microsoft.com/en-us/office/sql-reserved-words-b899948b-0e1c-4b56-9622-a03f8f07cfc8</p>
+</blockquote>
+<h3 id="rules-for-writing-sql-queries">Rules for Writing SQL Queries</h3>
+<p>By following these rules, queries will be well formed and well executed in any database. 
+Would ensure consistency and functionality across databases. </p>
+<ul>
+<li><strong>End with Semicolon<code>;</code></strong>    Each SQL statement must end with a semicolon to execute properly.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">USE</span><span class="w"> </span><span class="n">sys</span><span class="p">.</span><span class="k">database</span><span class="p">;</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">GO</span><span class="p">;</span>
+</span></code></pre></div></li>
+<li><strong>Case Insensitivity:</strong>   SQL keywords(e.g., SELECET, INSERT) are not case sensitive. However, table or column names may be case-sensitive depending on the DBMS. </li>
+</ul>
+<h3 id="sql-environment">SQL Environment</h3>
+<ol>
+<li><strong>Catalog:</strong>   A set of schema that constitute the description of a database.<ul>
+<li>Example:  A shopping mall how many floor/ area / structure</li>
+</ul>
+</li>
+<li><strong>Schema:</strong> The structure that contains descriptions of objects created by a user<ul>
+<li>Example: A shopping mall  1F: food / 2F: Cloth , shoes / 3F: Movies</li>
+<li>Tables / Views / Functions / Procedures</li>
+</ul>
+</li>
+<li><strong>Data Control Language:</strong>  Commands that controls a database including administrating privileges and committing data <ul>
+<li>DCL</li>
+<li>Control the user what they can do </li>
+<li>GRANT (授權) / REVOKE （收回權限） / DENY (拒絕)</li>
+<li>Normal user views data only / Admin can  INSERT , DROP , UPDATE</li>
+</ul>
+</li>
+<li><strong>Data Manipulation Language:</strong> Commands that maintain and query a database<ul>
+<li>DML </li>
+<li>SELECT / INSERT / UPDATE / DELETE </li>
+</ul>
+</li>
+<li><strong>Data Definition Language:</strong>  Commands that define a database, including creating, altering , dropping tables and establishing constraints. <ul>
+<li>CREATE</li>
+<li>ALTER</li>
+<li>DROP</li>
+<li>TRUNCATE</li>
+</ul>
+</li>
+</ol>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">--DCL </span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Employees</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">user1</span><span class="p">;</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Employees</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">user1</span><span class="p">;</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">DENY</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Employees</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">user1</span><span class="p">;</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">--DML </span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Customers</span><span class="p">(</span><span class="n">CustomerID</span><span class="p">,</span><span class="w"> </span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">City</span><span class="p">)</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'John Doe'</span><span class="p">,</span><span class="s1">'New York'</span><span class="p">);</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">Customers</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">City</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Los Angeles'</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">CustomerID</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Customers</span><span class="p">;</span>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Customers</span>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">CustomerID</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="c1">--DDL ref module 2</span>
+</span></code></pre></div>
+ DDL: [[Module 2 - Data Definition Language  (DDL)]]</p>
+<blockquote>
+<p><strong>SQL Environment</strong> consists of catalog, schema, and SQL command languages (DDL, DML, DCL) used to define, manipulate, and control a database.</p>
+</blockquote>
+<h3 id="different-sql-commands-or-queries">Different SQL Commands or Queries</h3>
+<p><strong>SQL Commands</strong>
+    - DDL
+    - DML
+    - TCL
+    - DQL
+    - DCL</p>
+<p><strong>TCL</strong> - Transaction Control Language</p>
+<p>The primary TCL commands are:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>COMMIT</code></strong></td>
+<td>Permanently saves all changes made during the current transaction to the database. Once committed, changes cannot be rolled back.</td>
+<td><code>COMMIT;</code></td>
+</tr>
+<tr>
+<td><strong><code>ROLLBACK</code></strong></td>
+<td>Undoes all changes made in the current transaction since the last <code>COMMIT</code> or <code>ROLLBACK</code> command, restoring the database to its previous state.</td>
+<td><code>ROLLBACK;</code></td>
+</tr>
+<tr>
+<td><strong><code>SAVEPOINT</code></strong></td>
+<td>Creates a named point within a transaction to which you can later roll back without affecting the entire transaction.</td>
+<td><code>SAVEPOINT savepoint_name;</code></td>
+</tr>
+<tr>
+<td><strong><code>SET TRANSACTION</code></strong></td>
+<td>Configures the characteristics of the current transaction, such as the isolation level.</td>
+<td><code>SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;</code></td>
+</tr>
+<tr>
+<td>Importance of TCL</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Data Integrity:</strong> TCL ensures that the database remains in a consistent state, even in the event of system failures.</li>
+<li><strong>Atomicity:</strong> It enforces the ACID property of atomicity, guaranteeing that all operations within a transaction either succeed as a whole unit or fail completely.</li>
+<li><strong>Error Handling:</strong> It allows for controlled error handling through <code>ROLLBACK</code> and <code>SAVEPOINT</code>, preventing partial or incorrect data updates.</li>
+</ul>
+<p><strong>COMMIT</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">--TCL </span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">accounts</span><span class="w"> </span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">account_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'duke'</span><span class="p">;</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">accounts</span><span class="w"> </span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">account_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'six'</span><span class="p">;</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="k">COMMIT</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>ROLLBACK</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">accounts</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">account_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'duke'</span><span class="p">;</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">ROLLBACK</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>SAVEPOINT</strong>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Orders</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'Laptop'</span><span class="p">,</span><span class="mi">30000</span><span class="p">);</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">SAVE</span><span class="w"> </span><span class="n">TRAN</span><span class="w"> </span><span class="n">SavePoint_1</span><span class="p">;</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Orders</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="k">VALUES</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">'iPhone'</span><span class="p">,</span><span class="mi">50000</span><span class="p">);</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">ROLLBACK</span><span class="w"> </span><span class="n">TRAN</span><span class="w"> </span><span class="n">SavePoint_1</span><span class="p">;</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="k">COMMIT</span><span class="p">;</span>
+</span></code></pre></div></p>
+<blockquote>
+<p>TCL statements are used to manage transactions in a database, allowing changes to be committed or rolled back.</p>
+</blockquote>
+<h3 id="sql-data-types">SQL Data types</h3>
+<table>
+<thead>
+<tr>
+<th>NUMERIC</th>
+<th>BINARY</th>
+<th>STRING</th>
+<th>BOOLEAN</th>
+<th>DATE/TIME</th>
+<th>SPECIAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INT</td>
+<td>BINARY</td>
+<td>CHAR</td>
+<td>BOOLEAN</td>
+<td>DATE</td>
+<td>UUID</td>
+</tr>
+<tr>
+<td>DECIMAL</td>
+<td>BLOB</td>
+<td>VARCHAR</td>
+<td></td>
+<td>TIME</td>
+<td>AON</td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td></td>
+<td>TEXT</td>
+<td></td>
+<td>DATETIME</td>
+<td>XML</td>
+</tr>
+<tr>
+<td>NUMERIC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>https://learn.microsoft.com/zh-tw/sql/t-sql/data-types/decimal-and-numeric-transact-sql?view=sql-server-ver17</p>
+</blockquote>
+<p>![[Pasted image 20260123162455.png]] </p>
+<hr/>
+<p>References: 
+PPT module 1</p>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Welcome To duke's study note" class="md-footer__link md-footer__link--prev" href="../../../..">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Welcome To duke's study note
+              </div>
+</div>
+</a>
+<a aria-label="Next: Module 2   Data Definition Language  (DDL)" class="md-footer__link md-footer__link--next" href="../Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Module 2   Data Definition Language  (DDL)
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="../../../../javascripts/mathjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
