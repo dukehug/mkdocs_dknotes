@@ -1,8 +1,7 @@
 2026-01-27 22:18
 
-Tags: #ADV_DBMS #Activity
-
-Student name: Duke Hsu
+Tags: #ADV_DBMS 
+Student name: Yong Lou, Xu
 
 ---
 Exercise - 1 Database Tables Creation
@@ -133,33 +132,47 @@ CREATE TABLE employees(
 ```
 
 #### JOB_HISTORY Table
+update: 02/03/2026  10:51PM
 ```sql
+
 CREATE TABLE job_history(
 	EMPLOYEE_ID NUMERIC(6) NOT NULL,
 	START_DATE DATE NOT NULL,
-	END_DATA DATE NOT NULL CHECK(END_DATE > START_DATE),
+	END_DATE DATE NOT NULL ,
 	JOB_ID VARCHAR(10),
 	DEPARTMENT_ID NUMERIC(4),
 	
+	-- check constraint
+	CONSTRAINT chk_date_order CHECK (END_DATE > START_DATE),
 	
+	--compsite primary key
+	CONSTRAINT PK_for_jobHistory PRIMARY KEY (EMPLOYEE_ID,START_DATE);
 	
+	--fk 1
 	CONSTRAINT FK_Empolyee_ID
 		FOREIGN KEY (EMPLOYEE_ID)
 		REFERENCES employees(EMPLOYEE_ID),
 	
-	CONSTRAINT FK_Job_ID
+	--fk 2
+	CONSTRAINT FK_Job_ID_from_jobs_history
 		FOREIGN KEY (JOB_ID)
-		REFERENCE job_history(JOB_ID),
-		
-	CONSTRAINT FK_Department_ID
+		REFERENCES jobs(JOB_ID),
+	--fk 3	
+	CONSTRAINT FK_Department_ID_from_jobs_history
 		FOREIGN KEY (DEPARTMENT_ID)
-		REFERENCE departments(DEPARTMENT_ID)
+		REFERENCES departments(DEPARTMENT_ID)
 );
 
 ```
 
 
+```sql
 
+-- rename table name
+EXEC sp_rename 'jobs_history','job_history';
+
+
+```
 
 
 
