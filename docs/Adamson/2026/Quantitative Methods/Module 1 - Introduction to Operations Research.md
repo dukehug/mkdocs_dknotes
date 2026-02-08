@@ -147,4 +147,4 @@ flowchart LR
 
  The Operations Research Analyst translates real world problems into models and recommends real world solutions. 
  
-![[Pasted image 20260123104050.png]]
+![summary_image](../../../assets/images/qm_module_1_summary.png)

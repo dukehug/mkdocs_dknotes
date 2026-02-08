@@ -7,7 +7,7 @@
 ## Functions 
 - The group of codes or statements that performs one task
 - 
-### **Types of Functions
+### Types of Functions
 
 - Methods written by the programmer.
 
@@ -65,6 +65,6 @@ int add(int a, int b) {
 - Templated Object.
 
 
-![[Pasted image 20260122133356.png]] 
+![image1](../../../assets/images/oop_class.png) 
 
 

@@ -37,6 +37,7 @@ theme:
 plugins:
     - search
     - mermaid2
+    - glightbox
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true

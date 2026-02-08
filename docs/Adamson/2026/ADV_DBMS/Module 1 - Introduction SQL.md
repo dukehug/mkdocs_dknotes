@@ -214,7 +214,7 @@ COMMIT;
 
 >https://learn.microsoft.com/zh-tw/sql/t-sql/data-types/decimal-and-numeric-transact-sql?view=sql-server-ver17
 
-![[Pasted image 20260123162455.png]] 
+![sql_data_type](../../../assets/images/sql_data_type.png) 
 
 
 
