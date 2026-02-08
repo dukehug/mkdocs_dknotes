@@ -10,10 +10,10 @@
       
       
       
-        <link rel="prev" href="../Module%201%20-%20Introduction%20SQL/">
+        <link rel="prev" href="../Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/">
       
       
-        <link rel="next" href="../Module%203%20-%20Data%20Manipulation%20Language%20-%20Part%201%20%20INSERT/">
+        <link rel="next" href="../Module%202%20-%20OOP%20Fundamentals%20Part%202/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>Module 2 Data Definition Language (DDL) - Duke's Study notes</title>
+        <title>Module 2 OOP Fundamentals Part 1 - Duke's Study notes</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adv_dbms" class="md-skip">
+        <a href="#topic-outline-part-1" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module 2   Data Definition Language  (DDL)
+              Module 2   OOP Fundamentals Part 1
             
           </span>
         </div>
@@ -379,8 +379,6 @@
                 
   
   
-    
-  
   
   
     
@@ -390,11 +388,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1">
         
           
           <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
@@ -415,7 +413,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -433,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Module%201%20-%20Introduction%20SQL/" class="md-nav__link">
+      <a href="../../ADV_DBMS/Module%201%20-%20Introduction%20SQL/" class="md-nav__link">
         
   
   
@@ -458,37 +456,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Module 2   Data Definition Language  (DDL)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ADV_DBMS/Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/" class="md-nav__link">
         
   
   
@@ -504,142 +475,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-definition-language-ddl" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Definition Language (DDL)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#naming-rules-for-table-and-column-names" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Naming Rules for Table and Column Names
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#steps-in-table-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Steps in Table Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#including-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Including Constraints
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#constraints-guidelines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Constraints Guidelines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ddl-statements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DDL Statements
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sql-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SQL Constraints
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SQL Constraints">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#table-level-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table Level Constraints (資料表 層級)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#column-level-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Column Level Constraints (欄位 層級)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alter-table-adding-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ALTER TABLE adding Constraints
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -652,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Module%203%20-%20Data%20Manipulation%20Language%20-%20Part%201%20%20INSERT/" class="md-nav__link">
+      <a href="../../ADV_DBMS/Module%203%20-%20Data%20Manipulation%20Language%20-%20Part%201%20%20INSERT/" class="md-nav__link">
         
   
   
@@ -680,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Module%204%20-%20Data%20Manipulation%20Language%20-Part%202%20Select/" class="md-nav__link">
+      <a href="../../ADV_DBMS/Module%204%20-%20Data%20Manipulation%20Language%20-Part%202%20Select/" class="md-nav__link">
         
   
   
@@ -757,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/" class="md-nav__link">
+      <a href="../../ADV_DBMS/LAB/Exercise%20-%201%20Database%20Tables%20Creation/" class="md-nav__link">
         
   
   
@@ -785,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LAB/Exercise%20-%202%20%20DDL%20Insterting%20Data/" class="md-nav__link">
+      <a href="../../ADV_DBMS/LAB/Exercise%20-%202%20%20DDL%20Insterting%20Data/" class="md-nav__link">
         
   
   
@@ -826,6 +661,8 @@
                 
   
   
+    
+  
   
   
     
@@ -835,11 +672,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
@@ -860,7 +697,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -878,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP%20Java/Java%20Tutorial/" class="md-nav__link">
+      <a href="../Java%20Tutorial/" class="md-nav__link">
         
   
   
@@ -906,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP%20Java/Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/" class="md-nav__link">
+      <a href="../Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/" class="md-nav__link">
         
   
   
@@ -931,10 +768,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../OOP%20Java/Module%202%20-%20OOP%20Fundamentals%20Part%201/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module 2   OOP Fundamentals Part 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -950,6 +812,135 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topic-outline-part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topic outline Part - 1
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Topic outline Part - 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction-netbeans-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction Netbeans IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-netbeans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install NetBeans
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netbeans-basic-use-guid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetBeans Basic Use guid
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NetBeans Basic Use guid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-make-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to make a New Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#program-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-programming-rules-in-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Programming Rules in Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -962,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP%20Java/Module%202%20-%20OOP%20Fundamentals%20Part%202/" class="md-nav__link">
+      <a href="../Module%202%20-%20OOP%20Fundamentals%20Part%202/" class="md-nav__link">
         
   
   
@@ -990,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP%20Java/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/" class="md-nav__link">
+      <a href="../OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/" class="md-nav__link">
         
   
   
@@ -1136,8 +1127,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1146,110 +1135,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-definition-language-ddl" class="md-nav__link">
+  <a href="#topic-outline-part-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Definition Language (DDL)
+        Topic outline Part - 1
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#naming-rules-for-table-and-column-names" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Naming Rules for Table and Column Names
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#steps-in-table-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Steps in Table Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#including-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Including Constraints
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#constraints-guidelines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Constraints Guidelines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ddl-statements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DDL Statements
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sql-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SQL Constraints
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SQL Constraints">
+    <nav class="md-nav" aria-label="Topic outline Part - 1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#table-level-constraints" class="md-nav__link">
+  <a href="#introduction-netbeans-ide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Table Level Constraints (資料表 層級)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#column-level-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Column Level Constraints (欄位 層級)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alter-table-adding-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ALTER TABLE adding Constraints
+        Introduction Netbeans IDE
       
     </span>
   </a>
@@ -1258,6 +1159,89 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-netbeans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install NetBeans
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netbeans-basic-use-guid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NetBeans Basic Use guid
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NetBeans Basic Use guid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-make-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to make a New Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#program-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-programming-rules-in-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Programming Rules in Java
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References:
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1278,152 +1262,137 @@
 
 
 
-<p>01/22/2026</p>
-<h1 id="adv_dbms">ADV_DBMS</h1>
+  <h1>Module 2   OOP Fundamentals Part 1</h1>
+
+<p>2026-02-04 08:33</p>
+<p>Tags: #java 
+Made by Duke Hsu</p>
 <hr>
-<h2 id="data-definition-language-ddl">Data Definition Language (DDL)</h2>
-<ul>
-<li>CREATE  - Create a table</li>
-<li>ALTER - Modify table name , columns name </li>
-<li>DROP - Delete </li>
-<li>RENAME - Rename</li>
-<li>TRUNCATE - Empty  rows data</li>
-<li>CONMMENT - SQL comment 
-Table - Basic unit of storage, composed of rows</li>
-</ul>
-<h2 id="naming-rules-for-table-and-column-names">Naming Rules for Table and Column Names</h2>
+<h2 id="topic-outline-part-1">Topic outline Part - 1</h2>
 <ol>
-<li>Must begin with a letter</li>
-<li>Must be 1 - 30 characters long</li>
-<li>Must contain only A-Z, a-z, 0-9, _, '$'  and '#'</li>
-<li>Must not duplicate the name of another object owned by the same user</li>
-<li>Must not be a server - reserved word</li>
+<li>Introduction Netbeans IDE</li>
+<li>Netbeans Installing </li>
+<li>Netbeans basic use guide (How to make a New Project)</li>
+<li>Program Structure in Netbeans</li>
+<li>Basic Programming  Rules in Java</li>
+<li>Creating Class </li>
 </ol>
-<h2 id="steps-in-table-creation">Steps in Table Creation</h2>
+<h3 id="introduction-netbeans-ide">Introduction Netbeans IDE</h3>
+<p>Apache NetBeans is a free, open-source Integrated Development Enviroment (IDE) used to write , edit, compile, debug, and run programs, especially in java.</p>
+<p>NetBeans combines:
+- Code editor
+- Compiler support
+- Debugger
+- Project management tools
+- More programming language support </p>
+<h2 id="install-netbeans">Install NetBeans</h2>
+<p>Apache NetBeans 28 </p>
+<p>Download: 
+https://netbeans.apache.org/front/main/download/</p>
+<p>https://www.codelerity.com/netbeans/</p>
+<h2 id="netbeans-basic-use-guid">NetBeans Basic Use guid</h2>
+<h3 id="interface">Interface</h3>
+<p>NOTE: A - K is refers to interface annotation</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/NetBeans_1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/NetBeans_1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/NetBeans_2.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/NetBeans_2.png"></a></p>
+<p>A -  Menu Bar : Provides access to all NetBeans commands.</p>
+<p>B - NetBeans Initial interface</p>
+<p>C - Menu Bar: Search</p>
+<p>D - Menu Bar: Provides access to all NetBeans commands.</p>
+<p>E - Toolbar: Provides quick-access buttons for command actions </p>
+<p>F - Projects Windows:  Displays all projects and their structure
+    - Labs  in Project Windows : 
+        -  File ,Favorites  : Provides quick access buttons for common actions
+        - Services : Used mainly for database and enterprise applications </p>
+<p>G - Navigator Window: Provides a structural view of the current file / methods </p>
+<p>H - Code Editor Window: Where you write , and view source code . </p>
+<p>I - Status Bar: Located at the bottom of the IDE . Shows information such as current line number, file status , and notifications . </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/NetBeans_3.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/NetBeans_3.png"></a> </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/NetBeans_4.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/NetBeans_4.png"></a></p>
+<p>J - Output Window : Displays program output , compilation results, and error messages. </p>
+<p>K - Debugging Window: Appears when debugging a program. Shows breakpoints , call stack, and variable values (MENU BAR -&gt; Debug - New Watch)</p>
+<h2 id="how-to-make-a-new-project">How to make a New Project</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/NetBeans_5.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/NetBeans_5.png"></a></p>
 <ol>
-<li>Identify data types for attributes </li>
-<li>Identify columns that can and cannot be null</li>
-<li>Identify columns that must be unique(candidate keys)</li>
-<li>Determine default values</li>
-<li>Identify constraints on columns(Domain specification)</li>
-<li>Create the table</li>
+<li>Click File Menu &gt; New Project from the Menu Bar or press short key "Ctrl + Shift + N"  to create a new project </li>
+<li>Choose Java Application (java with Ant)</li>
+<li>Class name / meaning full the project name /  location/ </li>
 </ol>
-<h2 id="including-constraints">Including Constraints</h2>
-<ul>
-<li>Constraints enforce rules at the table level.</li>
-<li>Constraints prevent the deletion of a table if there are dependencies</li>
-<li>The following constraints are commonly used in SQL:<ol>
-<li>NOT NULL  - Ensures that a column cannot have a NULL value</li>
-<li>UNIQUE -  Ensures that all values in a column are different</li>
-<li>PRIMARY KEY - A combination of a NOT NULL and UNIQUE . Uniquely identifies each row in a table</li>
-<li>FOREIGN KEY - Prevent actions that would destroy links between tables</li>
-<li>CHECK - Ensure that the values in a column satisfies a specific condition </li>
-<li>DEFAULT - Sets a default value for a column if no values is specified</li>
-<li>CREATE INDEX - Used to create and retrieve data from the database very quickly</li>
-</ol>
-</li>
-</ul>
-<h2 id="constraints-guidelines">Constraints Guidelines</h2>
-<ol>
-<li>You can name a constraint, or the MS SQL Server generates a name </li>
-<li>Create a constraint at either of the following times:<ul>
-<li>At the same time as the creation of the table</li>
-<li>After the creation of the table</li>
-</ul>
-</li>
-<li>Define a constraint at the column or table level</li>
-<li>View a constraint in the data dictionary </li>
-</ol>
-<h2 id="ddl-statements">DDL Statements</h2>
-<p>The following SQL statement  is DDL </p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">--CREATE DATABASE Statement is used to create a new SQL database.</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">ProjectDB</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">--DROP DATABSE Statement is used to drop an existing SQL database.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">ProjectDB</span><span class="p">;</span>
+<h2 id="program-structure">Program Structure</h2>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * sample multiline comments</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm"> * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm"> */</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">--CREATE TABLE Statement is used to create a new table in a database.</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Customers</span><span class="p">(</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">CustomerID</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">LastName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">FristName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">Address</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">City</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">//Package</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kn">package</span><span class="w"> </span><span class="nn">java_ant_project</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="cm">/**</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cm"> *</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cm"> * @author dukehsu</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cm"> */</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1">//Main Class </span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Java_ant_Project</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="c1">//Class attributes </span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="cm">/**</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="cm">     * @param args the command line arguments</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="cm">     */</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="c1">//main method (programing enter point)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="c1">// TODO code application logic here</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span><span class="w"> </span><span class="c1">//out put "Hello World"</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="sql-constraints">SQL Constraints</h2>
-<p>MSSQL Constraints are rules applied to table columns or tables to enforce data integrity in a SQL Server database. 
-- Accuracy 
-- Consistency
-- Integrity
-- Rules</p>
-<p>Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.</p>
-<ul>
-<li>Table Level / Column Level</li>
-</ul>
-<h3 id="table-level-constraints">Table Level Constraints  (資料表 層級)</h3>
-<ul>
-<li>Define Primary key / Foreign Key / Unique / Check </li>
-<li>通常Constraints 寫在 欄位定義的最後</li>
-<li>多欄位，需要命名，方便維護與刪除 ，容易理解</li>
-</ul>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Table Level Constraints</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span><span class="p">(</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">StudentID</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">Email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">Age</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1">-- CONSTAINT {constraint name} {constraint_TYPE} {column},</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_Stidents</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">StudentID</span><span class="p">),</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">UQ_Student_Email</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">Email</span><span class="p">),</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CK_Student_Age</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="err">，</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Student_Class</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">ClassID</span><span class="p">)</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Classes</span><span class="p">(</span><span class="n">ClassID</span><span class="p">)</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="c1">--REFERENCES {table_name}({ref_table_column})</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">);</span>
-</span></code></pre></div>
-<h3 id="column-level-constraints">Column Level Constraints (欄位 層級)</h3>
-<ul>
-<li>PRIMARY KEY , UNIQUE , CHECK is identify when creating table </li>
-<li>The constraint name generate by MS SQL Server</li>
-</ul>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span><span class="p">(</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">StudentID</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">Age</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">18</span><span class="p">),</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">CreateDate</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">);</span>
-</span></code></pre></div>
-<h3 id="alter-table-adding-constraints">ALTER TABLE  adding  Constraints</h3>
-<ul>
-<li>資料表已經存在 Table existed</li>
-<li>資料庫維護或者後期設計調整</li>
-</ul>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">--PK</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_Students</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">StudentID</span><span class="p">);</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">--Unique</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">UQ_Student_Email</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">Email</span><span class="p">);</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">--Check</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">CK_Student_Age</span><span class="w"> </span><span class="k">CHECK</span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">18</span><span class="p">);</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1">--FK </span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Students</span><span class="w"> </span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Students_Class</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ClassID</span><span class="p">)</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Classes</span><span class="p">(</span><span class="n">ClassID</span><span class="p">);</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="c1">--Modify Column </span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">regions</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">REGION_ID</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
-</span></code></pre></div>
+<h2 id="basic-programming-rules-in-java">Basic Programming  Rules in Java</h2>
+<ol>
+<li>Java Is Case-Sensitive</li>
+<li>Every Java Program starts with a Class</li>
+<li>The main() Method Is the Entry Point</li>
+<li>Statements Must End with a Semicolon<code>;</code></li>
+<li>Curly Braces <code>{}</code> Define Code Blocks </li>
+<li>Class Names Must Match File Names</li>
+<li>Variables Must Be Declared Before Use</li>
+<li>Use Proper Naming Conventions</li>
+<li>Use the Correct Data Type</li>
+<li>Comments Improve Code Readability </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Conventi</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td>PascalCase</td>
+<td>FirstName</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>camelCase</td>
+<td>lastName</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>camelCase</td>
+<td>myTools</td>
+</tr>
+</tbody>
+</table>
 <hr>
+<h2 id="references">References:</h2>
+<p>Module 2 - PPT </p>
 
 
 
@@ -1461,7 +1430,7 @@ Table - Basic unit of storage, composed of rows</li>
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Module%201%20-%20Introduction%20SQL/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module 1   Introduction SQL">
+          <a href="../Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module 1   Introduction to Object Oriented Programming">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -1471,20 +1440,20 @@ Table - Basic unit of storage, composed of rows</li>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Module 1   Introduction SQL
+                Module 1   Introduction to Object Oriented Programming
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Module%203%20-%20Data%20Manipulation%20Language%20-%20Part%201%20%20INSERT/" class="md-footer__link md-footer__link--next" aria-label="Next: Module 3   Data Manipulation Language   Part 1  INSERT">
+          <a href="../Module%202%20-%20OOP%20Fundamentals%20Part%202/" class="md-footer__link md-footer__link--next" aria-label="Next: Module 2   OOP Fundamentals Part 2">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Module 3   Data Manipulation Language   Part 1  INSERT
+                Module 2   OOP Fundamentals Part 2
               </div>
             </div>
             <div class="md-footer__button md-icon">
