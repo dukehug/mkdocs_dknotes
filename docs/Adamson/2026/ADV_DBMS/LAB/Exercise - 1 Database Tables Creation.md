@@ -42,7 +42,7 @@ ALTER TABLE countries
 ALTER TABLE countries
 	ADD CONSTRAINT FK_REGION_ID
 		FOREIGN KEY (REGION_ID)
-		REFERENCES regeions(REGION_ID); --forrign key
+		REFERENCES regions(REGION_ID); --forrign key
 ```
 
 #### LOCATIONS Table
