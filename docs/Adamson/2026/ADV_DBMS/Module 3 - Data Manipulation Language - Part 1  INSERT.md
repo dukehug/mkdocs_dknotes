@@ -13,6 +13,14 @@ Module 3 - Data Manipulation Language - Part 1  INSTER
 ## Concept 
 
 ### SQL  Data Manipulation Language (DML)
+- **SELECT**: Used to select data from the table (show data).
+- **UPDATE**: Used to update existing data with a condition (modify data).
+- **INSERT INTO**: Used to insert new data into the table (insert data).
+- **DELETE**: Used to delete data from the table with a condition (delete data).
+
+---
+
+
 
 - **DML** statement is executed when you :
 	- Add new rows to a table 
