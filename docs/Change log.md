@@ -16,7 +16,7 @@
 02/12/2026 17:44
     - add admonitions
 
-```
+```yml
 markdown_extensions:
   - admonition
   - pymdownx.details
