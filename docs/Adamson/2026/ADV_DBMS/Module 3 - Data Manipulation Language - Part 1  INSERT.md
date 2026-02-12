@@ -88,7 +88,8 @@ INSERT INTO departments(DEPARTMENT_ID,DEPARTMENT_NAME,LOCATION_ID) --manager_id 
 		  (180,"Purch",2300);
 ```
 
-**note**: Make sure you separate each set of values with a comma `,` .
+!!! note
+	Make sure you separate each set of values with a comma `,` .
 
 
 ### The SQL UPDATE Statement
@@ -109,8 +110,9 @@ UPDATE Customers
 ```
 
 
-!!!
-**note**: The `WHERE`  clause specifies which records that should be updated , if you omit the `WHERE` clause, all records in the table will be updated !! 
+!!! warning
+	The `WHERE`  clause specifies which records that should be updated , if you omit the `WHERE` clause, all records in the table will be updated !! 
+
 
 ### The SQL DELETE Statement 
 

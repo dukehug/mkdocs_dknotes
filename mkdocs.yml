@@ -39,6 +39,9 @@ plugins:
     - mermaid2
     - glightbox
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.highlight:
