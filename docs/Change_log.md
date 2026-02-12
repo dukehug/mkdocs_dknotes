@@ -13,8 +13,13 @@
 
 
 ## Change log
+
+---
+
 02/12/2026 17:44
-    - add admonitions
+
+- add admonitions
+
 
 ```yml
 markdown_extensions:
@@ -22,3 +27,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 ```
+
+---
+
+02/12/2026 22:26
+
+  - add extra css
+
+  - add Roboto font

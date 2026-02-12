@@ -3,6 +3,9 @@ site_author: DukeHsu
 site_description: dukes study notes on adamson unievrsity - Information Technology
 theme:
   name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
   features:
   #  - navigation.tabs
     - navigation.sections
@@ -60,3 +63,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css

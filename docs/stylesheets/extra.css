@@ -1,0 +1,23 @@
+:root {
+  /* 增加正文字型大小，18px  */
+  --md-text-font-size: 1rem; 
+  
+  /* 增加行高，避免文字過於擁擠 */
+  --md-text-line-height: 2;
+}
+
+/* 針對英文技術文檔，適度增加段落間距 */
+.md-typeset p {
+  margin-bottom: 1.6em;
+}
+
+/* 讓代碼塊的字體稍微縮小一點點，看起來更精緻 */
+.md-typeset code {
+  font-size: 0.85em;
+}
+
+/* 針對文章內部的表格標題加粗 */
+.md-typeset table thead th {
+  font-weight: 700;
+  background-color: var(--md-default-bg-color--lighter);
+}
