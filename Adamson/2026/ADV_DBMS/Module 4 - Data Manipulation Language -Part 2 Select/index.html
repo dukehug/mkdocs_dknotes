@@ -655,6 +655,78 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="SQL Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwise-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitwise Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compound-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compound Operator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1234,6 +1306,78 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="SQL Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwise-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitwise Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compound-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compound Operator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1329,9 +1473,476 @@ Author:  Duke Hsu</p>
 </span></code></pre></div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/select_results.png" data-desc-position="bottom"><img alt="image4" src="../../../../assets/images/select_results.png"></a></p>
 <h3 id="sql-operators">SQL Operators</h3>
+<p>SQL operators are symbols or keywords used to perform operations on data in SQL queries </p>
+<h4 id="arithmetic-operators">Arithmetic Operators</h4>
+<p>Arithmetic Operators in SQL are used to perform mathematical operations on numeric data types in  SQL queries.</p>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td></td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td></td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus</td>
+<td></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">EmployeeName</span><span class="p">,</span><span class="w"> </span><span class="n">Salary</span><span class="p">,</span><span class="w"> </span><span class="n">Bonus</span><span class="p">,</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Bonus</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Total_Income</span><span class="p">,</span><span class="w"> </span><span class="c1">--Addition</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Bonus</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">After_Bonus_Deduction</span><span class="p">,</span><span class="w"> </span><span class="c1">--subtraction</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">10</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Ten_Percent_Tax</span><span class="p">,</span><span class="w"> </span><span class="c1">--multiplication</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Dayly_Salary</span><span class="p">,</span><span class="w"> </span><span class="c1">--division</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10000</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Salary_Remainder</span><span class="w"> </span><span class="c1">--modulus</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">FROM</span><span class="w"> </span><span class="n">Employees</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+<h4 id="comparison-operators">Comparison Operators</h4>
+<p>Comparison Operators in SQL are used to compare on expression's value to other expressions. </p>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+<th>example</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>Equal</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not Equal</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>less than and great than</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Great than</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Great than or Equal</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or Equal</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">70</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">50</span><span class="p">;</span>
+</span></code></pre></div></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span></code></pre></div>
+<h4 id="logical-operators">Logical Operators</h4>
+<p>Logical Operators in SQL are used to combine or manipulate conditions in SQL queries to retrieve or manipulate data based on specified criteria. </p>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+<th>example</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td>result should be True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>OR</td>
+<td>True or False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">--AND</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w">  </span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span><span class="w"> </span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">70</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">18</span><span class="p">;</span><span class="w"> </span><span class="c1">--both conditions must be true </span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">--OR</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">60</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">18</span><span class="p">;</span><span class="w"> </span><span class="c1">--either conditioncan be true</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="c1">--NOT</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">50</span><span class="p">;</span>
+</span></code></pre></div></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="bitwise-operators">Bitwise Operators</h4>
+<p>Compound operators combine an operation with assignment. These operators modify the  value of a column and store the result in the same column in a single step</p>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+<th>example</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;</td>
+<td>AND</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>|</td>
+<td>OR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>^</td>
+<td>XOR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>~</td>
+<td>NOT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>Left move</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>Right move</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>8 bit</p>
+<div class="arithmatex">\[2^7 - 2^6- 2^5- 2^4- 2^3- 2^2- 2^1- 2^0$$
+$$128-64-32-16-8-4-2-1\]</div>
+<hr>
+<table>
+<thead>
+<tr>
+<th><strong>Bit position (from left to right)</strong></th>
+<th><strong>1</strong></th>
+<th><strong>2</strong></th>
+<th><strong>3</strong></th>
+<th><strong>4</strong></th>
+<th><strong>5</strong></th>
+<th><strong>6</strong></th>
+<th><strong>7</strong></th>
+<th><strong>8</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Binary number 170</strong></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Binary number 75</strong></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Compare</strong></td>
+<td><span class="arithmatex">\(1\&amp;0\)</span></td>
+<td><span class="arithmatex">\(0\&amp;1\)</span></td>
+<td><span class="arithmatex">\(1\&amp;0\)</span></td>
+<td><span class="arithmatex">\(0\&amp;0\)</span></td>
+<td><strong><span class="arithmatex">\(1\&amp;1\)</span></strong></td>
+<td><span class="arithmatex">\(0\&amp;0\)</span></td>
+<td><strong><span class="arithmatex">\(1\&amp;1\)</span></strong></td>
+<td><span class="arithmatex">\(0\&amp;1\)</span></td>
+</tr>
+<tr>
+<td><strong>AND Result</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>00001010 =  2+ 8 = 10</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th><strong>Bit position (from left to right)</strong></th>
+<th><strong>1</strong></th>
+<th><strong>2</strong></th>
+<th><strong>3</strong></th>
+<th><strong>4</strong></th>
+<th><strong>5</strong></th>
+<th><strong>6</strong></th>
+<th><strong>7</strong></th>
+<th><strong>8</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Binary number 170</strong></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Binary number 75</strong></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Compare</strong></td>
+<td>1|0</td>
+<td>0|1</td>
+<td>1|0</td>
+<td>0|0</td>
+<td>1|1</td>
+<td>0|0</td>
+<td>1|1</td>
+<td>0|1</td>
+</tr>
+<tr>
+<td><strong>OR Result</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>11101011 = 128+ 64+32+8+2+1 = 235</p>
+<h4 id="compound-operator">Compound Operator</h4>
+<p>複合運算符
+Compound operators combine an operation with assignment. These operators  modify the value of a column and store the result in the same column in a single step. </p>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+<th>example</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>/=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>%=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Example:</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">stdudent</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">student</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">10</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">student</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">/=</span><span class="mi">2</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">student</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">*=</span><span class="mi">2</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+</span></code></pre></div></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="special-operators">Special Operators</h4>
+<ul>
+<li><code>BETWEEN .....AND .....</code></li>
+<li><code>IN(....)</code></li>
+<li><code>LIKE</code></li>
+<li><code>IS NULL</code></li>
+<li><code>EXISTS</code></li>
+</ul>
 <hr>
 <h3 id="references">References:</h3>
-<p>MSSQL Group Functions - https://learn.microsoft.com/zh-cn/sql/t-sql/functions/aggregate-functions-transact-sql?view=sql-server-ver17</p>
+<p>MSSQL Group Functions - 
+https://learn.microsoft.com/zh-cn/sql/t-sql/functions/aggregate-functions-transact-sql?view=sql-server-ver17</p>
 
 
 
