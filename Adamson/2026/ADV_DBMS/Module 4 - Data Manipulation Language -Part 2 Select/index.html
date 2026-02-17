@@ -1510,13 +1510,9 @@ Author:  Duke Hsu</p>
 <td>Modulus</td>
 <td></td>
 </tr>
-<tr>
-<td>Example:</td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<p>Example:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">EmployeeName</span><span class="p">,</span><span class="w"> </span><span class="n">Salary</span><span class="p">,</span><span class="w"> </span><span class="n">Bonus</span><span class="p">,</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Bonus</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Total_Income</span><span class="p">,</span><span class="w"> </span><span class="c1">--Addition</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">Salary</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Bonus</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">After_Bonus_Deduction</span><span class="p">,</span><span class="w"> </span><span class="c1">--subtraction</span>
@@ -1588,8 +1584,9 @@ Author:  Duke Hsu</p>
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td><div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</tbody>
+</table>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">70</span><span class="p">;</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
@@ -1597,14 +1594,7 @@ Author:  Duke Hsu</p>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">50</span><span class="p">;</span>
-</span></code></pre></div></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</span></code></pre></div>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
@@ -1639,14 +1629,10 @@ Author:  Duke Hsu</p>
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td>Example:</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">--AND</span>
+</tbody>
+</table>
+<p>Example:
+</p><div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">--AND</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w">  </span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span><span class="w"> </span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">70</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">18</span><span class="p">;</span><span class="w"> </span><span class="c1">--both conditions must be true </span>
@@ -1661,13 +1647,7 @@ Author:  Duke Hsu</p>
 </span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 </span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Students</span>
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">50</span><span class="p">;</span>
-</span></code></pre></div></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</span></code></pre></div><p></p>
 <h4 id="bitwise-operators">Bitwise Operators</h4>
 <p>Compound operators combine an operation with assignment. These operators modify the  value of a column and store the result in the same column in a single step</p>
 <table>
@@ -1719,8 +1699,8 @@ Author:  Duke Hsu</p>
 </tbody>
 </table>
 <p>8 bit</p>
-<div class="arithmatex">\[2^7 - 2^6- 2^5- 2^4- 2^3- 2^2- 2^1- 2^0$$
-$$128-64-32-16-8-4-2-1\]</div>
+<p><span class="arithmatex">\(2^7 - 2^6- 2^5- 2^4- 2^3- 2^2- 2^1- 2^0\)</span></p>
+<p><span class="arithmatex">\(128-64-32-16-8-4-2-1\)</span></p>
 <hr>
 <table>
 <thead>
@@ -1859,8 +1839,9 @@ $$128-64-32-16-8-4-2-1\]</div>
 </table>
 <p>11101011 = 128+ 64+32+8+2+1 = 235</p>
 <h4 id="compound-operator">Compound Operator</h4>
-<p>複合運算符
-Compound operators combine an operation with assignment. These operators  modify the value of a column and store the result in the same column in a single step. </p>
+<p>複合運算符</p>
+<p>Compound operators combine an operation with assignment.
+These operators  modify the value of a column and store the result in the same column in a single step. </p>
 <table>
 <thead>
 <tr>
@@ -1901,14 +1882,10 @@ Compound operators combine an operation with assignment. These operators  modify
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td>Example:</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">stdudent</span>
+</tbody>
+</table>
+<p>Example:
+</p><div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">stdudent</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
@@ -1924,13 +1901,7 @@ Compound operators combine an operation with assignment. These operators  modify
 </span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">student</span>
 </span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">*=</span><span class="mi">2</span>
 </span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
-</span></code></pre></div></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</span></code></pre></div><p></p>
 <h4 id="special-operators">Special Operators</h4>
 <ul>
 <li><code>BETWEEN .....AND .....</code></li>
