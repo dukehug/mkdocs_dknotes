@@ -11,7 +11,7 @@ Exercise 2 – SELECT statement with  Aggregate Functions (Transact-SQL)
 ```sql
 SELECT * FROM employees
 	WHERE (SALARY *12 > 100000 AND DEPARTMENT_ID IN (60,100))
-		OR Commission IS NOT NULL;	
+		OR COMMISSION_PCT IS NOT NULL;	
 ```
 
 2.  Write a query to find the unique Department IDs where employees have 'Clerk' in their Job ID, earn more than $2,500 after a $200 bonus is added, and report to Manager 114."
