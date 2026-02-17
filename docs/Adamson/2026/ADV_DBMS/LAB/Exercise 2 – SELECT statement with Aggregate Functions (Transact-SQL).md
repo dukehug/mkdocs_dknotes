@@ -18,7 +18,7 @@ SELECT * FROM employees
 
 ```sql
 SELECT DISTINCT DEPARTMENT_ID FROM employees
-	WHERE JOB_ID LIKE = '%Clerk'
+	WHERE JOB_ID LIKE '%Clerk'
 		AND(SALARY + 200) > 2500
 		AND MANAGER_ID =114;
 ```
