@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-1-database-tables-creation" class="md-skip">
+        <a href="#table-creation" class="md-skip">
           Skip to content
         </a>
       
@@ -681,17 +681,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercise-1-database-tables-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise - 1 Database Tables Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#table-creation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -829,14 +818,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercise%202%20%E2%80%93%20SELECT%20statement%20with%20Aggregate%20Functions%20%28Transact-SQL%29/" class="md-nav__link">
+      <a href="../Exercise%20-%202%20SELECT%20statement%20with%20Aggregate%20Functions%20%28Transact-SQL%29/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Exercise 2 – SELECT statement with Aggregate Functions (Transact SQL)
+    Exercise   2 SELECT statement with Aggregate Functions (Transact SQL)
   
 
     
@@ -1244,17 +1233,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercise-1-database-tables-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise - 1 Database Tables Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#table-creation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1371,7 +1349,7 @@
 <p>Tags: #ADV_DBMS 
 Student name: Yong Lou, Xu</p>
 <hr>
-<h2 id="exercise-1-database-tables-creation">Exercise - 1 Database Tables Creation</h2>
+<p>Exercise - 1 Database Tables Creation</p>
 <h2 id="table-creation">Table creation</h2>
 <h4 id="regions-table">REGIONS Table</h4>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">--TABLE CREATE</span>
@@ -1481,8 +1459,8 @@ Student name: Yong Lou, Xu</p>
 </span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="job_history-table">JOB_HISTORY Table</h4>
-<p>update: 02/03/2026  10:51PM
-</p><div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">job_history</span><span class="p">(</span>
+<p>update: 02/03/2026  10:51PM</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">job_history</span><span class="p">(</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">EMPLOYEE_ID</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">START_DATE</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">END_DATE</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">,</span>
@@ -1509,7 +1487,7 @@ Student name: Yong Lou, Xu</p>
 </span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
 </span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">departments</span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
 </span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="p">);</span>
-</span></code></pre></div><p></p>
+</span></code></pre></div>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">-- rename table name</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">EXEC</span><span class="w"> </span><span class="n">sp_rename</span><span class="w"> </span><span class="s1">'jobs_history'</span><span class="p">,</span><span class="s1">'job_history'</span><span class="p">;</span>
 </span></code></pre></div>
@@ -1527,8 +1505,7 @@ Student name: Yong Lou, Xu</p>
 
 
 
-<script src="https://giscus.app/client.js" data-repo="dukehug/mkdocs_dknotes" data-repo-id="R_kgDORE_dLw" data-category="General" data-category-id="DIC_kwDORE_dL84C2tg2" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
-</script>
+
                 
               </article>
             </div>
