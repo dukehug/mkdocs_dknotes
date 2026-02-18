@@ -24,6 +24,7 @@ SELECT DISTINCT DEPARTMENT_ID FROM employees
 ```
 
 3.  Write a query to display the last name and salary for any employee whose salary is not in the range of $5,000 to $12,000
+
 ```sql
 SELECT LAST_NAME, SALARY  
     FROM employees  
@@ -31,6 +32,7 @@ SELECT LAST_NAME, SALARY
 ```
 
 4. Write a query to display the last name and salary of employees who earn between $5,000 and $12,000, and are in department 20 or 50. Label the columns Employee and Monthly Salary
+
 ```sql
 SELECT LAST_NAME AS "Employee", SALARY AS "Monthly Salary"  
     FROM employees  
@@ -40,6 +42,7 @@ SELECT LAST_NAME AS "Employee", SALARY AS "Monthly Salary"
 
   
 5.  Write a query to Display the last name, job ID, and hire date of employees who belong to departments 10, 20, and 30, and sort the results in ascending order by hire date.
+
 ```sql
 SELECT LAST_NAME,JOB_ID,HIRE_DATE  
     FROM employees  
@@ -49,6 +52,7 @@ SELECT LAST_NAME,JOB_ID,HIRE_DATE
 
 
 6. Write a query to Display the total number of employees whose last name has “a” as the third character.
+
 ```sql
 SELECT COUNT(*) AS "Total Employees"  
     FROM employees  
@@ -56,6 +60,7 @@ SELECT COUNT(*) AS "Total Employees"
 ```
 
 7. Write a query to display the average salary per department.
+
 ```sql
 --use join table ,display the department name 
 SELECT d.DEPARTMENT_NAME, AVG(SALARY) AS "Average Salary"  
@@ -72,6 +77,7 @@ SELECT d.DEPARTMENT_NAME, AVG(SALARY) AS "Average Salary"
 ```
 
 8. Write a query to display the earliest hire date and the most recent hire date of all employees.
+
 ```sql
 SELECT MIN(HIRE_DATE) AS "EarliestHireDate", MAX(HIRE_DATE) AS "RecentHireDate"  
     FROM employees;
@@ -88,24 +94,29 @@ SELECT LAST_NAME AS "Employee" , HIRE_DATE AS "Hire Date"
 	when `SELECT` with `MIN()` , they can't add other  field 
 	在使用 **MIN()** 和 **MAX()** 這類聚合函數時，不能直接選擇其他列（如 **LAST_NAME**）的值
 
+
 9. Write a query to display the total salary paid for each Job ID.
+
 ```sql
 SELECT JOB_ID, SUM(SALARY) AS "Total Salary"
 	FROM employees
 		GROUP BY JOB_ID;
 ```
 
+
 10. Write a query to display the departments that have more than 5 employees whose first name has “e” as the second character.
+
 ```sql
 SELECT DEPARTMENT_ID 
 	FROM employees
 		WHERE FIRST_NAME LIKE '_e%'
 			GROUP BY DEPARTMENT_ID
-				HAVING(*) > 5;
+				HAVING COUNT(*) > 5;
 
 ```
 
 11. Write a query to display departments where the average salary is greater than 50,000.
+
 ```sql
 SELECT DEPARTMENT_ID
 	FROM employees

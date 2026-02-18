@@ -8,6 +8,7 @@ Exercise - 1 Database Tables Creation
 
 ## Table creation 
 #### REGIONS Table
+
 ```sql
 --TABLE CREATE
 CREATE TABLE regions(
@@ -46,6 +47,7 @@ ALTER TABLE countries
 ```
 
 #### LOCATIONS Table
+
 ```sql
 --CREATE TABLE
 CREATE TABLE locations(
@@ -71,6 +73,7 @@ ALTER TABLE locations
 ```
 
 #### DEPARTMENTS Table
+
 ```sql
 -- TABLE CREATE
 CREATE TABLE departments(
@@ -93,6 +96,7 @@ ALTER TABLE departments
 ```
 
 #### JOBS Table
+
 ```sql
 --TABLE CREATE  
 -- Define the primary key and not nll constraints inline
@@ -106,6 +110,7 @@ CREATE TABLE jobs(
 
 
 #### EMPLOYEES Table
+
 ```sql
 --Add all constraints inline or via ALTER TABLE
 --Department managers are linked via DEPARTMENTS.MANAGER_ID
@@ -133,6 +138,7 @@ CREATE TABLE employees(
 
 #### JOB_HISTORY Table
 update: 02/03/2026  10:51PM
+
 ```sql
 
 CREATE TABLE job_history(

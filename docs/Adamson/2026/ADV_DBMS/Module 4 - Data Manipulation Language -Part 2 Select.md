@@ -92,7 +92,203 @@ SELECT JOB_ID, AVG(SALARY) AS average_salary
 
 ### SQL Operators 
 
+SQL operators are symbols or keywords used to perform operations on data in SQL queries 
 
+#### Arithmetic Operators
+
+Arithmetic Operators in SQL are used to perform mathematical operations on numeric data types in  SQL queries.
+
+| symbol | meaning        | example |
+| ------ | -------------- | ------- |
+| +      | Addition       |         |
+| -      | Subtraction    |         |
+| *      | Multiplication |         |
+| /      | Division       |         |
+| %      | Modulus        |         |
+
+
+Example:
+
+
+```sql
+SELECT EmployeeName, Salary, Bonus,
+	Salary + Bonus AS Total_Income, --Addition
+	Salary - Bonus AS After_Bonus_Deduction, --subtraction
+	Salary * 0.10 AS Ten_Percent_Tax, --multiplication
+	Salary / 30 AS Dayly_Salary, --division
+	Salary % 10000 AS Salary_Remainder --modulus
+FROM Employees;
+```
+
+---
+
+#### Comparison Operators
+
+Comparison Operators in SQL are used to compare on expression's value to other expressions. 
+
+
+
+| symbol | meaning                  | example |     |     |
+| ------ | ------------------------ | ------- | --- | --- |
+| =      | Equal                    |         |     |     |
+| !=     | Not Equal                |         |     |     |
+| <>     | less than and great than |         |     |     |
+| <      | Less than                |         |     |     |
+| >      | Great than               |         |     |     |
+| >=     | Great than or Equal      |         |     |     |
+| <=     | Less than or Equal       |         |     |     |
+
+
+
+```sql
+SELECT *
+	FROM Students
+	WHERE Score >=70;
+	
+
+SELECT *
+	FROM Students
+	WHERE Score <=50;
+```
+
+```sql
+SELECT *
+	FROM Students
+	WHERE Age <> 18;
+```
+
+
+
+#### Logical Operators 
+
+Logical Operators in SQL are used to combine or manipulate conditions in SQL queries to retrieve or manipulate data based on specified criteria. 
+
+
+| symbol | meaning               | example |     |
+| ------ | --------------------- | ------- | --- |
+| AND    | result should be True |         |     |
+| OR     | True or False         |         |     |
+| NOT    | False                 |         |     |
+
+
+Example:
+
+
+```sql
+
+--AND
+SELECT *  
+	FROM Students 
+		WHERE Score >=70 AND Age >=18; --both conditions must be true 
+
+
+--OR
+SELECT * 
+	FROM Students
+		WHERE Score <60 OR Age <18; --either conditioncan be true
+
+--NOT
+SELECT *
+	FROM Students
+		WHERE NOT Score >=50;
+
+
+```
+
+
+
+
+
+#### Bitwise Operators
+
+Compound operators combine an operation with assignment. These operators modify the  value of a column and store the result in the same column in a single step
+
+
+| symbol | meaning    | example |     |
+| ------ | ---------- | ------- | --- |
+| &      | AND        |         |     |
+| \|     | OR         |         |     |
+| ^      | XOR        |         |     |
+| ~      | NOT        |         |     |
+| <<     | Left move  |         |     |
+| >>     | Right move |         |     |
+
+
+8 bit
+
+$2^7 - 2^6- 2^5- 2^4- 2^3- 2^2- 2^1- 2^0$
+$128-64-32-16-8-4-2-1$
+
+---
+
+
+| **Bit position (from left to right)** | **1**  | **2**  | **3**  | **4**  | **5**      | **6**  | **7**      | **8**  |
+| ------------------------------------- | ------ | ------ | ------ | ------ | ---------- | ------ | ---------- | ------ |
+| **Binary number 170**                 | 1      | 0      | 1      | 0      | 1          | 0      | 1          | 0      |
+| **Binary number 75**                  | 0      | 1      | 0      | 0      | 1          | 0      | 1          | 1      |
+| **Compare**                           | $1\&0$ | $0\&1$ | $1\&0$ | $0\&0$ | **$1\&1$** | $0\&0$ | **$1\&1$** | $0\&1$ |
+| **AND Result**                        | **0**  | **0**  | **0**  | **0**  | **1**      | **0**  | **1**      | **0**  |
+
+00001010 =  2+ 8 = 10
+ 
+---
+
+
+| **Bit position (from left to right)** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** |
+| ------------------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **Binary number 170**                 | 1     | 0     | 1     | 0     | 1     | 0     | 1     | 0     |
+| **Binary number 75**                  | 0     | 1     | 0     | 0     | 1     | 0     | 1     | 1     |
+| **Compare**                           | 1\|0  | 0\|1  | 1\|0  | 0\|0  | 1\|1  | 0\|0  | 1\|1  | 0\|1  |
+| **OR Result**                         | **1** | **1** | **1** | **0** | **1** | **0** | **1** | **1** |
+|                                       |       |       |       |       |       |       |       |       |
+
+11101011 = 128+ 64+32+8+2+1 = 235
+
+
+#### Compound Operator
+
+複合運算符
+Compound operators combine an operation with assignment. These operators  modify the value of a column and store the result in the same column in a single step. 
+
+| symbol | meaning | example |     |
+| ------ | ------- | ------- | --- |
+| +=     |         |         |     |
+| -=     |         |         |     |
+| *=     |         |         |     |
+| /=     |         |         |     |
+| %=     |         |         |     |
+
+
+Example:
+
+```sql
+UPDATE stdudent
+	SET score += 10
+		WHERE studentID = 1;
+
+
+UPDATE student
+	SET score -= 10
+		WHERE studentID = 2;
+
+UPDATE student
+	SET score /=2
+		WHERE studentID = 3;
+
+UPDATE student
+	SET score *=2
+		WHERE studentID =4;
+		
+```
+
+
+#### Special Operators
+
+- `BETWEEN .....AND .....`
+- `IN(....)`
+- `LIKE`
+- `IS NULL`
+- `EXISTS`
 
 
 
