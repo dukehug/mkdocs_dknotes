@@ -357,3 +357,6 @@ public String enroll(int studID, String studName, String studCourse){
 
 ----
 ### References
+
+Instructor’s In-Class Demonstration
+OOP - Module 2. Object Oriented Programming Fundamentals part 2.pptx

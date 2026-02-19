@@ -291,6 +291,296 @@ UPDATE student
 - `EXISTS`
 
 
+#### The SQL IN Operator
+
+- The `IN` operator allows you to specify multiple values in a `WHERE` clause.
+- The `IN` operator  is a shorthand for multiple `OR` conditions.
+
+**Syntax:**
+
+```sql
+SELECT column_name(s) FROM table_name
+	WHERE column_name IN (value1,value2,.....);
+```
+
+**Example:** 
+
+```sql
+--rerturn all customes from `Germany`, `France` or 'UK'
+
+SELECT * FROM Customers
+	WHERE Country IN ('Germany','France','UK');
+```
+
+
+**Nature language :**
+
+從 Customers 表中選擇所有記錄，條件是這些記錄的 Country 欄位是德國、法國或英國。
+
+Select all records from the `Customers` table where the `Country` column is include `Germany, France,UK.`
+
+
+
+#### The SQL `BETWEEN` Operator
+
+- The `BETWEEN` operator selects values within a given range. The values can be numbers, text, or dates.
+- The `BETWEEN` operator is inclusive: begin and end values are included.(起始值和結束值都包含在內)
+
+**Syntax:**
+
+```sql
+SELECT column_name(s) FROM table_name
+	WHERE column_name BETWEEN values1 AND values2;
+```
+
+**Example:**
+
+```sql
+-- selects all products with a price between 10 and 20
+
+SELECT * FROM Products
+	WHERE Price BETWEEN 10 and 20;
+```
+
+
+
+
+
+####  The SQL `LIKE` Operator
+
+- `LIKE` 運算子用於在 `WHERE` 子句中搜尋資料行中的**指定模式 (Pattern)**。
+    
+- 通常與**萬用字元 (Wildcards)** 搭配使用：
+    
+    - `%`：代表零個、一個或多個字元。
+        
+    - `_`：代表單一個字元。
+        
+
+**Syntax:**
+
+SQL
+
+```sql
+SELECT column_name(s) FROM table_name
+	WHERE column_name LIKE pattern;
+```
+
+**Example:**
+
+SQL
+
+```sql
+-- return all customers whose name starts with 'a'
+SELECT * FROM Customers
+	WHERE CustomerName LIKE 'a%';
+```
+
+**Natural Language:**
+
+從 `Customers` 表中選擇所有記錄，條件是 `CustomerName` 欄位的值是以 "a" 開頭。
+
+Select all records from the `Customers` table where the `CustomerName` column starts with the letter "a".
+
+
+
+#### The SQL `IS NULL` Operator
+
+- `IS NULL` 運算子用於測試**空值 (NULL values)**。
+    
+
+!!! warning
+	不能使用比較運算子（如 `=` 或 `!=`）來測試 NULL，必須使用 `IS NULL` 或 `IS NOT NULL`。
+
+**Syntax:**
+
+SQL
+
+```sql
+SELECT column_name(s) FROM table_name
+	WHERE column_name IS NULL;
+```
+
+**Example:**
+
+SQL
+
+```sql
+-- return all customers that do not have an address listed
+SELECT * FROM Customers
+	WHERE Address IS NULL;
+```
+
+**Natural Language:**
+
+從 `Customers` 表中選擇所有記錄，條件是 `Address` 欄位沒有數值（為空值）。
+
+Select all records from the `Customers` table where the `Address` column has a NULL value.
+
+
+
+#### The SQL `EXISTS` Operator
+
+- `EXISTS` 運算子用於測試**子查詢 (Subquery)** 是否傳回任何記錄。
+    
+- 如果子查詢傳回一筆或多筆記錄，則傳回 `TRUE`。
+    
+
+**Syntax:**
+
+SQL
+
+```sql
+SELECT column_name(s) FROM table_name
+WHERE EXISTS (SELECT column_name FROM table_name WHERE condition);
+```
+
+**Example:**
+
+SQL
+
+```sql
+-- return suppliers with a product price less than 20
+SELECT SupplierName FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Products 
+              WHERE Products.SupplierID = Suppliers.supplierID 
+              AND Price < 20);
+```
+
+**Natural Language:**
+
+從 `Suppliers` 表中選擇供應商名稱，條件是該供應商在 `Products` 表中有至少一項產品價格低於 20。
+
+Select the `SupplierName` from the `Suppliers` table if the subquery returns any records (i.e., if there is at least one product with a price less than 20 for that supplier).
+
+
+---
+!!!note
+	SQL 聚合函數（Aggregate Functions）用於對一組值執行計算，並傳回**單一值**。除了 `COUNT(*)` 之外，聚合函數都會忽略空值 (NULL)。
+
+
+!!!warning
+	 Operand data type varchar is invalid for sum operator.
+
+
+####  The SQL `COUNT()` Function
+
+- `COUNT()` 函數傳回符合指定條件的**資料列數目**。
+    
+
+**Syntax:**
+
+
+```sql
+SELECT COUNT(column_name) FROM table_name
+	WHERE condition;
+```
+
+**Example:** 
+
+```sql
+-- return the total number of products
+SELECT COUNT(ProductID) FROM Products;
+	WHERE Price > 20;
+```
+
+####  The SQL `SUM()` Function 
+
+- The `SUM()`  returns the total sum of a numerical column
+
+
+**Syntax** :
+```sql
+SELECT SUM(column_name) FROM table_name 
+	WHERE condition;
+```
+
+**Example**:
+```sql
+SELECT SUM(LAST_NAME) FROM employees
+	WHERE DEPARTMENT_ID = 100;
+```
+
+
+#### The SQL `MIN()` and `MAX()` Function
+
+- The  `MIN()`  returns the smallest value within the selected column
+- The `MAX()`  returns the largest value within the selected column
+
+**Example**:
+
+```sql
+--MAX
+SELECT MAX(SALARY)
+	FROM employees;
+
+
+--MIN
+SELECT MIN(SALARY)
+	FROM employees;
+```
+
+#### The SQL `AVG()`  Function 
+
+- The `AVG()` function returns the average value of a numerical column
+
+**Example:**
+
+```sql
+SELECT AVG(SALARY)
+	FROM employees;
+```
+
+---
+
+#### Using Aliases With a Space Character 
+- If you want your alias to contain one or more spaces, like "My Great Products", surround your alias with square brackets or double quotes. 
+
+**Example** 
+
+Using` [square brackets]` for aliases with space characters: 
+
+```sql
+SELECT ProductName AS [My Great Products] 
+	FROM Products;  
+```
+
+Using "double quotes" for aliases with space characters: 
+
+```sql
+SELECT ProductName AS "My Great Products" 
+	FROM Products;
+```
+
+
+#### SQL `SELECT DISTINCT` Statement 
+
+- The `SELECT DISTINCT `statement is used to return only distinct (different) values. 
+- **SELECT DISTINCT** 语句的确是用来返回某个列中不重复的值。它确保返回的结果集中没有重复项。
+
+**Syntax:** 
+
+```sql
+SELECT DISTINCT column1, column2, ... 
+	FROM table_name;
+```
+
+**Example:** 
+
+- Select all the different countries from the "Customers" table:
+
+```sql
+SELECT DISTINCT Country 
+	FROM Customers; 
+```
+
+
+
+
+
+
+
+
 
 
 

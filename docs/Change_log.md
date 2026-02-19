@@ -40,3 +40,8 @@ markdown_extensions:
 02/18/2026 22:32PM
 
 - add giscus.app comment function
+
+
+02/19/2026 17:45PM
+
+- add line numbers to the code block display.
