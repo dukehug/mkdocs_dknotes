@@ -3,6 +3,7 @@ site_author: DukeHsu
 site_description: dukes study notes on adamson unievrsity - Information Technology
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Roboto
     code: Roboto Mono
