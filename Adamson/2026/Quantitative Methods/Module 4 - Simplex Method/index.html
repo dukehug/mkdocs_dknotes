@@ -999,45 +999,45 @@ Author:  Duke Hsu</p>
 <hr>
 <p>Handle  <code>&lt;=</code> constraint , we need <strong>Slack Variable</strong>  positive S</p>
 <p>Object function:</p>
-<p>$Maximize \quad  Z = 300x_1 + 250x_2 $</p>
-<p>Subject to :
-<span class="arithmatex">\(2x_1 +x_2 \le 40 \qquad (labor)\)</span>
-<span class="arithmatex">\(x_1+3x_2 \le 45 \qquad (machine time)\)</span></p>
+<p><span class="arithmatex">\(Maximize \quad  Z = 300x_1 + 250x_2\)</span></p>
+<p>Subject to :</p>
+<p><span class="arithmatex">\(2x_1 +x_2 \le 40 \qquad (labor)\)</span></p>
+<p><span class="arithmatex">\(x_1+3x_2 \le 45 \qquad (machine time)\)</span></p>
 <p><span class="arithmatex">\(x_1 \le 12 \qquad (marketing)\)</span></p>
-<p>$x_1,x_2 \ge 0 $</p>
+<p><span class="arithmatex">\(x_1,x_2 \ge 0\)</span></p>
 <p>labor constraint :</p>
-<p>$2x_1 +x_2\le 40 $</p>
-<p>standard :
-<span class="arithmatex">\(2x_1+x_2+s_1=40\)</span></p>
-<p>machinetime constraint:
-$x_1+3x_2 \le 45 $</p>
-<p>standard:
-<span class="arithmatex">\(x_1+3x_2+s_2 = 45\)</span></p>
-<p>marketing constraint:
-$x_1 \le 12 $</p>
-<p>standard:
-<span class="arithmatex">\(x_1 + s_3 = 12\)</span></p>
+<p><span class="arithmatex">\(2x_1 +x_2\le 40\)</span></p>
+<p>standard :</p>
+<p><span class="arithmatex">\(2x_1+x_2+s_1=40\)</span></p>
+<p>machinetime constraint:</p>
+<p><span class="arithmatex">\(x_1+3x_2 \le 45\)</span></p>
+<p>standard:</p>
+<p><span class="arithmatex">\(x_1+3x_2+s_2 = 45\)</span></p>
+<p>marketing constraint:</p>
+<p><span class="arithmatex">\(x_1 \le 12\)</span></p>
+<p>standard:</p>
+<p><span class="arithmatex">\(x_1 + s_3 = 12\)</span></p>
 <p>Standard:</p>
 <p><span class="arithmatex">\(Max \qquad Z = 300x_1 +250x_2 +0S_1+0S_2+0S_3\)</span></p>
-<p>$x_1,x_2,s_1,s_2,s_3 \ge 0 $</p>
+<p><span class="arithmatex">\(x_1,x_2,s_1,s_2,s_3 \ge 0\)</span></p>
 <hr>
 <p>Handle  <code>&gt;=</code> constraint , we need <strong>Surplus Variable</strong>  negative  S  and add an  <strong>Artificial Variable</strong>  positive A</p>
 <p>Object function:</p>
-<p>$Minimize \quad  Z = 45x_1 + 12x_2 $</p>
-<p>Subject to :
-<span class="arithmatex">\(1x_1 +x_2 \ge 300 \qquad (brightness)\)</span>
+<p><span class="arithmatex">\(Minimize \quad  Z = 45x_1 + 12x_2\)</span></p>
+<p>Subject to :</p>
+<p><span class="arithmatex">\(1x_1 +x_2 \ge 300 \qquad (brightness)\)</span>
 <span class="arithmatex">\(3x_1 \ge 250 \qquad (hue)\)</span></p>
 <p>brightness constraint :</p>
-<p>$1x_1 +x_2 \ge 300 $</p>
-<p>standard :
-$1x_1 +x_2 -s_1 +a_1 = 300 $</p>
-<p>hue constraint:
-$3x_1  \ge 250 $</p>
-<p>standard:
-<span class="arithmatex">\(3x_1 -s_2 +a_2 = 250\)</span></p>
+<p><span class="arithmatex">\(1x_1 +x_2 \ge 300\)</span></p>
+<p>standard :</p>
+<p><span class="arithmatex">\(1x_1 +x_2 -s_1 +a_1 = 300\)</span></p>
+<p>hue constraint:</p>
+<p><span class="arithmatex">\(3x_1  \ge 250\)</span></p>
+<p>standard:</p>
+<p><span class="arithmatex">\(3x_1 -s_2 +a_2 = 250\)</span></p>
 <p>Standard:</p>
 <p><span class="arithmatex">\(Min \qquad Z = 45x_1 +12x_2 +0S_1+0S_2 +Ma_1+Ma_2\)</span></p>
-<p>$x_1,x_2,s_1,s_2,a_1, a_2 \ge 0 $</p>
+<p><span class="arithmatex">\(x_1,x_2,s_1,s_2,a_1, a_2 \ge 0\)</span></p>
 <hr>
 <h3 id="references">References</h3>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDORE_dL84C2tg2" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="dukehug/mkdocs_dknotes" data-repo-id="R_kgDORE_dLw" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
