@@ -259,7 +259,7 @@ SELECT CITY, STATE_PROVINCE
 
 Gemini canvas 
 
-https://gemini.google.com/share/531b591e835c
+[https://gemini.google.com/share/531b591e835c](https://gemini.google.com/share/531b591e835c)
 
 
 ----
