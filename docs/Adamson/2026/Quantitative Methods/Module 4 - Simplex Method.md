@@ -101,36 +101,43 @@ Handle  `<=` constraint , we need **Slack Variable**  positive S
 
 Object function:
 
-$Maximize \quad  Z = 300x_1 + 250x_2 $
+$Maximize \quad  Z = 300x_1 + 250x_2$
 
 Subject to :
+
 $2x_1 +x_2 \le 40 \qquad (labor)$
+
 $x_1+3x_2 \le 45 \qquad (machine time)$
 
 $x_1 \le 12 \qquad (marketing)$
 
-$x_1,x_2 \ge 0 $
+$x_1,x_2 \ge 0$
 
 
 
 labor constraint :
 
-$2x_1 +x_2\le 40 $
+$2x_1 +x_2\le 40$
 
 standard :
+
 $2x_1+x_2+s_1=40$
 
 
 machinetime constraint:
-$x_1+3x_2 \le 45 $
+
+$x_1+3x_2 \le 45$
 
 standard:
+
 $x_1+3x_2+s_2 = 45$
 
 marketing constraint:
-$x_1 \le 12 $
+
+$x_1 \le 12$
 
 standard:
+
 $x_1 + s_3 = 12$
 
 
@@ -138,16 +145,17 @@ Standard:
 
 $Max \qquad Z = 300x_1 +250x_2 +0S_1+0S_2+0S_3$
 
-$x_1,x_2,s_1,s_2,s_3 \ge 0 $
+$x_1,x_2,s_1,s_2,s_3 \ge 0$
 
 ----
 Handle  `>=` constraint , we need **Surplus Variable**  negative  S  and add an  **Artificial Variable**  positive A
 
 Object function:
 
-$Minimize \quad  Z = 45x_1 + 12x_2 $
+$Minimize \quad  Z = 45x_1 + 12x_2$
 
 Subject to :
+
 $1x_1 +x_2 \ge 300 \qquad (brightness)$
 $3x_1 \ge 250 \qquad (hue)$
 
@@ -157,16 +165,19 @@ $3x_1 \ge 250 \qquad (hue)$
 
 brightness constraint :
 
-$1x_1 +x_2 \ge 300 $
+$1x_1 +x_2 \ge 300$
 
 standard :
-$1x_1 +x_2 -s_1 +a_1 = 300 $
+
+$1x_1 +x_2 -s_1 +a_1 = 300$
 
 
 hue constraint:
-$3x_1  \ge 250 $
+
+$3x_1  \ge 250$
 
 standard:
+
 $3x_1 -s_2 +a_2 = 250$
 
 Standard:
@@ -175,7 +186,7 @@ $Min \qquad Z = 45x_1 +12x_2 +0S_1+0S_2 +Ma_1+Ma_2$
 
 
 
-$x_1,x_2,s_1,s_2,a_1, a_2 \ge 0 $
+$x_1,x_2,s_1,s_2,a_1, a_2 \ge 0$
 
 
 
