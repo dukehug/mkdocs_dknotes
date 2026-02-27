@@ -93,6 +93,13 @@ graph TD
 
 #### Example for Step 1  - Standardize the problem into a linear programming tableau 
 
+
+!!!note
+	 The Slack variable, surplus variable, and artificial variable depend on the ranking of the constraints.
+
+
+
+
 - Convert the inequalities in the problem statement in to equations 
 
 ---
