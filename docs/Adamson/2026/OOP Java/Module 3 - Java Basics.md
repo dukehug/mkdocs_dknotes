@@ -35,7 +35,7 @@ Concept Define
  - **Constants** are values that cannot be changed once assigned . In Java, constants are declared using the `final` keyword.
 
 
-![[dataType_in_Java.png]]
+![dataType_in_Java.png](../../../assets/images/dataType_in_Java.png)
 
 #### Primitive Data Types in Java
 
