@@ -312,3 +312,8 @@ Since:   $\ge$  , therefor  is Oblique Line, and in QIV,
 
 ----
 ### References
+
+Module 1 PDF
+
+
+Gemini tools - [https://gemini.google.com/share/b3c0ec6c89db](https://gemini.google.com/share/b3c0ec6c89db)
