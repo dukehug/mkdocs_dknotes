@@ -315,6 +315,9 @@ A class is drawn as a rectangle with three sections:
 ### References: 
 
 Module 1 - Introduction to Object Oriented Programming PPT 
-UML class diagrams - https://www.youtube.com/watch?v=6XrL5jXmTwM
-UML Class Diagram Tutorial - https://www.lucidchart.com/pages/uml-class-diagram
-Online shopping cart UML class diagram example - https://lucid.co/templates/online-shopping-cart-uml-class-diagram-example
+
+UML class diagrams - [https://www.youtube.com/watch?v=6XrL5jXmTwM](https://www.youtube.com/watch?v=6XrL5jXmTwM)
+
+UML Class Diagram Tutorial - [https://www.lucidchart.com/pages/uml-class-diagram](https://www.lucidchart.com/pages/uml-class-diagram)
+
+Online shopping cart UML class diagram example - [https://lucid.co/templates/online-shopping-cart-uml-class-diagram-example](https://lucid.co/templates/online-shopping-cart-uml-class-diagram-example)

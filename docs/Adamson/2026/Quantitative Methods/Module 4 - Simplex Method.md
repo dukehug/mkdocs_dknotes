@@ -1,7 +1,8 @@
 
 2026-02-23 08:10
 
-Tags: #QuantitativeMethods 
+Tags: #math
+
 Author:  Duke Hsu
 
 ---

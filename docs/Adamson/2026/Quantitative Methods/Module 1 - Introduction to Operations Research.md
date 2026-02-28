@@ -1,5 +1,11 @@
+
+#Module 1  Introduction to Operations Research 
+
+---
+
 01/23/2026
-#QuantitativeMethods
+
+Tag: #math
 
 ---
 ## Module 1  Introduction to Operations Research 

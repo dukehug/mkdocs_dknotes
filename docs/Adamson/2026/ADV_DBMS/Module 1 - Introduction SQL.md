@@ -1,5 +1,11 @@
+#Module 1 - Introduction SQL
+
+---
+
 01/22/2026
-#ADV_DBMS 
+
+Tag: #ADV_DBMS 
+
 Made by Duke Hsu
 
 ---

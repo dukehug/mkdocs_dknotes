@@ -1,6 +1,12 @@
+
+#Module 4 - Data Manipulation Language -Part 2 
+
+---
+
 2026-02-07 21:03
 
 Tags: #ADV_DBMS 
+
 Author:  Duke Hsu
 
 ---

@@ -1,6 +1,14 @@
+
+#Module 3 - Data Manipulation Language - Part 1  INSTER
+
+
+---
+
+
 2026-02-08 11:14
 
 Tags: #ADV_DBMS 
+
 Author:  Duke Hsu
 
 ---

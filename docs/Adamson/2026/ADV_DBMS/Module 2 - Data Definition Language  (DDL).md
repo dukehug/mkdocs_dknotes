@@ -1,5 +1,11 @@
+
+#Module 2 - Data Definition Language
+
+---
+
 01/22/2026
-#ADV_DBMS
+
+Tag: #ADV_DBMS
 
 ---
 
