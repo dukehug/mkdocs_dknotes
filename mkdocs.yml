@@ -1,14 +1,18 @@
 site_name: Duke's Study notes
+repo_url: https://github.com/dukehug/mkdocs_dknotes
+repo_name: dukehug/mkdocs_dknotes
 site_author: DukeHsu
 site_description: dukes study notes on adamson unievrsity - Information Technology
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
   custom_dir: overrides
   font:
     text: Roboto
     code: Roboto Mono
   features:
-  #  - navigation.tabs
+    - navigation.tabs
     - navigation.sections
   #  - navigation.expand
     - navigation.top

@@ -17,20 +17,11 @@ I use Obsidian to write and take notes, then sync them to my NAS WebDAV server. 
 
 
 
-```mermaid
-graph
-A[Start] --> B[Use obsidian]
-B --> C[Write and take notes]
-C --> D[Sync notes to NAS WebDAV server]
-D --> E[Sync notes on Linux Sever running MkDocs]
-E --> F[Double check content on Linux server]
-F --> H[Use gh-deploy command to push to Github]
-H --> I[End]
-```
-
-
 ## Error report 
 
 If you find any errors, please submit an issue on GitHub or clone the project and submit a pull request (PR) directly.
 
 [https://github.com/dukehug/mkdocs_dknotes/issues](https://github.com/dukehug/mkdocs_dknotes/issues)
+
+
+Or Comment on the content and submit your opinion.
