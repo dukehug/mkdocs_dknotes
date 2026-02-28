@@ -5,7 +5,7 @@
 ## Module 1  Introduction to Operations Research 
 
 note 
-### What is Operations Research (OR)?
+)?
 Operations Research /Management Science is the application of scientific methods, techniques, and tools to problems involving the operation of systems so as to provide those in control of the operations with optimum, or practically optimum, solutions to the problems. 
 
 Operations Research 通過科學方法，技術，工具應用於涉及系統運作的問題為運營控制者提供最優或最實際的解決方案。 
@@ -33,7 +33,7 @@ Operations Research 通過科學方法，技術，工具應用於涉及系統運
 5. Allows decision  makers to judge how much information to gather in a given problem .
 6. Increases the effectiveness of the decision.
 7. Enables quick identification of the best available solution.
-8. Allows quick and inexpensive examination of a large(sometimes infinite) number of alternatives
+) number of alternatives
 9. Enables experimentation with different alternatives using models, thus eliminating the cost of making errors while experimenting with reality .
 
 
@@ -62,14 +62,14 @@ Operations Research 通過科學方法，技術，工具應用於涉及系統運
 ### Structure of Mathematical Models
  1. **Decision variables and parameters** 
 	- Unknowns to be determined from the solution of the model .
-	- Example: For this project / tasks , how many worker we need, how much we need to pay . (time , cost, resource)
+)
 	- Key words: Unknowns , Parameters
 2.  **Structural constraints or restrictions** 
 	- To account for the physical limitations of the system, the model must include constraints which limit the decision variables to their feasible values.
 	- Example:  FDA verify / BIR / Shipping capacity  / Time limited / Working time 
 	- Key words: Constraints 
 	Formular：
-	$$g_i(X_1,\ldots,X_n)\le b_i, \quad i = 1,2, \ldots  \quad X_i \ge 0$$
+)\le b_i, \quad i = 1,2, \ldots  \quad X_i \ge 0$$
 	'g_i' is variables,  'i'  is the constraint,  where 'b_i ' is a known constant.
 	 某些條件g_i 不能超過已知上限 b_i 
 
@@ -78,8 +78,8 @@ Operations Research 通過科學方法，技術，工具應用於涉及系統運
 	- Example:  Minimize Cost / Maximize Profit / Minimize Time
 	- Key words: Object  function /  Mathematical function / Decision variables / Single goal
 	Formular:
-	$$X_0 = f(X1, \ldots X_n)$$
-	'X_0 ' is your goal, 'f(x)' is a mathematical formula 
+)$$
+)' is a mathematical formula 
 
 
 ### Operations Research / Operational Research 
@@ -147,4 +147,4 @@ flowchart LR
 
  The Operations Research Analyst translates real world problems into models and recommends real world solutions. 
  
-![summary_image](../../../assets/images/qm_module_1_summary.png)
+)
