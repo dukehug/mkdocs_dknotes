@@ -4,8 +4,30 @@
   
   /* 增加行高，避免文字過於擁擠 */
   --md-text-line-height: 2;
+
+  /*標題顏色*/
+  --custom-header-color: #000000;
 }
 
+/* dark 和light 模式切換*/
+[data-md-color-scheme='slate']{
+  --custom-header-color: #ffffff;
+}
+
+
+/*apply to all title*/
+
+.md-typeset h1,
+.md-typeset h2{
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 12px;
+}
+.md-typeset h3,
+.md-typeset h4{
+  color: var(--custom-header-color) !important;
+  font-weight: 800; 
+  transition: color 0.3s;
+}
 /* 針對英文技術文檔，適度增加段落間距 */
 .md-typeset p {
   margin-bottom: 1.6em;
