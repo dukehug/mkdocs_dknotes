@@ -237,8 +237,8 @@ Values of x:   $x= 15,16,17,18,19,20,21,.....$
 
 | LINE NAME   | EXAMPLE  | SYMBOL    |
 | ----------- | -------- | --------- |
-| Solid line  | -------- | $>,<$     |
-| Dotted line | ———      | $\ge,\le$ |
+| Dotted line | -------- | $>,<$     |
+| Solid line  | ———      | $\ge,\le$ |
 
 Example:
 
