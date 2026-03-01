@@ -278,7 +278,7 @@ Calculator  the point:
 point A: (0,-3)
 point B: (5,0)
 
-Since:   $\ge$  , therefor  is Oblique Line, and in QIV, 
+Since:   $\ge$  , therefor  is **Solid Line**, and in **QIV**, 
 
 ![](../../../assets/images/3x – 5y = 15.png)
 
