@@ -43,7 +43,7 @@ Concept Define
 
 #### Primitive Data Types in Java
 
-| DATA TYPE | DESCRIPTION                        | EXAMPLE                       | Default Value (for fields) |
+| DATA TYPE | DESCRIPTION                        | EXAMPLE                       | DEFAULT VALUE (FOR FIELDS)|
 | --------- | ---------------------------------- | ----------------------------- | -------------------------- |
 | byte      | very small whole numbers           | `byte b = 10;`                | 0                          |
 | short     | small whole numbers                | `short  s = 100;`             | 0                          |
@@ -91,7 +91,7 @@ Arithmetic
 
 Assignment 
 
-| OPERATOR | EXAMPLE | Meaning       |
+| OPERATOR | EXAMPLE | MEANING       |
 | -------- | ------- | ------------- |
 | =        | x = 5   | assign 5 to x |
 | +=       | x += 2  | x = x + 2     |
