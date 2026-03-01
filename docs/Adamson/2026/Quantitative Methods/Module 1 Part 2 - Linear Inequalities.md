@@ -137,7 +137,7 @@ Step3 Set Builder Notation
 
 $\{x\quad  | \quad x<-3\}\quad  U \quad \{x\quad |\quad  x>3\}$
 
-Vales of $x$: 
+Values of $x$: 
 
 $x= -4,-5,-6,-7,-8,-9.....$
 $x=4,5,6,7,8,9,10$
@@ -223,6 +223,39 @@ $\{x\quad |\quad x \ge15\}$
 
 
 Values of x:   $x= 15,16,17,18,19,20,21,.....$
+
+---
+
+**Question 7:** 
+
+$-2\le x+1 \le 4$
+
+
+Calculator $x$:
+
+$\because$
+ $(-2)-(-1) \le x \le 4-1$
+
+$\therefore$
+$-3\le x \le 3$
+
+Step1 Number line 
+
+![-3<=x <=3.png](../../../assets/images/-3<=x <=3.png)
+
+Step2 Interval Notation 
+
+$[-3,3]$
+
+
+Step3 Set Builder Notation
+
+$\{x| -2\le x+1 \le4\}$
+
+Values of $x$: 
+
+$x=-3,-2,-1,0,1,2,3$
+
 
 ----
 
