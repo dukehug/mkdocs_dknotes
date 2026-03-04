@@ -444,6 +444,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#self-join">
+<span class="md-ellipsis">
+      
+        SELF JOIN
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -881,6 +890,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#self-join">
+<span class="md-ellipsis">
+      
+        SELF JOIN
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1129,6 +1147,34 @@
 </span><span id="__span-11-3"><span class="w">        </span><span class="k">FULL</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">countries</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">C</span>
 </span><span id="__span-11-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">L</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">COUNTRY_ID</span>
 </span><span id="__span-11-5"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">CITY</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="self-join">SELF JOIN</h4>
+<ul>
+<li>A self join is a regular join, but the table is joined with itself .</li>
+</ul>
+<p>!!note
+    使用場景： 同一張表，既存在員工， 也存在主管； A single table contains both employees and  manager.</p>
+<p>Syntax</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-12-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">T2</span>
+</span><span id="__span-12-3"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-13-2"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="n">FIRST_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Employees</span><span class="p">,</span>
+</span><span id="__span-13-3"><span class="w">    </span><span class="n">m</span><span class="p">.</span><span class="n">FIRST_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Manager</span>
+</span><span id="__span-13-4"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w">&nbsp; </span><span class="n">e</span>
+</span><span id="__span-13-5"><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">employees</span><span class="w">&nbsp; </span><span class="n">m</span>
+</span><span id="__span-13-6">
+</span><span id="__span-13-7"><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">MANAGER_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">MANAGER_ID</span><span class="p">;</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <p>Gemini canvas </p>
 <p><a href="https://gemini.google.com/share/531b591e835c">https://gemini.google.com/share/531b591e835c</a></p>
