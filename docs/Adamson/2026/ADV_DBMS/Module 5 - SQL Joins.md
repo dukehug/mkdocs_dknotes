@@ -261,6 +261,41 @@ SELECT CITY, STATE_PROVINCE
 	WHERE CITY IS NOT NULL ;
 ```
 
+#### SELF JOIN
+
+- A self join is a regular join, but the table is joined with itself .
+
+!!note
+	使用場景： 同一張表，既存在員工， 也存在主管； A single table contains both employees and  manager.
+
+Syntax
+
+```sql
+SELECT column_name(s)
+	FROM table1 T1, table1 T2
+	WHERE condition;
+```
+
+
+Example
+
+```sql
+SELECT 
+	e.FIRST_NAME AS Employees,
+	m.FIRST_NAME AS Manager
+	FROM employees  e
+	JOIN employees  m
+
+ON e.MANAGER_ID = m.MANAGER_ID;
+
+```
+
+
+
+
+
+
+
 
 Gemini canvas 
 

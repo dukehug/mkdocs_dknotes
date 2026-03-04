@@ -19,10 +19,12 @@ Data Types
 - Constants
 
 Operators and Expressions
+
 -  + - * / .....
 
 
 Scanner
+
 - Input 
 - Output
 - nextLine()
@@ -35,7 +37,9 @@ Example Application in OOP
 Concept Define
 
  - **Variables** are named memory locations used to store data that can change during program execution.
+
  - **Data Types** define the type and size of data a variable can store.
+
  - **Constants** are values that cannot be changed once assigned . In Java, constants are declared using the `final` keyword.
 
 
@@ -64,17 +68,29 @@ Concept Define
 ### Operators
 
 1. Arithmetic Operators
+
 	- Used to perform mathematical operations.
+
 2. Assignment Operators
+
 	- Used to assign values to variables
+
 3. Relational (Comparison ) Operators
+
 	- Used to compare two values and return a boolean result 
+	
 4. Logical Operators
+
 	-  Used to  combine of negate boolean conditions, allowing for complex decision-making in control flow statements. 
+
 5. Unary Operators
+
 	-  Unary operators in java perform operations on a single operand. They include operations like` negation(-)`,` increment(++)`, and `decrement(--),` allowing for modifications or evaluations of a single value.
+
 6. Ternary(Conditional ) Operator
+
 	- The ternary operator in java is a concise way to evaluate a condition and return one of two values based on that condition. It uses the syntax` condition ? valueIfTrue : valueIfFalse,` enabling shorthand conditional expressions. 
+
 
 
 #### Tables and Example 
