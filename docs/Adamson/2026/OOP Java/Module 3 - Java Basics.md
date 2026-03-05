@@ -15,18 +15,22 @@ Module 3 - Java Basics
 Data Types
 
 - Variables 
+
 - Data Types
+
 - Constants
 
 Operators and Expressions
 
--  + - * / .....
+-  `+ - * / .....`
 
 
 Scanner
 
 - Input 
+
 - Output
+
 - nextLine()
 
 Example Application in OOP 
