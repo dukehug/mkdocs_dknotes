@@ -9,9 +9,10 @@
 - Use Gemini to help me learning (Gemini can acess my notes)
 
 
-## Run it on Local
+## Run Locally
 
-Step  1 : clone project and  create a environment 
+
+Step  1 : Clone the project and create an environment.
 
 ```shell
 git clone https://github.com/dukehug/mkdocs_dknotes.git
@@ -32,7 +33,7 @@ source notes_venv/bin/activate
 deactivate
 ```
 
-Step 3: Install requester 
+Step 3: Install the requirements.
 
 ```shell
 pip install mkdocs-meterial mkdocs-glightbox mkdocs-mermaid2-plguin -y
@@ -42,7 +43,7 @@ pip list
 ```
 
 
-Step 4: Running
+Step 4: Run
 
 ```shell
 mkdocs  serve --dev-addr=0.0.0.0:8000
