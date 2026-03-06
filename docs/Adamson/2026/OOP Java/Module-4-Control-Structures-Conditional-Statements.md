@@ -2,9 +2,7 @@
 # Module 4 Control Structures Conditional Statements
 
 2026-03-05 14:13
-
 Tags:  #java 
-
 Author:  Duke Hsu
 
 ---
@@ -35,8 +33,13 @@ Author:  Duke Hsu
 -  Nested if statement 
 
 	A nested if statement is an if statement placed inside another if statement. 
-	It is used when: 1. A second condition must be checked only if the first condition is true.
-	2 . you need multiple levels of decision-making. 3. you are validating conditions step-by- step .
+	It is used when: 
+
+	1. A second condition must be checked only if the first condition is true.
+
+	2. you need multiple levels of decision-making. 
+
+	3. you are validating conditions step-by- step .
 
 -  if -else statement
 
