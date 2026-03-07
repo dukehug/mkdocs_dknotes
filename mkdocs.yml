@@ -48,6 +48,7 @@ plugins:
     - glightbox
 markdown_extensions:
   - admonition
+  - pymdownx.mark
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.arithmatex:
