@@ -2067,12 +2067,12 @@
 <p><span class="arithmatex">\(Z_j = (C_iRow1 * First Row Each Number) + (C_iRow2 * Second Row Each Number)\)</span></p>
 <p>Find the <code>Entering Variable</code>:</p>
 <ul>
-<li>檢查 <span class="arithmatex">\(C_j - Z_j\)</span> row, 那個==最大的positive number== 的那個<code>column</code>就是 <code>Entering Variable</code></li>
+<li>檢查 <span class="arithmatex">\(C_j - Z_j\)</span> row, 那個 <mark>最大的positive number</mark> 的那個<code>column</code>就是 <code>Entering Variable</code></li>
 <li><span class="arithmatex">\(C_j - Z_j\)</span>  - For Maximize  problem pick the most positive value that column is your <strong>Entering Variable</strong>  </li>
 </ul>
 <p>Find the <code>Leaving Variable</code>:</p>
 <ul>
-<li>檢查 <span class="arithmatex">\(Q_i\)</span>  column, 那個==最小的Positive number== 那個<code>row</code>就是 <code>Leaving Variable</code></li>
+<li>檢查 <span class="arithmatex">\(Q_i\)</span>  column, 那個 <mark>最小的Positive number</mark> 那個<code>row</code>就是 <code>Leaving Variable</code></li>
 <li>
 <p>Devide the Qty column by the entering values(only positive ones) , the row with the smallest positive , that's your <strong>Leaving Variable</strong>;</p>
 <p><span class="arithmatex">\(Q_i = Qty \div Entering Variable Column Constraint Row Each Number\)</span></p>
@@ -2097,7 +2097,7 @@
 </ol>
 <p><span class="arithmatex">\(New row =  Old Tableau Row Numbers -  (This Row Y 係數) \times Pivot Rows Each Number\)</span></p>
 <p>Old Tableau <span class="arithmatex">\(S_1\)</span> Row Numbers Y 係數 = <span class="arithmatex">\(-1\)</span></p>
-<p>$New S_1 row = Old Tableau S_1 Row Numbers - <span class="arithmatex">\((-1)\)</span> \times Pivot Row Numbers$</p>
+<p><span class="arithmatex">\(New S_1 row = Old Tableau S_1 Row Numbers - (-1) \times Pivot Row Numbers\)</span></p>
 <p><span class="arithmatex">\(New S_1 Row = [25,4,-1,1,0] - ((-1) \times [20,\frac{1}{2},1,0,\frac{1}{2}])\)</span></p>
 <ol>
 <li><span class="arithmatex">\(Z_j\)</span></li>
