@@ -65,12 +65,12 @@ $Z_j = (C_iRow1 * First Row Each Number) + (C_iRow2 * Second Row Each Number)$
 
 Find the `Entering Variable`:
 
-- 檢查 $C_j - Z_j$ row, 那個==最大的positive number== 的那個`column `就是 `Entering Variable`
+- 檢查 $C_j - Z_j$ row, 那個 ==最大的positive number== 的那個`column `就是 `Entering Variable`
 -  $C_j - Z_j$  - For Maximize  problem pick the most positive value that column is your **Entering Variable**  
 
 Find the `Leaving Variable`:
 
-- 檢查 $Q_i$  column, 那個==最小的Positive number== 那個`row `就是 `Leaving Variable`
+- 檢查 $Q_i$  column, 那個 ==最小的Positive number== 那個`row `就是 `Leaving Variable`
 - Devide the Qty column by the entering values(only positive ones) , the row with the smallest positive , that's your **Leaving Variable**;
 
 	$Q_i = Qty \div Entering Variable Column Constraint Row Each Number$
@@ -101,7 +101,7 @@ $New row =  Old Tableau Row Numbers -  (This Row Y 係數) \times Pivot Rows Eac
 
 Old Tableau $S_1$ Row Numbers Y 係數 = $-1$
 
-$New S_1 row = Old Tableau S_1 Row Numbers - $(-1)$ \times Pivot Row Numbers$
+$New S_1 row = Old Tableau S_1 Row Numbers - (-1) \times Pivot Row Numbers$
 
 
 $New S_1 Row = [25,4,-1,1,0] - ((-1) \times [20,\frac{1}{2},1,0,\frac{1}{2}])$
