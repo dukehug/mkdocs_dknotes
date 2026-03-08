@@ -99,9 +99,9 @@ $Old \quad Tableau \quad Leaving \quad Variable \quad Row  \quad Numbers \quad  
 
 $New row =  Old Tableau Row Numbers -  (This Row Y 係數) \times Pivot Rows Each Number$
 
-Old Tableau S_1 Row Numbers Y 係數 = $-1$
+Old Tableau $S_1$ Row Numbers Y 係數 = $-1$
 
-$New S_1 row = Old Tableau S_1 Row Numbers - 2 \times Pivot Row Numbers$
+$New S_1 row = Old Tableau S_1 Row Numbers - $(-1)$ \times Pivot Row Numbers$
 
 
 $New S_1 Row = [25,4,-1,1,0] - ((-1) \times [20,\frac{1}{2},1,0,\frac{1}{2}])$
