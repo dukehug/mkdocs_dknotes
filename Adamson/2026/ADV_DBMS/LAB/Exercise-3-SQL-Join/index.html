@@ -953,6 +953,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL 語句的正確順序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL 語句的正確順序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -960,6 +972,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1773,6 +1790,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL 語句的正確順序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL 語句的正確順序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1780,6 +1809,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1808,6 +1842,18 @@
 <p>Tags: #ADV_DBMS </p>
 <p>Author:  Duke Hsu</p>
 <hr>
+<h2 id="sql">SQL 語句的正確順序</h2>
+<p>記住這個順序很重要：</p>
+<ol>
+<li><code>SELECT</code>&nbsp;- Selected columns</li>
+<li><code>FROM</code>&nbsp;- Selected table</li>
+<li><code>JOIN</code>&nbsp;- Connect other table</li>
+<li><code>WHERE</code>&nbsp;- Filtering first table data</li>
+<li><code>GROUP BY</code>&nbsp;- Group column</li>
+<li><code>HAVING</code>&nbsp;- Filtering Group result  </li>
+<li><code>ORDER BY</code>&nbsp;- Sort</li>
+</ol>
+<hr>
 <ol>
 <li>The HR manager wants to generate a report of all company locations in the United States of<br>
     America that are specifically located in the state of California. Display Location ID, Street<br>
@@ -1817,29 +1863,26 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">STREET_ADDRESS</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="p">,</span><span class="n">STATE_PROVINCE</span><span class="p">,</span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_NAME</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">STREET_ADDRESS</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">STATE_PROVINCE</span><span class="p">,</span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_NAME</span>
 </span><span id="__span-0-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="n">l</span><span class="w"> </span>
-</span><span id="__span-0-3"><span class="w">    </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">countries</span><span class="w"> </span><span class="k">c</span><span class="w">  </span><span class="c1">--need match</span>
+</span><span id="__span-0-3"><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">countries</span><span class="w"> </span><span class="k">c</span><span class="w">  </span><span class="c1">--need match</span>
 </span><span id="__span-0-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span>
-</span><span id="__span-0-5"><span class="k">WHERE</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'California'</span><span class="p">;</span><span class="w"> </span><span class="c1">--condition</span>
+</span><span id="__span-0-5"><span class="k">WHERE</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">STATE_PROVINCE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'California'</span><span class="p">;</span><span class="w"> </span><span class="c1">--condition</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <ol>
-<li>The HR Department wants to know how many company locations exist per country. Display<br>
-    Country Name and Total Number of Locations</li>
+<li>The HR Department wants to know how many company locations exist per country. Display  Country Name and Total Number of Locations</li>
 </ol>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_NAME</span><span class="p">,</span><span class="k">COUNT</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalLocations</span>
-</span><span id="__span-1-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="n">l</span>
-</span><span id="__span-1-3"><span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">countries</span><span class="w"> </span><span class="k">c</span>
-</span><span id="__span-1-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span>
-</span><span id="__span-1-5">
-</span><span id="__span-1-6"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span><span class="p">,</span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_NAME</span><span class="w"> </span>
-</span><span id="__span-1-7"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalLocations</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"> </span><span class="c1">--large to small</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_NAME</span><span class="p">,</span><span class="k">COUNT</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalLocations</span>
+</span><span id="__span-1-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="c1">--Select table</span>
+</span><span id="__span-1-3"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">countries</span><span class="w"> </span><span class="k">c</span>
+</span><span id="__span-1-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w">  </span><span class="c1">--Join table</span>
+</span><span id="__span-1-5"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_ID</span><span class="w"> </span><span class="p">,</span><span class="k">c</span><span class="p">.</span><span class="n">COUNTRY_NAME</span><span class="w">  </span><span class="c1">-- Group columns</span>
+</span><span id="__span-1-6"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalLocations</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"> </span><span class="c1">--large to small</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <ol>
 <li>The HR Department wants to generate a report listing all employees together with the department where they are assigned. Display Employee last name, Department number and Department name</li>
@@ -1848,15 +1891,214 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
+</span><span id="__span-2-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-2-3"><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-2-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-2-5"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>HR wants to display all employees, even those without a depart </li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">HIRE_DATE</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">JOB_ID</span><span class="p">,</span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
+</span><span id="__span-3-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-3-3"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-3-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>HR wants to know the total number of employees per department.</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w"> </span><span class="c1">--count all employees</span>
+</span><span id="__span-4-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-4-3"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-4-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-4-5"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
+</span><span id="__span-4-6"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w"> </span><span class="c1">--large to smallest</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>The HR Department wants to display the departments that have more than 5 employees.  Display Department Name and Total Number of Employees. Sort the Total Number of  Employees in descending order</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
-</span><span id="__span-2-2">
-</span><span id="__span-2-3"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
-</span><span id="__span-2-4"><span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
-</span><span id="__span-2-5"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
-</span><span id="__span-2-6">
-</span><span id="__span-2-7"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalEmployees</span>
+</span><span id="__span-5-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-5-3"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-5-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-5-5"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
+</span><span id="__span-5-6"><span class="k">HAVING</span><span class="p">(</span><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="c1">--having should be after Group by, where is before Group by</span>
+</span><span id="__span-5-7"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>The HR Department wants to know how many employees were hired after January 1, 2005, in  each department. </li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="w"> </span><span class="c1">--SELECT column</span>
+</span><span id="__span-6-2"><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w"> </span>
+</span><span id="__span-6-3"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span><span class="w">  </span><span class="c1">-- SELECT Table</span>
+</span><span id="__span-6-4"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w">  </span><span class="c1">--Join to other table</span>
+</span><span id="__span-6-5"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span>
+</span><span id="__span-6-6"><span class="k">WHERE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">HIRE_DATE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'2005-01-01'</span><span class="w"> </span><span class="c1">--filtering first table data</span>
+</span><span id="__span-6-7"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span><span class="c1">-- set group </span>
+</span><span id="__span-6-8"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w">  </span><span class="c1">-- sort</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>Display Department Name and Total Number of Employees Hired After 2005.  Only include departments with at least 2 such employees.</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="w"> </span><span class="c1">--SELECT column  </span>
+</span><span id="__span-7-2"><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w">  </span>
+</span><span id="__span-7-3"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span><span class="w">&nbsp; </span><span class="c1">-- SELECT Table  </span>
+</span><span id="__span-7-4">
+</span><span id="__span-7-5"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w">&nbsp; </span><span class="c1">--Join to other table  </span>
+</span><span id="__span-7-6"><span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w">  </span>
+</span><span id="__span-7-7"><span class="k">WHERE</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">HIRE_DATE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'2005-01-01'</span><span class="w">&nbsp; </span><span class="c1">--filtering first table data  </span>
+</span><span id="__span-7-8"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span><span class="c1">-- set group  </span>
+</span><span id="__span-7-9"><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">2</span><span class="w">  </span>
+</span><span id="__span-7-10"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w">&nbsp; </span><span class="c1">-- sort</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>The HR Department wants a summary report showing:</li>
+<li>How many employees work in each department</li>
+<li>Only include departments located in Seattle or New York</li>
+<li>Display department number, department name, location city, and total employees</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="p">,</span><span class="w"> </span><span class="c1">--SELECT column</span>
+</span><span id="__span-8-2"><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">[</span><span class="n">Total</span><span class="w"> </span><span class="n">Employees</span><span class="p">]</span><span class="w"> </span><span class="c1">--use []&nbsp;</span>
+</span><span id="__span-8-3"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span><span class="w">&nbsp; </span><span class="c1">-- SELECT Table</span>
+</span><span id="__span-8-4">
+</span><span id="__span-8-5"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w">&nbsp; </span><span class="c1">--Join to other table</span>
+</span><span id="__span-8-6"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w">&nbsp;</span>
+</span><span id="__span-8-7"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="n">l</span>
+</span><span id="__span-8-8"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span>
+</span><span id="__span-8-9">
+</span><span id="__span-8-10"><span class="k">WHERE</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Seattle'</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'New York'</span>
+</span><span id="__span-8-11"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="w"> </span><span class="c1">-- set group&nbsp;</span>
+</span><span id="__span-8-12"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">[</span><span class="n">Total</span><span class="w"> </span><span class="n">Employees</span><span class="p">]</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span><span class="w">&nbsp; </span><span class="c1">-- sort</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>The HR department needs a report of employees in Toronto. Display the Last name, Job title, Department number, and the Department name for all employees who work in Toronto.</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">j</span><span class="p">.</span><span class="n">JOB_TITLE</span><span class="p">,</span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="w"> </span><span class="c1">--SELECT column&nbsp;</span>
+</span><span id="__span-9-2">
+</span><span id="__span-9-3"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span><span class="w">&nbsp; </span><span class="c1">-- SELECT Table</span>
+</span><span id="__span-9-4">
+</span><span id="__span-9-5"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w">&nbsp; </span><span class="c1">--Join to other table</span>
+</span><span id="__span-9-6"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w">&nbsp;</span>
+</span><span id="__span-9-7"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">locations</span><span class="w"> </span><span class="n">l</span>
+</span><span id="__span-9-8"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">LOCATION_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">LOCATION_ID</span>
+</span><span id="__span-9-9"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">jobs</span><span class="w"> </span><span class="n">j</span>
+</span><span id="__span-9-10"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">JOB_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">JOB_ID</span>
+</span><span id="__span-9-11">
+</span><span id="__span-9-12"><span class="k">WHERE</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">CITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Toronto'</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>The HR Department wants a list of all departments. For each department, show Employee last name, Employee ID, Job title and Department name. Some departments may have no employees, but they should still appear in the report.</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">,</span><span class="n">j</span><span class="p">.</span><span class="n">JOB_TITLE</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w">&nbsp;</span>
+</span><span id="__span-10-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-10-3"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-10-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-10-5"><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">jobs</span><span class="w"> </span><span class="n">j</span>
+</span><span id="__span-10-6"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">JOB_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">JOB_ID</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>
+<p>The HR Department wants a list showing all employees and all departments.</p>
+</li>
+<li>
+<p>Include departments even if they have no employees.</p>
+</li>
+<li>Include employees even if they have no department assigned.  </li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span>
+</span><span id="__span-11-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-11-3"><span class="k">FULL</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-11-4"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-11-5"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span>
+</span><span id="__span-11-6"><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>Create a report to display employees’ last name and employee number along with  their manager’s last name and manager number. Label the columns Employee,  Emp#, Manager, and Mgr#, respectively.</li>
+</ol>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><span class="k">SELECT</span><span class="w">&nbsp;</span>
+</span><span id="__span-12-2"><span class="w">&nbsp; &nbsp; </span><span class="n">e</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Employee"</span><span class="p">,</span><span class="w">&nbsp;</span>
+</span><span id="__span-12-3"><span class="w">&nbsp; &nbsp; </span><span class="n">e</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Emp#"</span><span class="p">,</span><span class="w">&nbsp;</span>
+</span><span id="__span-12-4"><span class="w">&nbsp; &nbsp; </span><span class="n">m</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Manager"</span><span class="p">,</span><span class="w">&nbsp;</span>
+</span><span id="__span-12-5"><span class="w">&nbsp; &nbsp; </span><span class="n">m</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Mgr#"</span>
+</span><span id="__span-12-6">
+</span><span id="__span-12-7"><span class="k">FROM</span><span class="w">&nbsp;</span>
+</span><span id="__span-12-8"><span class="w">&nbsp; &nbsp; </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-12-9"><span class="k">JOIN</span><span class="w">&nbsp;</span>
+</span><span id="__span-12-10"><span class="w">&nbsp; &nbsp; </span><span class="n">employees</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">MANAGER_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">EMPLOYEE_ID</span><span class="p">);</span>
+</span><span id="__span-12-11"><span class="w">&nbsp; &nbsp; </span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <hr>
 <h3 id="references">References</h3>
