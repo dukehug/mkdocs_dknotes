@@ -4,7 +4,7 @@
 set -e 
 
 #mkdocs build
-mkdocs build
+mkdocs build --clean
 
 sleep 10
 
