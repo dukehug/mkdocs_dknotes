@@ -867,7 +867,79 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="JOIN vs Sub-query">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlated-vs-non-correlated-sub-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlated vs. Non correlated Sub queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Union Queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Union Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union-vs-union-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UNION vs UNION ALL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UNION Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-developing-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Developing Queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-efficiency-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Efficiency Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Efficiency Considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1912,7 +1984,79 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="JOIN vs Sub-query">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlated-vs-non-correlated-sub-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correlated vs. Non correlated Sub queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Union Queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Union Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union-vs-union-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UNION vs UNION ALL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UNION Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-developing-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Developing Queries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-efficiency-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Efficiency Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Efficiency Considerations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2014,9 +2158,155 @@
 <ul>
 <li>Some queries could be accomplished by either a join or a sub-query </li>
 </ul>
+<p>Example:  What are the name and address of the customer who placed order number 1008??</p>
+<p><strong>JOIN</strong></p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><span class="k">SELECT</span>
+</span><span id="__span-3-2"><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerName</span><span class="p">,</span>
+</span><span id="__span-3-3"><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerAddress</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-4"><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerCity</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-5"><span class="w">    </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerPostalCode</span>
+</span><span id="__span-3-6"><span class="k">FROM</span><span class="w"> </span><span class="n">Customer_T</span><span class="w"> </span><span class="k">c</span><span class="w"> </span>
+</span><span id="__span-3-7"><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Order_T</span><span class="w"> </span><span class="n">o</span><span class="w"> </span>
+</span><span id="__span-3-8"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">c</span><span class="p">.</span><span class="n">CustomerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">CustomerID</span><span class="w"> </span>
+</span><span id="__span-3-9"><span class="k">WHERE</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">OrderID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1008</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Sub-query</strong> </p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">CustomerName</span><span class="p">,</span><span class="n">CustomerAddress</span><span class="p">,</span><span class="w">  </span><span class="c1">--Selected the column</span>
+</span><span id="__span-4-2"><span class="w">    </span><span class="n">CustomerCity</span><span class="p">,</span><span class="n">CustomerPostalCode</span><span class="w"> </span>
+</span><span id="__span-4-3"><span class="k">FROM</span><span class="w"> </span><span class="n">Customer_T</span><span class="w"> </span><span class="c1">-- Selected the table (Customer Table)</span>
+</span><span id="__span-4-4"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Customer_T</span><span class="p">.</span><span class="n">CustomerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="c1">--Main query condition </span>
+</span><span id="__span-4-5"><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">Order_T</span><span class="p">.</span><span class="n">CustomerID</span><span class="w">  </span><span class="c1">--this sub-query will return a customerID</span>
+</span><span id="__span-4-6"><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Order_T</span><span class="w"> </span><span class="c1">-- From Order table </span>
+</span><span id="__span-4-7"><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">OrderID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1008</span><span class="w"> </span><span class="c1">-- condition is OrderID == 1008</span>
+</span><span id="__span-4-8"><span class="w">    </span><span class="p">);</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Explain :  The <code>subquery</code> returns the <strong><code>CustomerID</code></strong> for <strong><code>OrderID 1008</code></strong>. Then, we use that ID to <strong><code>look up</code></strong> the customer's name and address in the <strong><code>Customer table</code></strong>.</p>
+<h2 id="correlated-vs-non-correlated-sub-queries">Correlated vs. Non correlated Sub queries</h2>
+<p><strong>Correlated</strong> 
+-  A correlated subquery depends on the outer query.
+- It runs once for every row of the outer query.
+- The inner query uses a value from outer query.
+- Can use the EXISTS operator</p>
+<p><strong>Logical</strong>
+- It runs once for every row of the outer query.</p>
 <p>Example:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="n">LAST_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="n">SALARY</span>
+</span><span id="__span-5-2"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e1</span>
+</span><span id="__span-5-3"><span class="k">WHERE</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="n">SALARY</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-4"><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">e2</span><span class="p">.</span><span class="n">SALARY</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-5-5"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e2</span><span class="w"> </span>
+</span><span id="__span-5-6"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">e2</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="c1">-- 這裡引用了外層的 e1</span>
+</span><span id="__span-5-7"><span class="p">);</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Non-Correlated Subquery</strong>
+- A non-conrrelated subquery is independent of the outer query .
+- It runs only once.
+- The result is used by the main query.</p>
+<p><strong>Logical</strong>
+- The subquery runs first, then returns the result to the main query. It only executes once.</p>
+<p>Example:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_NAME</span>
+</span><span id="__span-6-2"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-6-3"><span class="k">WHERE</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="c1">--sub-query start</span>
+</span><span id="__span-6-4"><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-6-5"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">departments</span>
+</span><span id="__span-6-6"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'IT'</span><span class="w"> </span><span class="c1">-- independent work</span>
+</span><span id="__span-6-7"><span class="p">);</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<h2 id="union-queries">Union Queries</h2>
+<ul>
+<li>Combine the output(union of multiple queries) together into a single result table . </li>
+</ul>
+<p><strong>UNION</strong>（聯集）是 SQL 中用來將多個查詢結果「<strong>垂直堆疊</strong>」在一起的語法。
+如果說 <strong>JOIN</strong> 是將兩張表 <strong>橫向(左右)</strong> 合併，那麼 UNION 就是將兩張表 <strong>縱向（上下）</strong> 合併。</p>
+<p>想像你有兩份名單：一份是「正式員工」，另一份是「約聘人員」。如果你想把這兩份名單拼成一張完整的「通訊錄」，你就會用到 <code>UNION</code></p>
+<p>Example: </p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">phone</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">FullTimeEmployees</span>
+</span><span id="__span-7-2">
+</span><span id="__span-7-3"><span class="k">UNION</span>
+</span><span id="__span-7-4">
+</span><span id="__span-7-5"><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">phone</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">ContractEmployees</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<h3 id="union-vs-union-all">UNION vs UNION ALL</h3>
+<ul>
+<li>
+<p><strong><code>UNION</code></strong>：會自動<strong>去除重複</strong>的資料。就像集合運算，如果兩張表都有同一個客戶，結果只會出現一次。</p>
+</li>
+<li>
+<p><strong><code>UNION ALL</code></strong>：<strong>不檢查重複</strong>，直接把所有結果疊加。</p>
+<ul>
+<li><strong>效能提示</strong>：<code>UNION ALL</code> 的執行速度比 <code>UNION</code> 快很多，因為它不需要花時間去比對和剔除重複項。如果你確定資料不會重複，請優先選 <code>UNION ALL</code>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="union-rules">UNION Rules</h3>
+<p>要成功把兩組數據「疊」在一起，必須滿足以下兩個條件：</p>
+<ol>
+<li>
+<p><strong>欄位數量必須相同</strong>：第一個 <code>SELECT</code> 查了 3 個欄位，第二個也必須是 3 個。</p>
+</li>
+<li>
+<p><strong>資料類型必須相容</strong>：第一個查詢的第一欄如果是「數字」，第二個查詢的第一欄也必須是「數字」（或能轉換成數字）。</p>
+</li>
+</ol>
+<h2 id="tips-for-developing-queries">Tips for Developing Queries</h2>
+<ul>
+<li>Be familiar with the data model (entities and relationships)</li>
+<li>Understand the desired results</li>
+<li>Know the attributes desired in results</li>
+<li>Identify the entities that contain desired attributes</li>
+<li>Review ERD</li>
+<li>Construct a WHERE equality for each link</li>
+<li>Fine tune with GROUP BY and HAVING clauses if needed </li>
+<li>Consider the effect on unusual data</li>
+</ul>
+<h2 id="query-efficiency-considerations">Query Efficiency Considerations</h2>
+<ul>
+<li>
+<p>Instead of SELECT  *   , identify the specific attributes in the SELECT cause; this helps reduce network traffic of result set.</p>
+</li>
+<li>
+<p>Limit the number of sub-queries; try to make everything done in a single query if possible </p>
+</li>
+<li>
+<p>If data is to be used many times, make a separate query and store it as a view.</p>
+</li>
+</ul>
 <hr>
 <h3 id="references">References</h3>
+<p>Module 6 - SQL Subquery </p>
+<p>Gemini - UNION vs UNION ALL  and  UNION Rules</p>
 
 
 
