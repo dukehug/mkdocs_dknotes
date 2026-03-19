@@ -2252,7 +2252,7 @@ Student name: Yong Lou, Xu</p>
 </span><span id="__span-5-22"><span class="p">);</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <h4 id="job_history-table">JOB_HISTORY Table</h4>
-<p>update: 02/03/2026  10:51PM</p>
+<p>update: 03/19/2026  1:20PM</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2279,33 +2279,35 @@ Student name: Yong Lou, Xu</p>
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">job_history</span><span class="p">(</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">job_history</span><span class="p">(</span>
 </span><span id="__span-6-2"><span class="w">    </span><span class="n">EMPLOYEE_ID</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 </span><span id="__span-6-3"><span class="w">    </span><span class="n">START_DATE</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-</span><span id="__span-6-4"><span class="w">    </span><span class="n">END_DATE</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">,</span>
+</span><span id="__span-6-4"><span class="w">    </span><span class="n">END_DATE</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
 </span><span id="__span-6-5"><span class="w">    </span><span class="n">JOB_ID</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
 </span><span id="__span-6-6"><span class="w">    </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
 </span><span id="__span-6-7">
 </span><span id="__span-6-8"><span class="w">    </span><span class="c1">-- check constraint</span>
 </span><span id="__span-6-9"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">chk_date_order</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">END_DATE</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">START_DATE</span><span class="p">),</span>
 </span><span id="__span-6-10">
-</span><span id="__span-6-11"><span class="w">    </span><span class="c1">--compsite primary key</span>
-</span><span id="__span-6-12"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_for_jobHistory</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">EMPLOYEE_ID</span><span class="p">,</span><span class="n">START_DATE</span><span class="p">);</span>
+</span><span id="__span-6-11"><span class="w">    </span><span class="c1">-- composite primary key</span>
+</span><span id="__span-6-12"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_for_jobHistory</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">EMPLOYEE_ID</span><span class="p">,</span><span class="w"> </span><span class="n">START_DATE</span><span class="p">),</span>
 </span><span id="__span-6-13">
-</span><span id="__span-6-14"><span class="w">    </span><span class="c1">--fk 1</span>
-</span><span id="__span-6-15"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Empolyee_ID</span>
+</span><span id="__span-6-14"><span class="w">    </span><span class="c1">-- fk 1</span>
+</span><span id="__span-6-15"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Employee_ID</span>
 </span><span id="__span-6-16"><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">EMPLOYEE_ID</span><span class="p">)</span>
 </span><span id="__span-6-17"><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">employees</span><span class="p">(</span><span class="n">EMPLOYEE_ID</span><span class="p">),</span>
 </span><span id="__span-6-18">
-</span><span id="__span-6-19"><span class="w">    </span><span class="c1">--fk 2</span>
+</span><span id="__span-6-19"><span class="w">    </span><span class="c1">-- fk 2</span>
 </span><span id="__span-6-20"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Job_ID_from_jobs_history</span>
 </span><span id="__span-6-21"><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">JOB_ID</span><span class="p">)</span>
 </span><span id="__span-6-22"><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">jobs</span><span class="p">(</span><span class="n">JOB_ID</span><span class="p">),</span>
-</span><span id="__span-6-23"><span class="w">    </span><span class="c1">--fk 3  </span>
-</span><span id="__span-6-24"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Department_ID_from_jobs_history</span>
-</span><span id="__span-6-25"><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
-</span><span id="__span-6-26"><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">departments</span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
-</span><span id="__span-6-27"><span class="p">);</span>
+</span><span id="__span-6-23">
+</span><span id="__span-6-24"><span class="w">    </span><span class="c1">-- fk 3  </span>
+</span><span id="__span-6-25"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_Department_ID_from_jobs_history</span>
+</span><span id="__span-6-26"><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
+</span><span id="__span-6-27"><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">departments</span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
+</span><span id="__span-6-28"><span class="p">);</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><span class="c1">-- rename table name</span>
