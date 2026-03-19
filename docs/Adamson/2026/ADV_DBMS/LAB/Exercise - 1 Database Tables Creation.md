@@ -137,37 +137,39 @@ CREATE TABLE employees(
 ```
 
 #### JOB_HISTORY Table
-update: 02/03/2026  10:51PM
+update: 03/19/2026  1:20PM
 
 ```sql
 
 CREATE TABLE job_history(
-	EMPLOYEE_ID NUMERIC(6) NOT NULL,
-	START_DATE DATE NOT NULL,
-	END_DATE DATE NOT NULL ,
-	JOB_ID VARCHAR(10),
-	DEPARTMENT_ID NUMERIC(4),
-	
-	-- check constraint
-	CONSTRAINT chk_date_order CHECK (END_DATE > START_DATE),
-	
-	--compsite primary key
-	CONSTRAINT PK_for_jobHistory PRIMARY KEY (EMPLOYEE_ID,START_DATE);
-	
-	--fk 1
-	CONSTRAINT FK_Empolyee_ID
-		FOREIGN KEY (EMPLOYEE_ID)
-		REFERENCES employees(EMPLOYEE_ID),
-	
-	--fk 2
-	CONSTRAINT FK_Job_ID_from_jobs_history
-		FOREIGN KEY (JOB_ID)
-		REFERENCES jobs(JOB_ID),
-	--fk 3	
-	CONSTRAINT FK_Department_ID_from_jobs_history
-		FOREIGN KEY (DEPARTMENT_ID)
-		REFERENCES departments(DEPARTMENT_ID)
+    EMPLOYEE_ID NUMERIC(6) NOT NULL,
+    START_DATE DATE NOT NULL,
+    END_DATE DATE NOT NULL,
+    JOB_ID VARCHAR(10),
+    DEPARTMENT_ID NUMERIC(4),
+
+    -- check constraint
+    CONSTRAINT chk_date_order CHECK (END_DATE > START_DATE),
+
+    -- composite primary key
+    CONSTRAINT PK_for_jobHistory PRIMARY KEY (EMPLOYEE_ID, START_DATE),
+
+    -- fk 1
+    CONSTRAINT FK_Employee_ID
+        FOREIGN KEY (EMPLOYEE_ID)
+        REFERENCES employees(EMPLOYEE_ID),
+
+    -- fk 2
+    CONSTRAINT FK_Job_ID_from_jobs_history
+        FOREIGN KEY (JOB_ID)
+        REFERENCES jobs(JOB_ID),
+    
+    -- fk 3  
+    CONSTRAINT FK_Department_ID_from_jobs_history
+        FOREIGN KEY (DEPARTMENT_ID)
+        REFERENCES departments(DEPARTMENT_ID)
 );
+
 
 ```
 
