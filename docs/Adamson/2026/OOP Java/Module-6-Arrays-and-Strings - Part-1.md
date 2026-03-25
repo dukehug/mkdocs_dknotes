@@ -11,6 +11,8 @@ Author:  Duke Hsu
 
 ## Arrays
 
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
 - One dimensional Array (one row of data )
 - Multidimensional Array( multidimensional of data)
 - In Java , arrays are designed to be homogeneous, meaning they can only store values of a single, consistent data type. 
