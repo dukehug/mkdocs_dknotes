@@ -30,7 +30,7 @@ Arrays are used to store multiple values in a single variable, instead of declar
 - Elements are automatically initialized to default values 
 - 0 for `int`, `null` for objects, `false` for boolean
 
-!!!waring
+!!! warning "Important Note"
 	**In Java, once an array is defined, its size cannot be changed.**
 
 
