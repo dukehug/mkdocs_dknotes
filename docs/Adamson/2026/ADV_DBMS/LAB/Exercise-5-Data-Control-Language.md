@@ -8,7 +8,7 @@ Tags: #ADV_DBMS
 Author:  Duke Hsu
 
 ---
-![dcl_key_concepts](../../../assets/images/dcl_key_concepts.png)
+![dcl_key_concepts](../../../../assets/images/dcl_key_concepts.png)
 
 ## Key concepts 
 
