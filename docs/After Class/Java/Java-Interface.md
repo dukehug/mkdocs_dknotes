@@ -16,7 +16,7 @@ Author:  Duke Hsu
 - classes can apply more than one interface, 
 
 
-![java_interface_banksys](../../../../assets/images/java_interface_banksys.jpeg)
+![java_interface_banksys](../../../assets/images/java_interface_banksys.jpeg)
 
 
 

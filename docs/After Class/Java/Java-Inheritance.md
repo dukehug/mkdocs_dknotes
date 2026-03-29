@@ -9,7 +9,7 @@ Author:  Duke Hsu
 
 ---
 
-![java_inheritance](../../../../assets/images/java_inheritance.jpeg)
+![java_inheritance](../../../assets/images/java_inheritance.jpeg)
 
 ## Key Concepts
 
