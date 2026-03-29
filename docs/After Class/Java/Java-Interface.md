@@ -15,6 +15,11 @@ Author:  Duke Hsu
 - interface similar to inheritance, but specifies what a class has/ must do.
 - classes can apply more than one interface, 
 
+
+![java_interface_banksys](../../../../assets/images/java_interface_banksys.jpeg)
+
+
+
 ## Code Example:
 
 - Bank Class
