@@ -10,28 +10,28 @@
       
       
       
-        <link rel="prev" href="../Exercise%20-%202%20%20DDL%20Insterting%20Data/">
+        <link rel="prev" href="../Module-7-DataControlLanguage/">
       
       
-        <link rel="next" href="../Exercise-3-SQL-Join/">
+        <link rel="next" href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Exercise 2 SELECT statement with Aggregate Functions (Transact SQL) - Duke's Study notes</title>
+        <title>Module - 8 Database Objects - Part 1 - View - Duke's Study notes</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -50,15 +50,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#references" class="md-skip">
+        <a href="#module-8-database-objects-part-1-view" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Duke's Study notes" class="md-header__button md-logo" aria-label="Duke's Study notes" data-md-component="logo">
+    <a href="../../../.." title="Duke's Study notes" class="md-header__button md-logo" aria-label="Duke's Study notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercise   2 SELECT statement with Aggregate Functions (Transact SQL)
+              Module - 8 Database Objects - Part 1 - View
             
           </span>
         </div>
@@ -239,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../../Change_log/" class="md-tabs__link">
+      <a href="../../../../Change_log/" class="md-tabs__link">
         
   
   
@@ -281,7 +281,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../About_This_Category/" class="md-tabs__link">
+        <a href="../../../About_This_Category/" class="md-tabs__link">
           
   
   
@@ -308,7 +308,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../After%20Class/DBMS/MSSQL%20Database%20Backup%20and%20Restore/" class="md-tabs__link">
+        <a href="../../../../After%20Class/DBMS/MSSQL%20Database%20Backup%20and%20Restore/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Duke's Study notes" class="md-nav__button md-logo" aria-label="Duke's Study notes" data-md-component="logo">
+    <a href="../../../.." title="Duke's Study notes" class="md-nav__button md-logo" aria-label="Duke's Study notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -375,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -402,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Change_log/" class="md-nav__link">
+      <a href="../../../../Change_log/" class="md-nav__link">
         
   
   
@@ -486,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../About_This_Category/" class="md-nav__link">
+      <a href="../../../About_This_Category/" class="md-nav__link">
         
   
   
@@ -625,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module%201%20-%20Introduction%20SQL/" class="md-nav__link">
+      <a href="../Module%201%20-%20Introduction%20SQL/" class="md-nav__link">
         
   
   
@@ -653,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/" class="md-nav__link">
+      <a href="../Module%202%20-%20Data%20Definition%20Language%20%20%28DDL%29/" class="md-nav__link">
         
   
   
@@ -681,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module%203%20-%20Data%20Manipulation%20Language%20-%20Part%201%20%20INSERT/" class="md-nav__link">
+      <a href="../Module%203%20-%20Data%20Manipulation%20Language%20-%20Part%201%20%20INSERT/" class="md-nav__link">
         
   
   
@@ -709,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module%204%20-%20Data%20Manipulation%20Language%20-Part%202%20Select/" class="md-nav__link">
+      <a href="../Module%204%20-%20Data%20Manipulation%20Language%20-Part%202%20Select/" class="md-nav__link">
         
   
   
@@ -737,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module%205%20-%20SQL%20Joins/" class="md-nav__link">
+      <a href="../Module%205%20-%20SQL%20Joins/" class="md-nav__link">
         
   
   
@@ -765,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module-6-SQL-Subquery/" class="md-nav__link">
+      <a href="../Module-6-SQL-Subquery/" class="md-nav__link">
         
   
   
@@ -793,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Module-7-DataControlLanguage/" class="md-nav__link">
+      <a href="../Module-7-DataControlLanguage/" class="md-nav__link">
         
   
   
@@ -818,10 +818,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Module-8-DatabaseObjects/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module - 8 Database Objects - Part 1 - View
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -837,6 +864,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-tables-of-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two tables of Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-view-from-multiple-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a View From Multiple Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alter-view-statement-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALTER view Statement (SQL Server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-complex-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Complex View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-rules-for-dml-on-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Rules for DML on Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-with-check-option-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the WITH CHECK OPTION Clause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-with-read-only-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the WITH READ ONLY Clause
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing a View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing a View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -846,8 +1043,6 @@
                 
   
   
-    
-  
   
   
     
@@ -860,11 +1055,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9">
         
           
           <label class="md-nav__link" for="__nav_3_2_1_9" id="__nav_3_2_1_9_label" tabindex="0">
@@ -885,7 +1080,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_1_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -903,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercise%20-%201%20Database%20Tables%20Creation/" class="md-nav__link">
+      <a href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/" class="md-nav__link">
         
   
   
@@ -931,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercise%20-%202%20%20DDL%20Insterting%20Data/" class="md-nav__link">
+      <a href="../LAB/Exercise%20-%202%20%20DDL%20Insterting%20Data/" class="md-nav__link">
         
   
   
@@ -956,35 +1151,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Exercise   2 SELECT statement with Aggregate Functions (Transact SQL)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../LAB/Exercise%20-%202%20SELECT%20statement%20with%20Aggregate%20Functions%20%28Transact-SQL%29/" class="md-nav__link">
         
   
   
@@ -1000,35 +1170,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References:
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1041,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercise-3-SQL-Join/" class="md-nav__link">
+      <a href="../LAB/Exercise-3-SQL-Join/" class="md-nav__link">
         
   
   
@@ -1069,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercise-4-Subqueries/" class="md-nav__link">
+      <a href="../LAB/Exercise-4-Subqueries/" class="md-nav__link">
         
   
   
@@ -1097,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Exercise-5-Data-Control-Language/" class="md-nav__link">
+      <a href="../LAB/Exercise-5-Data-Control-Language/" class="md-nav__link">
         
   
   
@@ -1125,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LAB%20Class%20Note%20-%2002182026/" class="md-nav__link">
+      <a href="../LAB/LAB%20Class%20Note%20-%2002182026/" class="md-nav__link">
         
   
   
@@ -1221,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module%201%20-%20Introduction%20to%20Object%20Oriented%20Programming/" class="md-nav__link">
         
   
   
@@ -1249,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module%202%20-%20OOP%20Fundamentals%20Part%201/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module%202%20-%20OOP%20Fundamentals%20Part%201/" class="md-nav__link">
         
   
   
@@ -1277,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module%202%20-%20OOP%20Fundamentals%20Part%202/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module%202%20-%20OOP%20Fundamentals%20Part%202/" class="md-nav__link">
         
   
   
@@ -1305,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module%203%20-%20Java%20Basics/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module%203%20-%20Java%20Basics/" class="md-nav__link">
         
   
   
@@ -1333,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module-4-Control-Structures-Conditional-Statements/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module-4-Control-Structures-Conditional-Statements/" class="md-nav__link">
         
   
   
@@ -1361,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module-5-Control-Structures-LoopStatement/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module-5-Control-Structures-LoopStatement/" class="md-nav__link">
         
   
   
@@ -1389,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module-6-Arrays-and-Strings%20-%20Part-1/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module-6-Arrays-and-Strings%20-%20Part-1/" class="md-nav__link">
         
   
   
@@ -1417,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/Module-6-Arrays-andString-Part-2/" class="md-nav__link">
+      <a href="../../OOP%20Java/Module-6-Arrays-andString-Part-2/" class="md-nav__link">
         
   
   
@@ -1497,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/LAB/Java%20Tutorial/" class="md-nav__link">
+      <a href="../../OOP%20Java/LAB/Java%20Tutorial/" class="md-nav__link">
         
   
   
@@ -1525,7 +1666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/LAB/LAB%20-%20Activity%20-%2002182026/" class="md-nav__link">
+      <a href="../../OOP%20Java/LAB/LAB%20-%20Activity%20-%2002182026/" class="md-nav__link">
         
   
   
@@ -1553,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/LAB/LAB-Activity-03042026/" class="md-nav__link">
+      <a href="../../OOP%20Java/LAB/LAB-Activity-03042026/" class="md-nav__link">
         
   
   
@@ -1581,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/LAB/LAB-Activity-03112026/" class="md-nav__link">
+      <a href="../../OOP%20Java/LAB/LAB-Activity-03112026/" class="md-nav__link">
         
   
   
@@ -1609,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/LAB/LAB-Activity-03252026/" class="md-nav__link">
+      <a href="../../OOP%20Java/LAB/LAB-Activity-03252026/" class="md-nav__link">
         
   
   
@@ -1637,7 +1778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP%20Java/LAB/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/" class="md-nav__link">
+      <a href="../../OOP%20Java/LAB/OOP%20Introduction%20and%20%20%20UML%20Class%20Diagram/" class="md-nav__link">
         
   
   
@@ -1733,7 +1874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Quantitative%20Methods/Linear%20Programming%20Problem%20by%20Graphing%20Method/" class="md-nav__link">
+      <a href="../../Quantitative%20Methods/Linear%20Programming%20Problem%20by%20Graphing%20Method/" class="md-nav__link">
         
   
   
@@ -1761,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Quantitative%20Methods/Module%201%20-%20Introduction%20to%20Operations%20Research/" class="md-nav__link">
+      <a href="../../Quantitative%20Methods/Module%201%20-%20Introduction%20to%20Operations%20Research/" class="md-nav__link">
         
   
   
@@ -1789,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Quantitative%20Methods/Module%201%20Part%202%20-%20Linear%20Inequalities/" class="md-nav__link">
+      <a href="../../Quantitative%20Methods/Module%201%20Part%202%20-%20Linear%20Inequalities/" class="md-nav__link">
         
   
   
@@ -1817,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Quantitative%20Methods/Module%204%20-%20Simplex%20Method/" class="md-nav__link">
+      <a href="../../Quantitative%20Methods/Module%204%20-%20Simplex%20Method/" class="md-nav__link">
         
   
   
@@ -1845,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Quantitative%20Methods/Module-4-SimplexMethod-Part2/" class="md-nav__link">
+      <a href="../../Quantitative%20Methods/Module-4-SimplexMethod-Part2/" class="md-nav__link">
         
   
   
@@ -1873,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Quantitative%20Methods/Module-6-Transportation-Model/" class="md-nav__link">
+      <a href="../../Quantitative%20Methods/Module-6-Transportation-Model/" class="md-nav__link">
         
   
   
@@ -2028,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../After%20Class/DBMS/MSSQL%20Database%20Backup%20and%20Restore/" class="md-nav__link">
+      <a href="../../../../After%20Class/DBMS/MSSQL%20Database%20Backup%20and%20Restore/" class="md-nav__link">
         
   
   
@@ -2116,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../After%20Class/Java/JAVA-Type-Casting/" class="md-nav__link">
+      <a href="../../../../After%20Class/Java/JAVA-Type-Casting/" class="md-nav__link">
         
   
   
@@ -2144,7 +2285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../After%20Class/Java/Java-Constructor/" class="md-nav__link">
+      <a href="../../../../After%20Class/Java/Java-Constructor/" class="md-nav__link">
         
   
   
@@ -2172,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../After%20Class/Java/Java-Inheritance/" class="md-nav__link">
+      <a href="../../../../After%20Class/Java/Java-Inheritance/" class="md-nav__link">
         
   
   
@@ -2200,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../After%20Class/Java/Java-Interface/" class="md-nav__link">
+      <a href="../../../../After%20Class/Java/Java-Interface/" class="md-nav__link">
         
   
   
@@ -2253,6 +2394,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2261,13 +2404,152 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        References:
+        Key Concepts
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-tables-of-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two tables of Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-view-from-multiple-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a View From Multiple Tables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alter-view-statement-sql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALTER view Statement (SQL Server)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-complex-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Complex View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-rules-for-dml-on-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Rules for DML on Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-with-check-option-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the WITH CHECK OPTION Clause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-with-read-only-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the WITH READ ONLY Clause
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing a View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing a View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2291,151 +2573,253 @@
   
 
 
-  <h1>Exercise   2 SELECT statement with Aggregate Functions (Transact SQL)</h1>
-
-<p>2026-02-11 16:01</p>
-<p>Tags: #ADV_DBMS<br>
-Author:  Duke Hsu</p>
+<h1 id="module-8-database-objects-part-1-view">Module - 8  Database Objects - Part 1 - View</h1>
+<p>2026-03-31 17:25</p>
+<p>Tags: #ADV_DBMS </p>
+<p>Author:  Duke Hsu</p>
 <hr>
-<p>Exercise 2 – SELECT statement with  Aggregate Functions (Transact-SQL)</p>
-<ol>
-<li>Write a query to find all employees whose Annual Salary (Salary * 12) is greater than $100,000 AND they work in Department 60 or 100, OR they have a commission.</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-0-2"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">SALARY</span><span class="w"> </span><span class="o">*</span><span class="mi">12</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
-</span><span id="__span-0-3"><span class="w">        </span><span class="k">OR</span><span class="w"> </span><span class="n">COMMISSION_PCT</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w">  </span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to find the unique Department IDs where employees have 'Clerk' in their Job ID, earn more than $2,500 after a $200 bonus is added, and report to Manager 114."</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-1-2"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">JOB_ID</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%Clerk'</span>
-</span><span id="__span-1-3"><span class="w">        </span><span class="k">AND</span><span class="p">(</span><span class="n">SALARY</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2500</span>
-</span><span id="__span-1-4"><span class="w">        </span><span class="k">AND</span><span class="w"> </span><span class="n">MANAGER_ID</span><span class="w"> </span><span class="o">=</span><span class="mi">114</span><span class="p">;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display the last name and salary for any employee whose salary is not in the range of $5,000 to $12,000</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">SALARY</span><span class="w">  </span>
-</span><span id="__span-2-2"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w">  </span>
-</span><span id="__span-2-3"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">WHERE</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">5000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">12000</span><span class="p">;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display the last name and salary of employees who earn between $5,000 and $12,000, and are in department 20 or 50. Label the columns Employee and Monthly Salary</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Employee"</span><span class="p">,</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Monthly Salary"</span><span class="w">  </span>
-</span><span id="__span-3-2"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w">  </span>
-</span><span id="__span-3-3"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">WHERE</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">5000</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">12000</span><span class="w">  </span>
-</span><span id="__span-3-4"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">AND</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="k">IN</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to Display the last name, job ID, and hire date of employees who belong to departments 10, 20, and 30, and sort the results in ascending order by hire date.</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="p">,</span><span class="n">JOB_ID</span><span class="p">,</span><span class="n">HIRE_DATE</span><span class="w">  </span>
-</span><span id="__span-4-2"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w">  </span>
-</span><span id="__span-4-3"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">WHERE</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-4-4"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">HIRE_DATE</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to Display the total number of employees whose last name has “a” as the third character.</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Total Employees"</span><span class="w">  </span>
-</span><span id="__span-5-2"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w">  </span>
-</span><span id="__span-5-3"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">WHERE</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'__a%'</span><span class="p">;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display the average salary per department.</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="c1">--use join table ,display the department name </span>
-</span><span id="__span-6-2"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">SALARY</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Average Salary"</span><span class="w">  </span>
-</span><span id="__span-6-3"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span><span class="w">  </span>
-</span><span id="__span-6-4"><span class="w">&nbsp; &nbsp; </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w">  </span>
-</span><span id="__span-6-5"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">;</span>
-</span><span id="__span-6-6"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span>
-</span><span id="__span-6-7"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span>
-</span><span id="__span-6-8"><span class="w">&nbsp;</span><span class="c1">--department id </span>
-</span><span id="__span-6-9"><span class="w">&nbsp;</span><span class="k">SELECT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">SALARY</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Average Salary"</span>
-</span><span id="__span-6-10"><span class="w">    &nbsp;</span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-6-11"><span class="w">    &nbsp;</span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="p">;</span>
-</span><span id="__span-6-12"><span class="w">&nbsp;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display the earliest hire date and the most recent hire date of all employees.</li>
-</ol>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="objectives">Objectives</h3>
+<ul>
+<li>Table  <ul>
+<li>Basic unit of storage; composed of rows </li>
+</ul>
+</li>
+<li>
+<p>View</p>
+<ul>
+<li>Logically represents subsets of data from one or more tables.</li>
+</ul>
+</li>
+<li>
+<p>Sequence</p>
+<ul>
+<li>Generates numeric values</li>
+</ul>
+</li>
+<li>Index<ul>
+<li>Improves the performance of data retrieval queries </li>
+</ul>
+</li>
+<li>Synonym<ul>
+<li>Gives alternative names to objects</li>
+</ul>
+</li>
+</ul>
+<h3 id="view">View</h3>
+<ul>
+<li>An SQL view is a virtual table based on the result-set of an SQL statement. </li>
+<li>An SQL view contains rows and columns, just like a real table .</li>
+<li>The fields in the view are fields from one or more real tables in the database.</li>
+</ul>
+<h4 id="two-tables-of-views">Two tables of Views</h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Simple Views</th>
+<th>Complex Views</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of tables</td>
+<td>One</td>
+<td>One or more</td>
+</tr>
+<tr>
+<td>Contain functions</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Contain groups of data</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DML Operations through a view</td>
+<td>Yes</td>
+<td>Not always</td>
+</tr>
+<tr>
+<td>## Create a View From One Table</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Syntax:</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">HIRE_DATE</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"EarliestHireDate"</span><span class="p">,</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">HIRE_DATE</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"RecentHireDate"</span><span class="w">  </span>
-</span><span id="__span-7-2"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
-</span><span id="__span-7-3"><span class="w">&nbsp; &nbsp; </span>
-</span><span id="__span-7-4"><span class="w">&nbsp; &nbsp; </span>
-</span><span id="__span-7-5"><span class="c1">--group by last name </span>
-</span><span id="__span-7-6"><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Employee"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">HIRE_DATE</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Hire Date"</span>
-</span><span id="__span-7-7"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-7-8"><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">LAST_NAME</span>
-</span><span id="__span-7-9"><span class="w">            </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">HIRE_DATE</span><span class="p">;</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">view_name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span>
+</span><span id="__span-0-2"><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-0-3"><span class="w">    </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">.....</span>
+</span><span id="__span-0-4"><span class="k">FROM</span>
+</span><span id="__span-0-5"><span class="w">    </span><span class="k">table_name</span><span class="w"> </span>
+</span><span id="__span-0-6"><span class="k">WHERE</span><span class="w"> </span>
+</span><span id="__span-0-7"><span class="w">    </span><span class="n">condition</span><span class="p">;</span><span class="w"> </span>
 </span></code></pre></div></td></tr></tbody></table></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>when <code>SELECT</code> with <code>MIN()</code> , they can't add other  field 
-在使用 <strong>MIN()</strong> 和 <strong>MAX()</strong> 這類聚合函數時，不能直接選擇其他列（如 <strong>LAST_NAME</strong>）的值</p>
-</div>
-<ol>
-<li>Write a query to display the total salary paid for each Job ID.</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">JOB_ID</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">SALARY</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"Total Salary"</span>
-</span><span id="__span-8-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-8-3"><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">JOB_ID</span><span class="p">;</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display the departments that have more than 5 employees whose first name has “e” as the second character.</li>
-</ol>
+<p>Example: </p>
+<p>Create a View named <code>empuv80</code> from the table <code>employees</code>.</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span>
-</span><span id="__span-9-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-9-3"><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">FIRST_NAME</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'_e%'</span>
-</span><span id="__span-9-4"><span class="w">            </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span>
-</span><span id="__span-9-5"><span class="w">                </span><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">empuv80</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-1-2"><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-1-3"><span class="w">    </span><span class="n">employee_id</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">salary</span>
+</span><span id="__span-1-4"><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-1-5"><span class="w">    </span><span class="n">employees</span>
+</span><span id="__span-1-6"><span class="k">WHERE</span><span class="w"> </span>
+</span><span id="__span-1-7"><span class="w">    </span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
 </span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display departments where the average salary is greater than 50,000.</li>
-</ol>
+<p>Retrieving Data from a View</p>
+<div class="language-SQL highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="c1">-- same output </span>
+</span><span id="__span-2-2"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-2-3"><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-2-4"><span class="w">    </span><span class="n">empuv80</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Output</p>
+<p>employee_id                             last_name                 salary</p>
+<hr>
+<p>202                                     Mitchell                  8500.00
+203                                     Johnson                   8200.00
+207                                     Brown                     8000.00</p>
+<p>Creating a View by using column aliases in the subquery </p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">salvu50</span>
+</span><span id="__span-3-2"><span class="k">AS</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">employee_id</span><span class="w"> </span><span class="n">ID_NUMBER</span><span class="p">,</span>
+</span><span id="__span-3-3"><span class="w">&nbsp; </span><span class="n">last_name</span><span class="w"> </span><span class="n">LNAME</span><span class="p">,</span>
+</span><span id="__span-3-4"><span class="w">&nbsp; </span><span class="n">salary</span><span class="o">*</span><span class="mi">12</span><span class="w"> </span><span class="n">ANN_SALARY</span>
+</span><span id="__span-3-5"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-3-6"><span class="k">WHERE</span><span class="w"> </span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Retrieving Data from a View</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-4-2"><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-4-3"><span class="w">    </span><span class="n">salvu50</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Output</p>
+<p>ID_NUMBER                     LNAME          ANN_SALARY              </p>
+<hr>
+<p>120                                     Weiss                     96000.00                             <br>
+121                                     Fripp                     98400.00                              <br>
+122                                     Kaufling                  94800.00                              <br>
+123                                     Vollman                   78000.00                            <br>
+124                                     Mourgos                   69600.00                            </p>
+<h3 id="create-a-view-from-multiple-tables">Create a View From Multiple Tables</h3>
+<ul>
+<li>To create a view from multiple tables we can simply include multiple tables in the SELECT statement. </li>
+</ul>
+<p>Syntax:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">view_name</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-5-2"><span class="k">SELECT</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="n">column2</span><span class="p">.....</span>
+</span><span id="__span-5-3"><span class="k">FROM</span><span class="w"> </span><span class="n">table_1</span><span class="p">,</span><span class="w"> </span><span class="n">table_2</span>
+</span><span id="__span-5-4"><span class="k">WHERE</span><span class="w"> </span><span class="n">table_1</span><span class="p">.</span><span class="n">column1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table_2</span><span class="p">.</span><span class="n">column1</span><span class="p">;</span><span class="w"> </span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="k">ALTER</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">multiple_table</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-6-2"><span class="k">SELECT</span><span class="w"> </span><span class="n">countries</span><span class="p">.</span><span class="n">REGION_ID</span><span class="p">,</span><span class="w"> </span><span class="n">countries</span><span class="p">.</span><span class="n">COUNTRY_NAME</span><span class="p">,</span><span class="w">  </span><span class="n">regions</span><span class="p">.</span><span class="n">REGION_NAME</span>
+</span><span id="__span-6-3"><span class="k">FROM</span><span class="w"> </span><span class="n">countries</span><span class="p">,</span><span class="w"> </span><span class="n">regions</span>
+</span><span id="__span-6-4"><span class="k">WHERE</span><span class="w"> </span><span class="n">countries</span><span class="p">.</span><span class="n">REGION_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">regions</span><span class="p">.</span><span class="n">REGION_ID</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Retrieving Data from a View</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-7-2"><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-7-3"><span class="w">    </span><span class="n">multiple_table</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Output  </p>
+<p>REGION_ID                               COUNTRY_NAME                             REGION_NAME</p>
+<hr>
+<p>2                                       Argentina                                Americas
+3                                       Australia                                Asia
+1                                       Belgium                                  Europe</p>
+<h3 id="alter-view-statement-sql-server">ALTER view Statement (SQL Server)</h3>
+<ul>
+<li>In SQL server , a view can be updated with the ALTER VIEW statement. </li>
+</ul>
+<p>Syntax:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><span class="k">ALTER</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">view_name</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-8-2"><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="n">column3</span><span class="p">.....</span>
+</span><span id="__span-8-3"><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+</span><span id="__span-8-4"><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example:</p>
+<p>The following  SQL adds the <code>job_id</code> column to the <code>salvu50</code> view.</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><span class="k">ALTER</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">salvu50</span><span class="w"> </span>
+</span><span id="__span-9-2"><span class="k">AS</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">employee_id</span><span class="w"> </span><span class="n">ID_NUMBER</span><span class="p">,</span>
+</span><span id="__span-9-3"><span class="w">&nbsp; </span><span class="n">last_name</span><span class="w"> </span><span class="n">LNAME</span><span class="p">,</span>
+</span><span id="__span-9-4"><span class="w">&nbsp; </span><span class="n">salary</span><span class="o">*</span><span class="mi">12</span><span class="w"> </span><span class="n">ANN_SALARY</span><span class="p">,</span>
+</span><span id="__span-9-5"><span class="w">&nbsp; </span><span class="n">job_id</span><span class="w"> </span><span class="n">JOB_TITLE</span>
+</span><span id="__span-9-6"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-9-7"><span class="k">WHERE</span><span class="w"> </span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Output</p>
+<p>ID_NUMBER                               LNAME                     ANN_SALARY              JOB_TITLE</p>
+<hr>
+<p>120                                     Weiss                     96000.00                                ST_MAN
+121                                     Fripp                     98400.00                                ST_MAN
+122                                     Kaufling                  94800.00                                ST_MAN
+123                                     Vollman                   78000.00                                ST_MAN
+124                                     Mourgos                   69600.00                                ST_MAN</p>
+<h3 id="creating-a-complex-view">Creating a Complex View</h3>
+<div class="admonition note waring note">
+<p class="admonition-title">Note</p>
+<p>Complex views are mostly ready-only . Can include: INNER JOIN, LEFT JOIN, GROUP BY, HAVING , Subqueries.</p>
+</div>
+<ul>
+<li>Complex view - A saved SELECT statement that combines multiple tables and performs calculations. </li>
+</ul>
+<p>Syntax:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><span class="k">CREATE</span><span class="w"> </span><span class="n">view_name</span>
+</span><span id="__span-10-2"><span class="k">AS</span>
+</span><span id="__span-10-3"><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="n">column2</span><span class="p">,</span><span class="n">column3</span><span class="p">.....</span>
+</span><span id="__span-10-4"><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
+</span><span id="__span-10-5"><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">condition</span>
+</span><span id="__span-10-6"><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+</span><span id="__span-10-7"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">column1</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example:</p>
+<p>Create a complex view that contains group functions to display values from two tables.</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2446,72 +2830,163 @@ Author:  Duke Hsu</p>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span>
-</span><span id="__span-10-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-10-3"><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span>
-</span><span id="__span-10-4"><span class="w">            </span><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">SALARY</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span>
-</span><span id="__span-10-5">
-</span><span id="__span-10-6">
-</span><span id="__span-10-7">
-</span><span id="__span-10-8"><span class="c1">--display department name </span>
-</span><span id="__span-10-9"><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="w"> </span>
-</span><span id="__span-10-10"><span class="w">&nbsp; &nbsp; </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span><span class="w">  </span>
-</span><span id="__span-10-11"><span class="w">&nbsp; &nbsp; </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w">  </span>
-</span><span id="__span-10-12"><span class="w">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span>
-</span><span id="__span-10-13"><span class="w">    &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">SALARY</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">vw_DepartmentSummary</span>
+</span><span id="__span-11-2"><span class="k">AS</span>
+</span><span id="__span-11-3"><span class="k">SELECT</span>
+</span><span id="__span-11-4"><span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="p">,</span>
+</span><span id="__span-11-5"><span class="w">    </span><span class="n">d</span><span class="p">.</span><span class="n">department_name</span><span class="p">,</span>
+</span><span id="__span-11-6"><span class="k">COUNT</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">employee_id</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TotalEmployees</span><span class="p">,</span>
+</span><span id="__span-11-7"><span class="k">AVG</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">AvgSalary</span>
+</span><span id="__span-11-8"><span class="k">FROM</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-11-9"><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-11-10"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span>
+</span><span id="__span-11-11"><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">DEPARTMENT_NAME</span><span class="p">;</span>
 </span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display departments where the most recent hire date is after January 1, 1990.</li>
-</ol>
+<p>Retrieving Data from a View</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="w"> </span>
-</span><span id="__span-11-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-11-3"><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span>
-</span><span id="__span-11-4"><span class="w">            </span><span class="k">HAVING</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">HIRE_DATE</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'1990-01-01'</span><span class="p">;</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span>
+</span><span id="__span-12-2"><span class="w">     </span><span class="n">vw_DepartmentSummary</span>
 </span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query to display the department and the number of employees who have both “a” and “e” in their last name and either their JobID is 'IT_PROG' or their HireDate is before January 5, 1997, grouped by department and sorted in ascending order by last name.</li>
-</ol>
+<p>output</p>
+<p>department_id           department_name            TotalEmployees         AvgSalary</p>
+<hr>
+<p>20                                      Marketing                     2                          9500.000000
+30                                      Purchasing                   6                       4150.000000
+40                                      Human Resources       1                       6800.000000
+50                                      Shipping                       6                          6600.000000
+60                                      IT                                   8                            5912.500000
+80                                      Sales                             9                         10033.333333
+90                                      Executive                      3                      19333.333333
+100                                     Finance                        7                        8300.000000</p>
+<h3 id="key-rules-for-dml-on-views">Key Rules for DML on Views</h3>
+<ul>
+<li>
+<p><strong>Single Base Table</strong>: The view must reference only one underlying table for simple inserts and updates.</p>
+</li>
+<li>
+<p><strong>No Aggregation or Grouping</strong>: Views containing GROUP BY, HAVING, or DISTINCT are not updatable.</p>
+</li>
+<li>
+<p><strong>No Computed Columns</strong>: You cannot update a column that is defined by an expression or a function (e.g., salary * 12).</p>
+</li>
+<li>
+<p><strong>NOT NULL Constraints</strong>: If a NOT NULL column in the base table is omitted from the view, you cannot perform an INSERT.</p>
+</li>
+<li>
+<p><strong>WITH CHECK OPTION</strong>: If defined with this clause, you cannot update or insert rows that do not satisfy the view’s WHERE clause.</p>
+</li>
+<li>
+<p><strong>Multi-Table Views</strong>: Updates can sometimes be performed on a single table within a join, but inserting is typically prohibited unless it meets strict key-preserved table rules.</p>
+</li>
+<li>
+<p><strong>Read-Only Views</strong>: Views created with the READ ONLY clause or using complex queries cannot be used for DML operations</p>
+</li>
+</ul>
+<h3 id="using-the-with-check-option-clause">Using the WITH CHECK OPTION Clause</h3>
+<ul>
+<li>The WITH CEHCK OPTION is used when creating a view to enforce the view's condition during INSERT or UPDATE</li>
+<li>It ensures that any data modified through the view must still satisfy the WHERE condition of the view.</li>
+</ul>
+<div class="admonition note without check option">
+<p class="admonition-title">Note</p>
+<p>You can insert data that is NOT visible in the view.</p>
+</div>
+<div class="admonition note with check option">
+<p class="admonition-title">Note</p>
+<p>You can ONLY insert / update data that remains visible in the view.</p>
+</div>
+<p>Syntax:</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><span class="k">SELECT</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">EmployeeCount</span>
-</span><span id="__span-12-2"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employees</span>
-</span><span id="__span-12-3"><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%a%'</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%e%'</span><span class="p">)</span>
-</span><span id="__span-12-4"><span class="w">          </span><span class="k">AND</span><span class="w"> </span><span class="p">(</span><span class="n">JOB_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'IT_PROG'</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">HIRE_DATE</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">'1997-01-05'</span><span class="p">)</span>
-</span><span id="__span-12-5"><span class="w">        </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">DEPARTMENT_ID</span>
-</span><span id="__span-12-6"><span class="w">        </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">EmployeeCount</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span><span class="w">   </span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">view_name</span>
+</span><span id="__span-13-2"><span class="k">AS</span>
+</span><span id="__span-13-3"><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="n">column2</span><span class="p">....</span>
+</span><span id="__span-13-4"><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+</span><span id="__span-13-5"><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+</span><span id="__span-13-6"><span class="k">WITH</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
 </span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Write a query that describes the structure of the employees table.</li>
-</ol>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><span class="k">EXEC</span><span class="w"> </span><span class="n">sp_help</span><span class="w"> </span><span class="s1">'employees'</span>
-</span></code></pre></div></td></tr></tbody></table></div>
-<ol>
-<li>Modify the employees table to add foreign key constraint on department_id with ON DELETE CASCADE and ON UPDATE CASCADE.</li>
-</ol>
+<p>Example:</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-14-2"><span class="w">    </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">Fk_department</span>
-</span><span id="__span-14-3"><span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
-</span><span id="__span-14-4"><span class="w">        </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">departments</span><span class="p">(</span><span class="n">DEPARTMENT_ID</span><span class="p">)</span>
-</span><span id="__span-14-5"><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span>
-</span><span id="__span-14-6"><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">;</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">vw_ITEmployees</span>
+</span><span id="__span-14-2"><span class="k">AS</span>
+</span><span id="__span-14-3"><span class="k">SELECT</span><span class="w"> </span><span class="n">employee_id</span><span class="p">,</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">job_id</span>
+</span><span id="__span-14-4"><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-14-5"><span class="k">WHERE</span><span class="w"> </span><span class="n">job_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ST_MAN'</span>
+</span><span id="__span-14-6"><span class="k">WITH</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Retrieving Data from a View</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span>
+</span><span id="__span-15-2"><span class="w">     </span><span class="n">vw_ITEmployees</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Output</p>
+<p>employee_id                             first_name           job_id</p>
+<hr>
+<p>120                                     Matthew              ST_MAN
+121                                     Adam                 ST_MAN
+122                                     Payam                ST_MAN
+123                                     Shanta               ST_MAN
+124                                     Kevin                ST_MAN</p>
+<h3 id="using-the-with-read-only-clause">Using the WITH READ ONLY Clause</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- <strong>Feature</strong></td>
+<td>- <strong>MS SQL Support</strong></td>
+</tr>
+<tr>
+<td>- WITH READ ONLY</td>
+<td>- ❌ Not supported</td>
+</tr>
+<tr>
+<td>- Complex View</td>
+<td>- ✔ Automatically read-only</td>
+</tr>
+<tr>
+<td>- Permission Control</td>
+<td>- ✔ Recommended</td>
+</tr>
+<tr>
+<td>- WITH CHECK OPTION</td>
+<td>- ✔ Restricts data validity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="removing-a-view">Removing a View</h2>
+<p>Syntax:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">view_name</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">vw_ITEmployees</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Error msg:</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1">Msg 208, Level 16, State 1, Line 1
+</span><span id="__span-18-2">
+</span><span id="__span-18-3">Invalid object name 'vw_ITEmployees'.
+</span><span id="__span-18-4">
+</span><span id="__span-18-5">
+</span><span id="__span-18-6">Completion time: 2026-04-01T20:06:13.1493188+08:00
 </span></code></pre></div></td></tr></tbody></table></div>
 <hr>
-<h3 id="references">References:</h3>
-<p>Exercise #2 – SELECT statement with AGGRAGATE FUNCTIONS.docx
-SQLQuery1.sql</p>
+<h3 id="references">References</h3>
 
 
 
@@ -2550,7 +3025,7 @@ SQLQuery1.sql</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Exercise%20-%202%20%20DDL%20Insterting%20Data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercise   2  DDL Insterting Data">
+          <a href="../Module-7-DataControlLanguage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module 7 Data Control Language">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2560,20 +3035,20 @@ SQLQuery1.sql</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Exercise   2  DDL Insterting Data
+                Module 7 Data Control Language
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Exercise-3-SQL-Join/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercise 3 SQL Join">
+          <a href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercise   1 Database Tables Creation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Exercise 3 SQL Join
+                Exercise   1 Database Tables Creation
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2610,12 +3085,12 @@ SQLQuery1.sql</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
