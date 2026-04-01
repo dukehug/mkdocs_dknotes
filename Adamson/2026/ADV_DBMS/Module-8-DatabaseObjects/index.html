@@ -931,6 +931,23 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-view-from-one-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a View From One Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a View From One Table">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#create-a-view-from-multiple-tables" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2454,6 +2471,23 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-view-from-one-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a View From One Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a View From One Table">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#create-a-view-from-multiple-tables" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2642,13 +2676,9 @@
 <td>Yes</td>
 <td>Not always</td>
 </tr>
-<tr>
-<td>## Create a View From One Table</td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<h2 id="create-a-view-from-one-table">Create a View From One Table</h2>
 <p>Syntax:</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2796,7 +2826,7 @@
 123                                     Vollman                   78000.00                                ST_MAN
 124                                     Mourgos                   69600.00                                ST_MAN</p>
 <h3 id="creating-a-complex-view">Creating a Complex View</h3>
-<div class="admonition note waring note">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Complex views are mostly ready-only . Can include: INNER JOIN, LEFT JOIN, GROUP BY, HAVING , Subqueries.</p>
 </div>
@@ -2887,13 +2917,15 @@
 <li>The WITH CEHCK OPTION is used when creating a view to enforce the view's condition during INSERT or UPDATE</li>
 <li>It ensures that any data modified through the view must still satisfy the WHERE condition of the view.</li>
 </ul>
-<div class="admonition note without check option">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can insert data that is NOT visible in the view.</p>
+<p>WithOut CHECK OPTION
+ You can insert data that is NOT visible in the view.</p>
 </div>
-<div class="admonition note with check option">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can ONLY insert / update data that remains visible in the view.</p>
+<p>With CHECK OPTION
+ You can ONLY insert / update data that remains visible in the view.</p>
 </div>
 <p>Syntax:</p>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
