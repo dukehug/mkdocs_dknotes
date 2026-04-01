@@ -41,6 +41,9 @@ Author:  Duke Hsu
 | Contain functions             | No           | Yes           |
 | Contain groups of data        | No           | Yes           |
 | DML Operations through a view | Yes          | Not always    |
+
+
+
 ## Create a View From One Table 
 
 Syntax:
@@ -202,7 +205,7 @@ ID_NUMBER                               LNAME                     ANN_SALARY    
 
 ### Creating a Complex View
 
-!!!note WARING NOTE
+!!!note
 	 Complex views are mostly ready-only . Can include: INNER JOIN, LEFT JOIN, GROUP BY, HAVING , Subqueries.
 
 
@@ -290,11 +293,13 @@ department_id           department_name            TotalEmployees         AvgSal
 - It ensures that any data modified through the view must still satisfy the WHERE condition of the view.
 
 
-!!!note WithOut CHECK OPTION
+!!!note 
+	 WithOut CHECK OPTION
 	 You can insert data that is NOT visible in the view.
 
 
-!!!note With CHECK OPTION
+!!!note 
+	 With CHECK OPTION
 	 You can ONLY insert / update data that remains visible in the view.
 
 
