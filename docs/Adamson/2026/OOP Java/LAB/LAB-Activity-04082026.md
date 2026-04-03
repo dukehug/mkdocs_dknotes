@@ -221,14 +221,22 @@ public class HangmanGame {
 
 ## Output
 
-Output 1
-![](../../../assets/images/java_2.gif)
+**Output 1**
 
-Output 2
-![](../../../assets/images/java_3.gif)
+<img src="../../../../../assets/images/java_2.gif" alt="Description">
 
-Output 3 
-![](../../../assets/images/java_4.gif)
+
+
+
+**Output 2**
+
+<img src="../../../../../assets/images/java_3.gif" alt="Description">
+
+
+
+**Output 3 **
+
+<img src="../../../../../assets/images/java_4.gif" alt="Description">
 
 
 
