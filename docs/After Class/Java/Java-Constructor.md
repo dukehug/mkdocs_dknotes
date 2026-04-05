@@ -10,6 +10,8 @@ Author:  Duke Hsu
 
 ---
 
+![](../../../assets/images/java_consturctor.jpeg)
+
 ## Key concept
 
 - Constructor  is A special method to initialize objects 
