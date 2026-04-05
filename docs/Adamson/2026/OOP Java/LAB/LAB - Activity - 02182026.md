@@ -1,3 +1,5 @@
+# LAB  Activity   02182026
+
 2026-02-18 17:03
 
 Tags: #java 
@@ -5,7 +7,7 @@ Tags: #java
 Author:  Duke Hsu
 
 ---
-## LAB - Activity - 02182026
+
 
 ### Types of Functions
 
