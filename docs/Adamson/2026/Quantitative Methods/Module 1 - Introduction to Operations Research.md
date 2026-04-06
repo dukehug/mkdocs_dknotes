@@ -10,9 +10,10 @@ Tag: #math
 ---
 ## Module 1  Introduction to Operations Research 
 
-note 
-)?
-Operations Research /Management Science is the application of scientific methods, techniques, and tools to problems involving the operation of systems so as to provide those in control of the operations with optimum, or practically optimum, solutions to the problems. 
+!!!note
+	Operations Research /Management Science is the application of scientific methods, techniques, and tools to problems involving the operation of systems so as to provide those in control of the operations with optimum, or practically optimum, solutions to the problems. 
+
+
 
 Operations Research 通過科學方法，技術，工具應用於涉及系統運作的問題為運營控制者提供最優或最實際的解決方案。 
 

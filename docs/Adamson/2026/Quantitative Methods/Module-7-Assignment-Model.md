@@ -19,7 +19,7 @@ Find minimum value in each ==row==. Subtract that value from each value in the s
 
 **Table 0:**
 
-![](../../../assets/imgages/assignment_pic_1.png)
+![](../../../assets/images/assignment_pic_1.png)
 
 In table 0 :
 row A minimum value is `40`
@@ -47,7 +47,7 @@ Find minimum value in each ==column== . Subtract that value from each value in t
 
 **Table 1:**
 
-![](../../../assets/imgages/assignment_pic_2.png) 
+![](../../../assets/images/assignment_pic_2.png) 
 
 
 Column 1 minimum value is `7`
@@ -77,7 +77,7 @@ Draw the ==minimum number of lines needed to cover all zeros==. If number of lin
 
 **Table cover all zeros with lines**
 
-![](../../../assets/imgages/assignment_pic_3.png) 
+![](../../../assets/images/assignment_pic_3.png) 
 
 
  
@@ -99,7 +99,7 @@ Find the smallest uncovered values. Subtract this from all uncovered values and 
 
 Uncovered value is 3, 4 , 2 . And the minimum value is 2 
 
-![](../../../assets/imgages/assignment_pic_4.png) 
+![](../../../assets/images/assignment_pic_4.png) 
 
 
 
@@ -114,7 +114,7 @@ Circle the assignment from row or column with minimum number of zeros. The final
 **The assignments:**
 #### Case#1
 
-![](../../../assets/imgages/assignment_pic_5.png) 
+![](../../../assets/images/assignment_pic_5.png) 
 
 
 Original cell
@@ -130,7 +130,7 @@ C-2 = 47
 
 #### Case#2:
 
-![](../../../assets/imgages/assignment_pic_6.png) 
+![](../../../assets/images/assignment_pic_6.png) 
 
 
 
