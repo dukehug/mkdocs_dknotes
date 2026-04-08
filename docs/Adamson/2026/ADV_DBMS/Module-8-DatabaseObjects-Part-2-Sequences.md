@@ -111,7 +111,7 @@ Guideline for modifying a sequence
  - Some validation is performed .
 - Change the increment value , maximum value, minimum value, cycle option   or cache option 
 
-!!! waring "Be careful ‘START’"
+!!! waring "Be careful ‘START WITH’"
 	When you use ALTER SEQUENCE, make sure to remove the START WITH option.
 
 ```sql
