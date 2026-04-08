@@ -290,7 +290,7 @@ department_id           department_name            TotalEmployees         AvgSal
 - It ensures that any data modified through the view must still satisfy the WHERE condition of the view.
 
 
-!!! note "WithOut CHECK OPTION
+!!! note "WithOut CHECK OPTION"
 	 You can insert data that is NOT visible in the view.
 
 
