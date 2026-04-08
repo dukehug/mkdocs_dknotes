@@ -41,9 +41,6 @@ Author:  Duke Hsu
 | Contain functions             | No           | Yes           |
 | Contain groups of data        | No           | Yes           |
 | DML Operations through a view | Yes          | Not always    |
-
-
-
 ## Create a View From One Table 
 
 Syntax:
@@ -141,7 +138,7 @@ WHERE table_1.column1 = table_2.column1;
 Example:
 
 ```sql
-ALTER VIEW multiple_table AS
+CREATE VIEW multiple_table AS
 SELECT countries.REGION_ID, countries.COUNTRY_NAME,  regions.REGION_NAME
 FROM countries, regions
 WHERE countries.REGION_ID = regions.REGION_ID;
@@ -205,7 +202,7 @@ ID_NUMBER                               LNAME                     ANN_SALARY    
 
 ### Creating a Complex View
 
-!!!note
+!!! warning 
 	 Complex views are mostly ready-only . Can include: INNER JOIN, LEFT JOIN, GROUP BY, HAVING , Subqueries.
 
 
@@ -293,15 +290,21 @@ department_id           department_name            TotalEmployees         AvgSal
 - It ensures that any data modified through the view must still satisfy the WHERE condition of the view.
 
 
-!!!note 
-	 WithOut CHECK OPTION
+!!! note "WithOut CHECK OPTION
 	 You can insert data that is NOT visible in the view.
 
 
-!!!note 
-	 With CHECK OPTION
+!!! note "With CHECK OPTION"
 	 You can ONLY insert / update data that remains visible in the view.
 
+
+### Adding vs Not Adding WITH CHECK OPTION
+
+| Situation                  | with (WITH CHECK OPTION)                                                    | with Out (WITH CHECK OPTION)                                                                      |
+| -------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| INSERT / UPDATE operations | Only allows you to insert or update data that matches the view's conditions | Lets you insert or update any data, even if it doesn't match the view's conditions                |
+| Data disappearing          | Won't happen — your changes stay visible in the view                        | Can happen — your changes might not match the conditions anymore, so they disappear from the view |
+| Error message              | Throws an error (Msg 550) if you try to break the rules                     | No checking — the operation just goes through                                                     |
 
 
 Syntax:
@@ -344,6 +347,66 @@ employee_id                             first_name           job_id
 124                                     Kevin                ST_MAN
 
 
+#### Real Life Example for WITH CHECK OPTION
+
+
+```sql
+SELECT employee_id , last_name, salary FROM employees
+WHERE salary > 10000;
+
+
+--create a view with out WITH CHECK OPTION
+CREATE VIEW HighSalaryEmployees AS
+SELECT last_name, salary 
+FROM employees 
+WHERE salary > 10000;
+
+--use ALTER modify view 
+ALTER VIEW HighSalaryEmployees AS
+SELECT employee_id, last_name, salary
+FROM employees
+WHERE salary > 10000;
+
+
+--create a view with WITH CHECK OPTION
+CREATE VIEW HighSalaryEmployees_Checked AS
+SELECT last_name, salary
+FROM employees
+WHERE salary > 10000
+WITH CHECK OPTION;
+
+
+--use ALTER modify view 
+ALTER VIEW HighSalaryEmployees_Checked AS
+SELECT employee_id, last_name, salary
+FROM employees
+WHERE salary > 10000
+WITH CHECK OPTION;
+
+
+
+-- use view
+SELECT * FROM 
+	HighSalaryEmployees;
+
+SELECT * FROM
+	HighSalaryEmployees_Checked; --same result
+	
+--update employee salary in the with out check option view 
+UPDATE HighSalaryEmployees
+SET salary = 300000
+WHERE employee_id = 225;  --since with out WITH CHECK OPTION, automatic sucess  
+
+
+--update employee salary in the with check option view
+UPDATE HighSalaryEmployees_Checked
+SET salary = 26000;
+WHERE employee_id = 201;  --return Error 
+	
+
+```
+
+
 
 ### Using the WITH READ ONLY Clause
 
@@ -373,6 +436,11 @@ DROP VIEW vw_ITEmployees;
 
 Error msg:
 
+```sql
+SELECT * FROM
+	 vw_ITEmployees;
+```
+
 ```
 Msg 208, Level 16, State 1, Line 1
 
@@ -381,6 +449,24 @@ Invalid object name 'vw_ITEmployees'.
 
 Completion time: 2026-04-01T20:06:13.1493188+08:00
 ```
+
+
+## When Should You Use WITH CHECK OPTION?
+
+### Use it in these situations:
+
+- Data accuracy matters a lot — Like in banking or inventory systems, where you can't have data suddenly vanish after an update
+- Control what people can change — For example, a manager should only be able to edit employees in their own department, not accidentally touch other departments
+- The view filters data in a specific way — Like showing only "active orders" or "non-expired coupons"
+- You have views built on top of other views — This protects the whole chain of filters
+
+### You don't really need it if:
+
+- The view is just for looking at data — You never insert, update, or delete through it
+- The view shows everything — It has no WHERE clause to filter anything
+- You want to allow data beyond the view's conditions — You're okay with data disappearing from the view
+
+
 
 
 ----
