@@ -3121,8 +3121,10 @@
 <li>The WITH CEHCK OPTION is used when creating a view to enforce the view's condition during INSERT or UPDATE</li>
 <li>It ensures that any data modified through the view must still satisfy the WHERE condition of the view.</li>
 </ul>
-<p>!!! note "WithOut CHECK OPTION
-     You can insert data that is NOT visible in the view.</p>
+<div class="admonition note">
+<p class="admonition-title">WithOut CHECK OPTION</p>
+<p>You can insert data that is NOT visible in the view.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">With CHECK OPTION</p>
 <p>You can ONLY insert / update data that remains visible in the view.</p>
