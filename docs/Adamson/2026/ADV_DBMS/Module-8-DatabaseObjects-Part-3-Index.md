@@ -1,5 +1,5 @@
 
-# Module - 8  Database Objects - Part 3 - Index
+# Module - 8  Database Objects - Part 3 - Index and Synonym
 
 2026-04-08 13:21
 
@@ -76,6 +76,27 @@ EXEC sp_rename 'old_index_name', 'new_index_name', 'INDEX';
 DROP INDEX index_name;
 ```
 
+## 3.0 Synonym 
+
+### 3.1.0 Synonym concepts
+
+- Synonym is simplify access to objects by creating a synonym(another name for an object)
+- With synonyms, you can :
+- Create an easier reference to table that is owned by another user 
+- Shorten lengthy object names. 
+
+### 3.1.1 Creating and Removing a Synonym 
+
+Syntax:
+
+```sql
+--creating
+CREATE SYNONYM synonym_name
+FOR  object_name;
+
+--removing 
+DROP SYNONYM synonym_name;
+```
 
 
 ----
