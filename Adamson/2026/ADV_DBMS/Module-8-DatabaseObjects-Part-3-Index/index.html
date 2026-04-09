@@ -10,10 +10,10 @@
       
       
       
-        <link rel="prev" href="../Module-8-DatabaseObjects-Part1-View/">
+        <link rel="prev" href="../Module-8-DatabaseObjects-Part-2-Sequences/">
       
       
-        <link rel="next" href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/">
+        <link rel="next" href="../Module-9-SQL-StoredProcedure/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>Module - 8 Database Objects - Part 3 - Index - Duke's Study notes</title>
+        <title>Module - 8 Database Objects - Part 3 - Index and Synonym - Duke's Study notes</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-8-database-objects-part-3-index" class="md-skip">
+        <a href="#module-8-database-objects-part-3-index-and-synonym" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module - 8 Database Objects - Part 3 - Index
+              Module - 8 Database Objects - Part 3 - Index and Synonym
             
           </span>
         </div>
@@ -821,14 +821,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Module-8-DatabaseObjects-Part-2-Sequences/" class="md-nav__link">
+      <a href="../Module-8-DatabaseObjects-Part-1-View/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Module - 8 Database Objects - Part 2 - Sequences
+    Module - 8 Database Objects - Part 1 - View
   
 
     
@@ -849,14 +849,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Module-8-DatabaseObjects-Part1-View/" class="md-nav__link">
+      <a href="../Module-8-DatabaseObjects-Part-2-Sequences/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Module - 8 Database Objects - Part 1 - View
+    Module - 8 Database Objects - Part 2 - Sequences
   
 
     
@@ -893,7 +893,7 @@
   <span class="md-ellipsis">
     
   
-    Module - 8 Database Objects - Part 3 - Index
+    Module - 8 Database Objects - Part 3 - Index and Synonym
   
 
     
@@ -911,7 +911,7 @@
   <span class="md-ellipsis">
     
   
-    Module - 8 Database Objects - Part 3 - Index
+    Module - 8 Database Objects - Part 3 - Index and Synonym
   
 
     
@@ -1070,6 +1070,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#30-synonym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.0 Synonym
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.0 Synonym">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#310-synonym-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.0 Synonym concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-creating-and-removing-a-synonym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Creating and Removing a Synonym
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1095,6 +1134,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Module-9-SQL-StoredProcedure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module 9 SQL Stored Procedure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -1109,10 +1176,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_11">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_12">
         
           
-          <label class="md-nav__link" for="__nav_3_2_1_11" id="__nav_3_2_1_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2_1_12" id="__nav_3_2_1_12_label" tabindex="0">
             
   
   
@@ -1130,8 +1197,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_1_11">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2643,6 +2710,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#30-synonym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.0 Synonym
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.0 Synonym">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#310-synonym-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.0 Synonym concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-creating-and-removing-a-synonym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Creating and Removing a Synonym
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2673,7 +2779,7 @@
   
 
 
-<h1 id="module-8-database-objects-part-3-index">Module - 8  Database Objects - Part 3 - Index</h1>
+<h1 id="module-8-database-objects-part-3-index-and-synonym">Module - 8  Database Objects - Part 3 - Index and Synonym</h1>
 <p>2026-04-08 13:21</p>
 <p>Tags:  #ADV_DBMS </p>
 <p>Author:  Duke Hsu</p>
@@ -2734,6 +2840,28 @@
 <h3 id="230-removing-index">2.3.0 Removing index</h3>
 <div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">index_name</span><span class="p">;</span>
 </span></code></pre></div></td></tr></tbody></table></div>
+<h2 id="30-synonym">3.0 Synonym</h2>
+<h3 id="310-synonym-concepts">3.1.0 Synonym concepts</h3>
+<ul>
+<li>Synonym is simplify access to objects by creating a synonym(another name for an object)</li>
+<li>With synonyms, you can :</li>
+<li>Create an easier reference to table that is owned by another user </li>
+<li>Shorten lengthy object names. </li>
+</ul>
+<h3 id="311-creating-and-removing-a-synonym">3.1.1 Creating and Removing a Synonym</h3>
+<p>Syntax:</p>
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><span class="c1">--creating</span>
+</span><span id="__span-6-2"><span class="k">CREATE</span><span class="w"> </span><span class="n">SYNONYM</span><span class="w"> </span><span class="n">synonym_name</span>
+</span><span id="__span-6-3"><span class="k">FOR</span><span class="w">  </span><span class="n">object_name</span><span class="p">;</span>
+</span><span id="__span-6-4">
+</span><span id="__span-6-5"><span class="c1">--removing </span>
+</span><span id="__span-6-6"><span class="k">DROP</span><span class="w"> </span><span class="n">SYNONYM</span><span class="w"> </span><span class="n">synonym_name</span><span class="p">;</span>
+</span></code></pre></div></td></tr></tbody></table></div>
 <hr>
 <h2 id="references">References</h2>
 <p>Module - 8  PPT</p>
@@ -2775,7 +2903,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../Module-8-DatabaseObjects-Part1-View/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module - 8 Database Objects - Part 1 - View">
+          <a href="../Module-8-DatabaseObjects-Part-2-Sequences/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module - 8 Database Objects - Part 2 - Sequences">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2785,20 +2913,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Module - 8 Database Objects - Part 1 - View
+                Module - 8 Database Objects - Part 2 - Sequences
               </div>
             </div>
           </a>
         
         
           
-          <a href="../LAB/Exercise%20-%201%20Database%20Tables%20Creation/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercise   1 Database Tables Creation">
+          <a href="../Module-9-SQL-StoredProcedure/" class="md-footer__link md-footer__link--next" aria-label="Next: Module 9 SQL Stored Procedure">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Exercise   1 Database Tables Creation
+                Module 9 SQL Stored Procedure
               </div>
             </div>
             <div class="md-footer__button md-icon">
