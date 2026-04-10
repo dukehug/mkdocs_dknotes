@@ -2605,88 +2605,30 @@
 <br>
 A Faculty Association of a certain college has four fund raising projects to work, which are to be assigned to each of the four officers. Given the <strong>opportunity profit</strong>( in thousand pesos) table below. What should be the best assignments?<br>
 <br>
-<mark>Opportunity profit = Maximum profit</mark><br>
-<br>
-| | | | | | |<br>
-|-|-|-|-|-|-|<br>
-| &nbsp; | <strong>Project</strong> | | | | | <br>
-| <strong>Officer</strong> | &nbsp; | <strong>W</strong> | <strong>X</strong> | <strong>Y</strong> | <strong>Z</strong> | <br>
-|  | <strong>A</strong> | 5 | 6 | 4.5 | 2.5 | <br>
-|  | <strong>B</strong> | 4 | 3 | 3.5 | 1 | <br>
-|  | <strong>C</strong> | 3.5 | 1.5 | 2 | 3 | <br>
-|  | <strong>D</strong> | 4.5 | 1 | 0 | 5.5 | <br>
-&nbsp;!!! note "Maximization"
-    &nbsp;The Hungarian Method was originally designed to solve minimization problems. Therefore, "Step 0: Building the Loss Matrix" must be performed first before proceeding.</p>
-<h3 id="step-0-loss-matrix-regret"><strong>Step 0:&nbsp; Loss Matrix / Regret</strong></h3>
-<p>Loss Matrix = Maximum value&nbsp; – Each cell values<br>
-<br>
-Max value is <strong>6</strong><br>
-<br>
-| | | | | | |<br>
-|-|-|-|-|-|-|<br>
-| &nbsp; | <strong>Project</strong> | | | | | <br>
-| <strong>Officer</strong> | &nbsp; | <strong>W</strong> | <strong>X</strong> | <strong>Y</strong> | <strong>Z</strong> | <br>
-|  | <strong>A</strong> | 6 - 5 =<strong>1</strong> | 6 - 6 =<strong>0</strong> | 6 - 4.5 = <strong>1.5</strong> | 6 - 2.5 = <strong>3.5</strong> | <br>
-|  | <strong>B</strong> | 6 - 4 = <strong>2</strong> | 6 - 3 = <strong>3</strong> | 6 - 3.5 = <strong>2.5</strong> | 6 - 1 = <strong>5</strong> | <br>
-|  | <strong>C</strong> | 6 - 3.5 = <strong>2.5</strong> | 6 - 1.5 = <strong>4.5</strong> | 6 - 2 = <strong>4</strong> | 6 - 3 = <strong>3</strong> | <br>
-|  | <strong>D</strong> | 6 - 4.5 = <strong>1.5</strong> | 6 - 1 = <strong>5</strong> | 6 - 0 = <strong>6</strong> | 6 - 5.5 =<strong>0.5</strong> | <br>
-</p>
+<mark>Opportunity profit = Maximum profit</mark>  </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_00.jpg" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_00.jpg"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Maximization</p>
+<p>The Hungarian Method was originally designed to solve minimization problems. Therefore, "Step 0: Building the Loss Matrix" must be performed first before proceeding.</p>
+</div>
+<h3 id="step-0-loss-matrix-regret"><strong>Step 0: Loss Matrix / Regret</strong></h3>
+<p>Loss Matrix = Maximum value – Each cell values  </p>
+<p>Max value is <strong>6</strong>  </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_01.jpg" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_01.jpg"></a></p>
 <h3 id="step-1-row-reduction"><strong>Step 1: Row Reduction</strong></h3>
-<p>Find minimum value in each&nbsp;row. Subtract that value from each value in the same row .<br>
-<br>
-|             |             |         |         |         |         |     |     |
-| ----------- | ----------- | ------- | ------- | ------- | ------- | --- | --- |
-| &nbsp;           | <strong>Project</strong> |         |         |         |         | &nbsp;   |     |
-| <strong>Officer</strong> | &nbsp;           | <strong>W</strong>   | <strong>X</strong>   | <strong>Y</strong>   | <strong>Z</strong>   | &nbsp;   |     |
-|             | <strong>A</strong>       | <strong>1</strong>   | <strong>0</strong>   | <strong>1.5</strong> | <strong>3.5</strong> | 0   |     |
-|             | <strong>B</strong>       | <strong>2</strong>   | &nbsp;<strong>3</strong>  | <strong>2.5</strong> | <strong>5</strong>   | 2   |     |
-|             | <strong>C</strong>       | <strong>2.5</strong> | <strong>4.5</strong> | <strong>4</strong>   | <strong>3</strong>   | 2.5 |     |
-|             | <strong>D</strong>       | <strong>1.5</strong> | <strong>5</strong>   | <strong>6</strong>   | <strong>0.5</strong> | 0.5 |     |
-&nbsp;<br>
-<br>
-Iteration <strong>a</strong> 
-&nbsp;<br>
-| | | | | | |<br>
-|-|-|-|-|-|-|<br>
-| &nbsp; | <strong>Project</strong> | | | | | <br>
-| <strong>Officer</strong> | &nbsp; | <strong>W</strong> | <strong>X</strong> | <strong>Y</strong> | <strong>Z</strong> | <br>
-|  | <strong>A</strong> | <strong>1</strong> | <strong>0</strong> | <strong>1.5</strong> | <strong>3.5</strong> | <br>
-|  | <strong>B</strong> | <strong>0</strong> | 1 | <strong>0.5</strong> | <strong>3</strong> | <br>
-|  | <strong>C</strong> | <strong>0</strong> | <strong>2</strong> | <strong>1.5</strong> | <strong>0.5</strong> | <br>
-|  | <strong>D</strong> | <strong>1</strong> | <strong>4.5</strong> | <strong>5.5</strong> | <strong>0</strong> | <br>
-<br>
-</p>
+<p>Find minimum value in each row. Subtract that value from each value in the same row .  </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_10.jpg" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_10.jpg"></a></p>
+<p>Iteration <strong>a</strong> </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_11.jpg" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_11.jpg"></a></p>
 <h3 id="step-2-column-reduction"><strong>Step 2: Column&nbsp; Reduction</strong></h3>
-<p>Find minimum value in each&nbsp;column&nbsp;. Subtract that value from each value in the same column.<br>
-<br>
-|             |             |       |         |         |         |     |
-| ----------- | ----------- | ----- | ------- | ------- | ------- | --- |
-| &nbsp;           | <strong>Project</strong> |       |         |         |         |     |
-| <strong>Officer</strong> | &nbsp;           | <strong>W</strong> | <strong>X</strong>   | <strong>Y</strong>   | <strong>Z</strong>   |     |
-|             | <strong>A</strong>       | <strong>1</strong> | <strong>0</strong>   | <strong>1.5</strong> | <strong>3.5</strong> |     |
-|             | <strong>B</strong>       | <strong>0</strong> | 1       | <strong>0.5</strong> | <strong>3</strong>   |     |
-|             | <strong>C</strong>       | <strong>0</strong> | <strong>2</strong>   | <strong>1.5</strong> | <strong>0.5</strong> |     |
-|             | <strong>D</strong>       | <strong>1</strong> | <strong>4.5</strong> | <strong>5.5</strong> | <strong>0</strong>   |     |
-| &nbsp;           | &nbsp;           | 0     | 0       | 0.5 | 0       |     |
-&nbsp;<br>
-Iteration <strong>b</strong> <br>
-<br>
-| | | | | | |<br>
-|-|-|-|-|-|-|<br>
-| &nbsp; | <strong>Project</strong> | | | | | <br>
-| <strong>Officer</strong> | &nbsp; | <strong>W</strong> | <strong>X</strong> | <strong>Y</strong> | <strong>Z</strong> | <br>
-|  | <strong>A</strong> | <strong>1</strong> | <strong>0</strong> | <strong>1</strong> | <strong>3.5</strong> | <br>
-|  | <strong>B</strong> | <strong>0</strong> | 1 | <strong>0</strong> | <strong>3</strong> | <br>
-|  | <strong>C</strong> | <strong>0</strong> | <strong>2</strong> | <strong>1</strong> | <strong>0.5</strong> | <br>
-|  | <strong>D</strong> | <strong>1</strong> | <strong>4.5</strong> | <strong>5</strong> | <strong>0</strong> | <br>
-<br>
-</p>
+<p>Find minimum value in each&nbsp;column&nbsp;. Subtract that value from each value in the same column.  </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_21.jpg" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_21.jpg"></a></p>
+<p>Iteration <strong>b</strong>   </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_22.jpg" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_22.jpg"></a></p>
 <h3 id="step-3-cover-all-zeros-with-lines"><strong>Step 3 - Cover All Zeros with Lines</strong></h3>
 <p>Draw the&nbsp;minimum number of lines needed to cover all zeros. If number of lines = number of rows, you are done . Otherwise move to step 4 .  </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_1.png"></a>
-&nbsp;  </p>
-<p><strong>4 Lines = 4 Rows&nbsp; We are done .  Jump to Step 5</strong><br>
-</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../assets/images/assignment_model_maximum_problem_1.png" data-desc-position="bottom"><img alt="" src="../../../../assets/images/assignment_model_maximum_problem_1.png"></a>&nbsp;  </p>
+<p><strong>4 Lines = 4 Rows&nbsp; We are done .  Jump to Step 5</strong>  </p>
 <h3 id="step-4-revise-the-matrix"><strong>Step 4:  Revise the Matrix</strong></h3>
 <p>Find the smallest uncovered values. Subtract this from all uncovered values and add it to values at intersection of lines. Then repeat step 3.<br>
 - Cells with&nbsp;<strong>no line</strong>&nbsp;through them: subtract the smallest uncovered number<br>
