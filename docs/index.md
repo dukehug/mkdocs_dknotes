@@ -1,6 +1,6 @@
 Welcome to my study notes!
 
-A big thanks to  [Steven Maluenda](https://github.com/qanszer)
+A special thanks to  [Steven Maluenda](https://github.com/qanszer)
 
 Thanks, Steven, for generously sharing how to use Obsidian with me. I’ve made rapid progress in just a short time because of your guidance.
 
