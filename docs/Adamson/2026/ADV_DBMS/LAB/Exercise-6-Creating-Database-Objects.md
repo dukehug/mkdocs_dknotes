@@ -35,7 +35,10 @@ SELECT * FROM employee_vu;
 Using your EMPLOYEES_VU view, write a query for the HR department to display all employee names and department numbers.
 
 ```sql
-
+-- question 3
+-- select 2 column from view employees_vu
+SELECT employee,department_id
+FROM employee_vu;
 ```
 
 ## Question 4
