@@ -2736,7 +2736,13 @@
 </span></code></pre></div></td></tr></tbody></table></div>
 <h2 id="question-3">Question 3</h2>
 <p>Using your EMPLOYEES_VU view, write a query for the HR department to display all employee names and department numbers.</p>
-<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1">
+<div class="language-sql highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="c1">-- question 3</span>
+</span><span id="__span-2-2"><span class="c1">-- select 2 column from view employees_vu</span>
+</span><span id="__span-2-3"><span class="k">SELECT</span><span class="w"> </span><span class="n">employee</span><span class="p">,</span><span class="n">department_id</span>
+</span><span id="__span-2-4"><span class="k">FROM</span><span class="w"> </span><span class="n">employee_vu</span><span class="p">;</span>
 </span></code></pre></div></td></tr></tbody></table></div>
 <h2 id="question-4">Question 4</h2>
 <p>Department 50 needs access to its employee data. Create a view named DEPT50 that contains the employee numbers, employee last names, and department numbers for all employees in department 50. You have been asked to label the view columns EMPNO, EMPLOYEE, and DEPTNO. For security purposes, do not allow an employee to be reassigned to another department through the view.</p>
