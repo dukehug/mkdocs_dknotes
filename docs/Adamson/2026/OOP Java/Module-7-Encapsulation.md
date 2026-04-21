@@ -15,10 +15,12 @@ Author:  Duke Hsu
 
 ### 1.0 Key concepts 
 
-Encapsulation
-- Encapsulation:  Encapsulation is wrapping data and methods together, hiding the internal details, and only showing what is needed to the outside world. 
+- Encapsulation is wrapping data and methods together, hiding the internal details, and only showing what is needed to the outside world. 
+
 - That meaning of Encapsulation , is to make sure that "sensitive" data is hidden from users. 
+
 - To achieve this ,you must : declare class variables / attributes as `private`
+
 - Provide `publi` get and set  methods to access and update the value of a `private ` variable 
 
 
@@ -26,8 +28,11 @@ Encapsulation
 ### 1. 1 Types of Access Modifiers 
 
 - Access Modifiers: Control visibility and accessibility of classes, attributes. ,methods, and constructors. (control the access level)
+
 - Non- Access Modifiers:  do not control access level, but provides other functionality 
+
  - [https://www.w3schools.com/java/java_non_modifiers.asp](https://www.w3schools.com/java/java_non_modifiers.asp)
+
 
 
 |           | Same Class | Same Package | Sub Class | Other Packages |     |
@@ -36,6 +41,8 @@ Encapsulation
 | private   | &check;    | &#10007;     | &#10007;  | &#10007;       |     |
 | protected | &check;    | &check;      | &check;   | &#10007;       |     |
 | default   | &check;    | &check;      | &#10007;  | &#10007;       |     |
+
+
 
 ### 1.2 Encapsulation and Data Handling 
 
