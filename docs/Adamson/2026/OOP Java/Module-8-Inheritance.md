@@ -219,14 +219,14 @@ classDiagram
 
 ```mermaid
 classDiagram
-    %% 定義父類別
+    
     class Character {
         +String name
         +int hp
         +displayStatus() void
     }
 
-    %% 定義介面 (Java 多重繼承的替代方案)
+    
     class Combatant {
         <<interface>>
         +attack(target) void
@@ -237,17 +237,17 @@ classDiagram
         +heal(amount) void
     }
 
-    %% Player 類別的繼承與實作
+    
     class Player {
         +int level
         +attack(target) void
         +heal(amount) void
     }
 
-    %% 關係表示
-    Character <|-- Player : extends (單一繼承)
-    Combatant <|.. Player : implements (實作介面1)
-    Healable <|.. Player : implements (實作介面2)
+    
+    Character <|-- Player : extends 
+    Combatant <|.. Player : implements 
+    Healable <|.. Player : implements 
 ```
 
 
