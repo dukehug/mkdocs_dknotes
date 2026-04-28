@@ -181,74 +181,8 @@ Class diagram symbol for inheritance
 
 Example UML with `Is-A` Relationship 
 
-```mermaid
-classDiagram
-    class Character {
-        -String name
-        -int hp
-        +Character(name, hp)
-        +displayStatus() void
-    }
+![](../../../assets/images/Example_uml_is_a_relashionship.png)
 
-    class Player {
-        +Player(name, hp)
-        +attack(monster, guess, secretNumber) void
-    }
-
-    class Monster {
-        +Monster(name, hp)
-        +taunt() void
-    }
-
-    class Main {
-        +main(args: String[]) void
-    }
-
-    Character <|-- Player
-    Character <|-- Monster
-
-    %% 建立關係與工具使用說明
-    Main ..> Player : Creates
-    Main ..> Monster : Creates
-    
-    note for Main "Uses: Scanner, Random"
-```
-
-
-**Interface** 
-
-```mermaid
-classDiagram
-    
-    class Character {
-        +String name
-        +int hp
-        +displayStatus() void
-    }
-
-    
-    class Combatant {
-        <<interface>>
-        +attack(target) void
-    }
-
-    class Healable {
-        <<interface>>
-        +heal(amount) void
-    }
-
-    
-    class Player {
-        +int level
-        +attack(target) void
-        +heal(amount) void
-    }
-
-    
-    Character <|-- Player : extends 
-    Combatant <|.. Player : implements 
-    Healable <|.. Player : implements 
-```
 
 
 #### 1.5.1 `Has-A ` Relationship
@@ -288,14 +222,15 @@ The child object cannot exist without  the parent. It represents a "death relati
 ```mermaid
 classDiagram
     class Player {
-        -String name
-        -Weapon weapon
-        +setWeapon(Weapon w)
+        -name:String
+	    -weapon:Weapon
+        +setWeapon()
+        
     }
 
     class Weapon {
-        -String type
-        -int damage
+        -type:String
+        -damage:int
         +fire()
     }
 
