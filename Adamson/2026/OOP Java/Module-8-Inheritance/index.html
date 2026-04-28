@@ -1512,69 +1512,7 @@ Student <code>Is-A</code> Person</p>
 <li>UML Symbol:  <code>Child -----&gt; Parent</code></li>
 </ul>
 <p>Example UML with <code>Is-A</code> Relationship </p>
-<div class="mermaid">classDiagram
-    class Character {
-        -String name
-        -int hp
-        +Character(name, hp)
-        +displayStatus() void
-    }
-
-    class Player {
-        +Player(name, hp)
-        +attack(monster, guess, secretNumber) void
-    }
-
-    class Monster {
-        +Monster(name, hp)
-        +taunt() void
-    }
-
-    class Main {
-        +main(args: String[]) void
-    }
-
-    Character &lt;|-- Player
-    Character &lt;|-- Monster
-
-    %% 建立關係與工具使用說明
-    Main ..&gt; Player : Creates
-    Main ..&gt; Monster : Creates
-
-    note for Main "Uses: Scanner, Random"
-</div>
-<p><strong>Interface</strong> </p>
-<div class="mermaid">classDiagram
-
-    class Character {
-        +String name
-        +int hp
-        +displayStatus() void
-    }
-
-
-    class Combatant {
-        &lt;<interface>&gt;
-        +attack(target) void
-    }
-
-    class Healable {
-        &lt;<interface>&gt;
-        +heal(amount) void
-    }
-
-
-    class Player {
-        +int level
-        +attack(target) void
-        +heal(amount) void
-    }
-
-
-    Character &lt;|-- Player : extends 
-    Combatant &lt;|.. Player : implements 
-    Healable &lt;|.. Player : implements 
-</interface></interface></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../../../../assets/images/Example_uml_is_a_relashionship.png"><img alt="" src="../../../../assets/images/Example_uml_is_a_relashionship.png"></a></p>
 <h4 id="151-has-a-relationship">1.5.1 <code>Has-A</code> Relationship</h4>
 <p><strong>Concept:</strong> </p>
 <p>In Java, a <code>Has-A</code> relationship is also known as Association. It occurs when one class uses another class as a member variable . Unlike <code>Is-A</code> (Inheritance) , which focuses on hierarchy,  <code>Has-A</code>  focuses on Code Reusability and Modularity.</p>
@@ -1601,14 +1539,15 @@ Student <code>Is-A</code> Person</p>
 <p><strong>UML</strong></p>
 <div class="mermaid">classDiagram
     class Player {
-        -String name
-        -Weapon weapon
-        +setWeapon(Weapon w)
+        -name:String
+        -weapon:Weapon
+        +setWeapon()
+
     }
 
     class Weapon {
-        -String type
-        -int damage
+        -type:String
+        -damage:int
         +fire()
     }
 
