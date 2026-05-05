@@ -30,7 +30,7 @@ Author:  Duke Hsu
 ## UML 
 
 
-![[lab_seatwork_final_2.png]]
+![images](../../../../assets/images/lab_seatwork_final_2.png)
 
 
 
