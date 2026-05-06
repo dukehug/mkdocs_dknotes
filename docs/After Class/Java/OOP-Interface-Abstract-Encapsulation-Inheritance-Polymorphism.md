@@ -5,18 +5,27 @@
 ## Interface
 
 `Account`:
+
 - 規定account 應該有哪些功能，需要做什麼
+
 - 只定義了空的method ， 沒有詳細的method如何實現
+
 ## Abstract And Encapsulation 
 
 `BankAccount ` >  Abstract , Encapsulation  
+
 - `abstract class BankAccount implements Account`  Override  the Interface methods， and implement it
+
 - 使用private modify 保護重要信息， 並通過getter setter 來更新和獲取數據
+
 - 使用abstract寫了利息和手續費的計算方式， 供後續的子class 實現具體的功能
 ## Inheritance And Polymorphism
 
 `SavingsAccount`
-- Inheritance from `BankAccount`(Extends from BankAccount), 繼承BankAccount 的所有屬性和方法
+
+- Inheritance from `BankAccount`(Extends from BankAccount), 繼承
+BankAccount 的所有屬性和方法
+
 - 利用polymorphism 的特性， 複寫(Override)  利息和手續費的計算方式
 
 剩餘的 `checkAccount `class, `TermAccount` class 同樣採用了 Inheritance 和 Polymorphism 的特性
@@ -117,18 +126,18 @@ abstract class BankAccount implements Account {
     @Override
     public void deposit(double amount) {
         if (amount <= 0) {
-            System.out.println("❌ 存入金額必須大於0！");
+            System.out.println(" 存入金額必須大於0！");
             return;
         }
         addBalance(amount);
-        System.out.println("✅ 已存入 " + amount + " 元");
+        System.out.println(" 已存入 " + amount + " 元");
     }
     
     // === 通用的提錢方法（但會調用各子類別的手續費計算） ===
     @Override
     public void withdraw(double amount) {
         if (amount <= 0) {
-            System.out.println("❌ 提取金額必須大於0！");
+            System.out.println("提取金額必須大於0！");
             return;
         }
         
@@ -137,12 +146,12 @@ abstract class BankAccount implements Account {
         double totalAmount = amount + fee;
         
         if (totalAmount > balance) {
-            System.out.println("❌ 餘額不足！需要 " + totalAmount + " 元（含手續費）");
+            System.out.println(" 餘額不足！需要 " + totalAmount + " 元（含手續費）");
             return;
         }
         
         subtractBalance(totalAmount);
-        System.out.println("✅ 已提取 " + amount + " 元（手續費：" + fee + " 元）");
+        System.out.println("已提取 " + amount + " 元（手續費：" + fee + " 元）");
     }
     
     // === 通用的列印帳單方法 ===
@@ -267,7 +276,7 @@ class TermAccount extends BankAccount {
 
 public class BankSystem {
     public static void main(String[] args) {
-        System.out.println("🏦 銀行帳戶系統\n");
+        System.out.println("銀行帳戶系統\n");
         
         // 建立三種不同類型的帳戶
         Account savings = new SavingsAccount("2024001", "王小明");
