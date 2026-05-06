@@ -2828,18 +2828,39 @@
 
 <h1 id="java-oop-interface-abstract-encapsulation-inheritance-and-polymorphism-concepts-code-example">JAVA OOP - Interface , Abstract ,   Encapsulation , Inheritance And  Polymorphism Concepts Code Example</h1>
 <h2 id="interface">Interface</h2>
-<p><code>Account</code>:
-- 規定account 應該有哪些功能，需要做什麼
-- 只定義了空的method ， 沒有詳細的method如何實現</p>
+<p><code>Account</code>:</p>
+<ul>
+<li>
+<p>規定account 應該有哪些功能，需要做什麼</p>
+</li>
+<li>
+<p>只定義了空的method ， 沒有詳細的method如何實現</p>
+</li>
+</ul>
 <h2 id="abstract-and-encapsulation">Abstract And Encapsulation</h2>
-<p><code>BankAccount</code> &gt;  Abstract , Encapsulation<br>
-- <code>abstract class BankAccount implements Account</code>  Override  the Interface methods， and implement it
-- 使用private modify 保護重要信息， 並通過getter setter 來更新和獲取數據
-- 使用abstract寫了利息和手續費的計算方式， 供後續的子class 實現具體的功能</p>
+<p><code>BankAccount</code> &gt;  Abstract , Encapsulation  </p>
+<ul>
+<li>
+<p><code>abstract class BankAccount implements Account</code>  Override  the Interface methods， and implement it</p>
+</li>
+<li>
+<p>使用private modify 保護重要信息， 並通過getter setter 來更新和獲取數據</p>
+</li>
+<li>
+<p>使用abstract寫了利息和手續費的計算方式， 供後續的子class 實現具體的功能</p>
+</li>
+</ul>
 <h2 id="inheritance-and-polymorphism">Inheritance And Polymorphism</h2>
-<p><code>SavingsAccount</code>
-- Inheritance from <code>BankAccount</code>(Extends from BankAccount), 繼承BankAccount 的所有屬性和方法
-- 利用polymorphism 的特性， 複寫(Override)  利息和手續費的計算方式</p>
+<p><code>SavingsAccount</code></p>
+<ul>
+<li>
+<p>Inheritance from <code>BankAccount</code>(Extends from BankAccount), 繼承
+BankAccount 的所有屬性和方法</p>
+</li>
+<li>
+<p>利用polymorphism 的特性， 複寫(Override)  利息和手續費的計算方式</p>
+</li>
+</ul>
 <p>剩餘的 <code>checkAccount</code>class, <code>TermAccount</code> class 同樣採用了 Inheritance 和 Polymorphism 的特性</p>
 <h2 id="code-example">Code Example:</h2>
 <h3 id="interface_1">Interface</h3>
@@ -3051,18 +3072,18 @@
 </span><span id="__span-1-68"><span class="w">    </span><span class="nd">@Override</span>
 </span><span id="__span-1-69"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-70"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-71"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"❌ 存入金額必須大於0！"</span><span class="p">);</span>
+</span><span id="__span-1-71"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" 存入金額必須大於0！"</span><span class="p">);</span>
 </span><span id="__span-1-72"><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 </span><span id="__span-1-73"><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-1-74"><span class="w">        </span><span class="n">addBalance</span><span class="p">(</span><span class="n">amount</span><span class="p">);</span>
-</span><span id="__span-1-75"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"✅ 已存入 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元"</span><span class="p">);</span>
+</span><span id="__span-1-75"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" 已存入 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元"</span><span class="p">);</span>
 </span><span id="__span-1-76"><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-77">
 </span><span id="__span-1-78"><span class="w">    </span><span class="c1">// === 通用的提錢方法（但會調用各子類別的手續費計算） ===</span>
 </span><span id="__span-1-79"><span class="w">    </span><span class="nd">@Override</span>
 </span><span id="__span-1-80"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-81"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-82"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"❌ 提取金額必須大於0！"</span><span class="p">);</span>
+</span><span id="__span-1-82"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"提取金額必須大於0！"</span><span class="p">);</span>
 </span><span id="__span-1-83"><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 </span><span id="__span-1-84"><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-1-85">
@@ -3071,12 +3092,12 @@
 </span><span id="__span-1-88"><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">totalAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fee</span><span class="p">;</span>
 </span><span id="__span-1-89">
 </span><span id="__span-1-90"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">totalAmount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-91"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"❌ 餘額不足！需要 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalAmount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元（含手續費）"</span><span class="p">);</span>
+</span><span id="__span-1-91"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" 餘額不足！需要 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalAmount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元（含手續費）"</span><span class="p">);</span>
 </span><span id="__span-1-92"><span class="w">            </span><span class="k">return</span><span class="p">;</span>
 </span><span id="__span-1-93"><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-1-94">
 </span><span id="__span-1-95"><span class="w">        </span><span class="n">subtractBalance</span><span class="p">(</span><span class="n">totalAmount</span><span class="p">);</span>
-</span><span id="__span-1-96"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"✅ 已提取 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元（手續費："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fee</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元）"</span><span class="p">);</span>
+</span><span id="__span-1-96"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"已提取 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元（手續費："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fee</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 元）"</span><span class="p">);</span>
 </span><span id="__span-1-97"><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-98">
 </span><span id="__span-1-99"><span class="w">    </span><span class="c1">// === 通用的列印帳單方法 ===</span>
@@ -3352,7 +3373,7 @@
 </span><span id="__span-3-4">
 </span><span id="__span-3-5"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BankSystem</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-6"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"🏦 銀行帳戶系統\n"</span><span class="p">);</span>
+</span><span id="__span-3-7"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"銀行帳戶系統\n"</span><span class="p">);</span>
 </span><span id="__span-3-8">
 </span><span id="__span-3-9"><span class="w">        </span><span class="c1">// 建立三種不同類型的帳戶</span>
 </span><span id="__span-3-10"><span class="w">        </span><span class="n">Account</span><span class="w"> </span><span class="n">savings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SavingsAccount</span><span class="p">(</span><span class="s">"2024001"</span><span class="p">,</span><span class="w"> </span><span class="s">"王小明"</span><span class="p">);</span>
