@@ -14,7 +14,9 @@ sleep 10
 
 #github
 echo "Pushing to github....."
-git add .
+if [-n "$(git status --procelain)"];then
+  git add .
+fi
 
 # check if there are changes to comit 
 if ! git diff-index --quiet HEAD --; then

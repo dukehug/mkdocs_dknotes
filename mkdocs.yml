@@ -46,7 +46,6 @@ plugins:
     - search
     - mermaid2
     - glightbox
-    - inline-svg
 markdown_extensions:
   - admonition
   - pymdownx.mark
