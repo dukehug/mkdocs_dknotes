@@ -1,5 +1,5 @@
 
-# JAVA OOP - Interface , Abstract ,   Encapsulation , Inheritance And  Polymorphism Concepts Code Example
+# JAVA OOP - Interface , Abstract etc
 
 
 ## Interface
