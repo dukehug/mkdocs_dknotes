@@ -51,6 +51,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.highlight:
