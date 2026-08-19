@@ -76,6 +76,7 @@ console.log('Study Note');
 console.log('Study Note');
 ```
 
+## Table
 
 ```markdown
 | Syntax | Purpose |
