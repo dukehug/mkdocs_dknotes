@@ -1,4 +1,6 @@
-# Welcome to my study notes!
+
+
+Welcome to my study notes!
 
 ## About this note
 
