@@ -1,26 +1,34 @@
-Welcome to my study notes!
+# Welcome to my study notes!
+
+## About this note
+
+This repository records my learning notes from some courses at ADU. I use it to review and organize my study materials.
+
+Purpose:
+
+- For review
+- Notes and knowledge sharing
+- Improve my writing skills
+- Use Gemini to support my learning (Gemini can access my notes)
 
 
-## Why I  publish  my notes 
-- For reviwer 
-- Notes and  Knowlege sharing 
-- Improve my writing skills 
-- Use Gemini to help me learning (Gemini can acess my notes)
+## My side project 
 
-## How's Work 
+Schedule maker
+[weekly.52hz.im](https://weekly.52hz.im)
 
-I use Obsidian to write and take notes, then sync them to my NAS WebDAV server. The notes are saved on  a Linux Server that runs an MkDocs Server.  Before i  push the content to Github, ill check it on my Linux Server, and then use the `gh-deploy` command to push it to Github.
+BB Better Layout
+[chromewebstore.google.com](https://chromewebstore.google.com/detail/bb-better-layout-for-adam/pbnangjmldocmbkogkophjbobmnnppki?hl=en&pli=1)
 
 
+## My Digital Garden 
 
-## Error report 
-
-If you find any errors, please submit an issue on GitHub or clone the project and submit a pull request (PR) directly.
-
-[https://github.com/dukehug/mkdocs_dknotes/issues](https://github.com/dukehug/mkdocs_dknotes/issues)
+[https://www.dukehsu.com](https://www.dukehsu.com)
 
 
-Or Comment on the content and submit your opinion.
+## Error Report
+
+If you find any errors, please leave a comment and share your feedback.
 
 
 
