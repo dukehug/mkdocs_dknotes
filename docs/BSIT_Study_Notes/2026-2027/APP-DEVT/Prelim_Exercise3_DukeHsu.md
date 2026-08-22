@@ -9,7 +9,7 @@ Author:  Duke Hsu
 
 ---
 
-# Lab Exercise 3
+## Lab Exercise 3
 
 ## Hands-on Activity: Exploring AI Tools in Software Development
 

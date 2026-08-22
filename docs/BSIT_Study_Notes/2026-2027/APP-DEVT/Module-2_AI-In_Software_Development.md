@@ -9,7 +9,7 @@ Author:  Duke Hsu
 
 ---
 
-# Topic 
+## Topic 
 
 1. AI and Machine Learning 
 2. AI in Software Development
