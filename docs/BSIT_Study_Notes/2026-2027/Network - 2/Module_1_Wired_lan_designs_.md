@@ -9,7 +9,7 @@
 
 ---
 
-# Chapter 1: LAN Design
+## Chapter 1: LAN Design
 
 ## Learning Objectives
 
@@ -388,7 +388,7 @@ show running-config
 
 ---
 
-# Chapter 2: Scaling VLANs
+## Chapter 2: Scaling VLANs
 
 ## Learning Objectives
 
