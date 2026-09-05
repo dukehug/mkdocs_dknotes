@@ -75,11 +75,11 @@ Subnetting Formula
 Example:  **/24** is the default CIDR
 
 - /25 - Borrowing 1 bit from the fourth octet creates 2 subnets supporting 126 hosts each .
-- /26 - Borrowing 2 bit from the fourth octet creates 4 subnets supporting 126 hosts each .
-- /27 - Borrowing 3 bit from the fourth octet creates 8 subnets supporting 126 hosts each .
-- /28 - Borrowing 4 bit from the fourth octet creates 16 subnets supporting 126 hosts each .
-- /29 - Borrowing 5 bit from the fourth octet creates 32 subnets supporting 126 hosts each .
-- /30 - Borrowing 6 bit from the fourth octet creates 64 subnets supporting 126 hosts each .
+- /26 - Borrowing 2 bit from the fourth octet creates 4 subnets supporting 64 hosts each .
+- /27 - Borrowing 3 bit from the fourth octet creates 8 subnets supporting 32 hosts each .
+- /28 - Borrowing 4 bit from the fourth octet creates 16 subnets supporting 16 hosts each .
+- /29 - Borrowing 5 bit from the fourth octet creates 32 subnets supporting 8 hosts each .
+- /30 - Borrowing 6 bit from the fourth octet creates 64 subnets supporting 4 hosts each .
 
 Network ID dan Broadcast Address
 
