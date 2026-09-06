@@ -29,9 +29,9 @@ IA vs IS
 | Pillars  | IA relies on five pillars(Availability, Integrity, Authenticity,Confidentiality, Non-repudiation) AIACN | InfoSec primarily centers on the classic triad (Confidentiality, Integrity, Availability) CIA |
 | Assets   | IA protects all company information assets, incuding analog and physical records.                       | InfoSec targets digital data and electronic systems.                                          |
 
-![[Pasted image 20260806113023.png]]  
+![](../../../assets/images/CIA_1.png)
 
-![[Pasted image 20260806113904.png]] 
+![](../../../assets/images/CIA_2.png)
 ####  1.1 Keyword in IA and IS
 
 IA
@@ -125,7 +125,7 @@ Availability  - Readiness
 
 #### 3.4 5 Pillars of Information Security 
 
-![](5_Pillars_of_Information_Security.png)
+![](../../../assets/images/5_Pillars_of_Information_Security.png)
 
 
 ### 4.0 The Cybersecurity Domains
