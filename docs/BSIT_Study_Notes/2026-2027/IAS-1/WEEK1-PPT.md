@@ -167,6 +167,8 @@ Software Development Life Cycle
 | 5.     Testing     | Review code and eliminate bugs                 | Refined, optimized software              |
 | 6.     Deployment  | Deploy code to production environment          | Software available to end users          |
 | 7.     Maintenance | Continual fixes and improvements               | Updated and optimized code               |
+
+
 #### 4.2 SOLID in Software Development 
 
 SOLID stands for:
