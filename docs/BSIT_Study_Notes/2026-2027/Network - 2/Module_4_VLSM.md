@@ -16,8 +16,11 @@ Author:  Duke Hsu
 ## 1. VLSM 
 
 VLSM stands for ==Variable Length Subnet Mask.==
+
 - You can use more than one mask inside the same Class A/B/C network .
+
 - You can create subnets of different sizes based on actual requirements.
+
 - It is often described as subnetting the subnet.
 
 ## 2. VLSM Step by step 
