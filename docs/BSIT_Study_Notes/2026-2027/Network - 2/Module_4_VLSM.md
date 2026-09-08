@@ -38,8 +38,8 @@ VLSM stands for ==Variable Length Subnet Mask.==
 
 4000 hosts 
 
-$2^{11} - 2 =2046$  not enough
-$2^{12}-2=4096$  ok > 4000
+$2^{11} - 2 =2044$  not enough
+$2^{12}-2=4094$  ok > 4000
 
 Host bits = 12 
 
