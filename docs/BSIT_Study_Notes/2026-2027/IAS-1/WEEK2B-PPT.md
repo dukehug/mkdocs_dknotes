@@ -1,5 +1,5 @@
 
-# Module 2B - Threats , Vulnerabilities, Exploits, and Common Attack Vectors
+# Module - 2BThreats , Vulnerabilities, Exploits, and Common Attack Vectors
 
 2026-08-18 11:32
 
