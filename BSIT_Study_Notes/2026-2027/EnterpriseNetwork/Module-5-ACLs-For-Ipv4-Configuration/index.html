@@ -3,11 +3,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport">
 <meta content="dukes study notes on adamson unievrsity - Information Technology" name="description">
 <meta content="DukeHsu" name="author">
-<link href="../0808-firstclass/" rel="prev">
-<link href="../Module-2_Single_Area_OSPF_Config/" rel="next">
+<link href="../Module-4-ACL%20Concepts/" rel="prev">
+<link href="../../IAS-1/WEEK1-PPT/" rel="next">
 <link href="../../../../assets/images/favicon.png" rel="icon">
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator">
-<title>Module - 1 Single Area Open Shortest Path First - Duke's Study notes</title>
+<title>Module - 5 ACLs For IPv4 Configuration - Duke's Study notes</title>
 <link href="../../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet">
 <link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -31,7 +31,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox">
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#module-1-single-area-open-shortest-path-first">
+<a class="md-skip" href="#module-5-acls-for-ipv4-configuration">
           Skip to content
         </a>
 </div>
@@ -55,7 +55,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Module - 1 Single Area Open Shortest Path First
+              Module - 5 ACLs For IPv4 Configuration
             
           </span>
 </div>
@@ -1221,20 +1221,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox">
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    Module - 1 Single Area Open Shortest Path First
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Module-1_Single-Area-Open-Shortest-Path-First/">
 <span class="md-ellipsis">
     
   
@@ -1244,143 +1232,6 @@
     
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#topic">
-<span class="md-ellipsis">
-      
-        Topic
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#10-ospf-features-and-characteristics">
-<span class="md-ellipsis">
-      
-        1.0 OSPF Features and Characteristics
-      
-    </span>
-</a>
-<nav aria-label="1.0 OSPF Features and Characteristics" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#11-core-concept">
-<span class="md-ellipsis">
-      
-        1.1 Core concept
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#20-components-of-ospf">
-<span class="md-ellipsis">
-      
-        2.0 Components of OSPF
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#30-three-ospf-databases">
-<span class="md-ellipsis">
-      
-        3.0 Three OSPF Databases
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#40-spf-algorithm">
-<span class="md-ellipsis">
-      
-        4.0 SPF Algorithm
-      
-    </span>
-</a>
-<nav aria-label="4.0 SPF Algorithm" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ospf-path-selection">
-<span class="md-ellipsis">
-      
-        OSPF Path Selection
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#50-link-state-operation">
-<span class="md-ellipsis">
-      
-        5.0 Link-State Operation
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#60-single-area-and-multiarea-ospf">
-<span class="md-ellipsis">
-      
-        6.0 Single-Area and Multiarea OSPF
-      
-    </span>
-</a>
-<nav aria-label="6.0 Single-Area and Multiarea OSPF" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#61-single-area-ospf">
-<span class="md-ellipsis">
-      
-        6.1 Single-Area OSPF
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#62-multiarea-ospf">
-<span class="md-ellipsis">
-      
-        6.2 Multiarea OSPF
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#70-ospf-operational-states">
-<span class="md-ellipsis">
-      
-        7.0 OSPF Operational States
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#80-hello-packet">
-<span class="md-ellipsis">
-      
-        8.0 Hello Packet
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Module-2_Single_Area_OSPF_Config/">
@@ -1406,8 +1257,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Module-5-ACLs-For-Ipv4-Configuration/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox">
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Module - 5 ACLs For IPv4 Configuration
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     
   
@@ -1417,6 +1280,253 @@
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic">
+<span class="md-ellipsis">
+      
+        Topic
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-acl-planning-concept-and-hands-on">
+<span class="md-ellipsis">
+      
+        1. ACL Planning Concept and Hands-on
+      
+    </span>
+</a>
+<nav aria-label="1. ACL Planning Concept and Hands-on" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-acl-planning">
+<span class="md-ellipsis">
+      
+        1.1 ACL Planning
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-standard-ipv4-acls-and-hands-on">
+<span class="md-ellipsis">
+      
+        2. Standard IPv4 ACLs and Hands-on
+      
+    </span>
+</a>
+<nav aria-label="2. Standard IPv4 ACLs and Hands-on" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-access-list-command">
+<span class="md-ellipsis">
+      
+        2.1 access-list command
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-parameter-table">
+<span class="md-ellipsis">
+      
+        2.2 Parameter table
+      
+    </span>
+</a>
+<nav aria-label="2.2 Parameter table" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-command-ip-access-list-standard">
+<span class="md-ellipsis">
+      
+        a. Command ip access-list standard
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b-numbered-standard-acl">
+<span class="md-ellipsis">
+      
+        b. Numbered Standard ACL
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-apply-a-standard-ipv4-acl">
+<span class="md-ellipsis">
+      
+        2.4 Apply a Standard IPv4 ACL
+      
+    </span>
+</a>
+<nav aria-label="2.4 Apply a Standard IPv4 ACL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-command-ip-access-group">
+<span class="md-ellipsis">
+      
+        a. Command ip access-group
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-acl-modification-and-statistics">
+<span class="md-ellipsis">
+      
+        3. ACL Modification and Statistics
+      
+    </span>
+</a>
+<nav aria-label="3. ACL Modification and Statistics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-text-editor-method">
+<span class="md-ellipsis">
+      
+        3.1 Text Editor Method
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-sequence-number-method">
+<span class="md-ellipsis">
+      
+        3.2 Sequence Number Method
+      
+    </span>
+</a>
+<nav aria-label="3.2 Sequence Number Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#321-modify">
+<span class="md-ellipsis">
+      
+        3.2.1 Modify
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#322-append">
+<span class="md-ellipsis">
+      
+        3.2.2 Append
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-acl-statistics">
+<span class="md-ellipsis">
+      
+        3.3 ACL Statistics
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-secure-vty-access">
+<span class="md-ellipsis">
+      
+        4. Secure VTY Access
+      
+    </span>
+</a>
+<nav aria-label="4. Secure VTY Access" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-secure-vty-access-step-by-step">
+<span class="md-ellipsis">
+      
+        4.1 Secure VTY Access Step by Step
+      
+    </span>
+</a>
+<nav aria-label="4.1 Secure VTY Access Step by Step" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-set-username-and-password">
+<span class="md-ellipsis">
+      
+        Step 1 - Set username and password
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-set-access-list-standard-host">
+<span class="md-ellipsis">
+      
+        Step 2 - Set access-list standard Host
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-set-acl-details">
+<span class="md-ellipsis">
+      
+        Step 3 - Set ACL details
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-set-vty">
+<span class="md-ellipsis">
+      
+        Step 4 - Set VTY
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      
+        References
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -1909,20 +2019,20 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#10-ospf-features-and-characteristics">
+<a class="md-nav__link" href="#1-acl-planning-concept-and-hands-on">
 <span class="md-ellipsis">
       
-        1.0 OSPF Features and Characteristics
+        1. ACL Planning Concept and Hands-on
       
     </span>
 </a>
-<nav aria-label="1.0 OSPF Features and Characteristics" class="md-nav">
+<nav aria-label="1. ACL Planning Concept and Hands-on" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#11-core-concept">
+<a class="md-nav__link" href="#11-acl-planning">
 <span class="md-ellipsis">
       
-        1.1 Core concept
+        1.1 ACL Planning
       
     </span>
 </a>
@@ -1931,38 +2041,48 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#20-components-of-ospf">
+<a class="md-nav__link" href="#2-standard-ipv4-acls-and-hands-on">
 <span class="md-ellipsis">
       
-        2.0 Components of OSPF
+        2. Standard IPv4 ACLs and Hands-on
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#30-three-ospf-databases">
-<span class="md-ellipsis">
-      
-        3.0 Three OSPF Databases
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#40-spf-algorithm">
-<span class="md-ellipsis">
-      
-        4.0 SPF Algorithm
-      
-    </span>
-</a>
-<nav aria-label="4.0 SPF Algorithm" class="md-nav">
+<nav aria-label="2. Standard IPv4 ACLs and Hands-on" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ospf-path-selection">
+<a class="md-nav__link" href="#21-access-list-command">
 <span class="md-ellipsis">
       
-        OSPF Path Selection
+        2.1 access-list command
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-parameter-table">
+<span class="md-ellipsis">
+      
+        2.2 Parameter table
+      
+    </span>
+</a>
+<nav aria-label="2.2 Parameter table" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-command-ip-access-list-standard">
+<span class="md-ellipsis">
+      
+        a. Command ip access-list standard
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b-numbered-standard-acl">
+<span class="md-ellipsis">
+      
+        b. Numbered Standard ACL
       
     </span>
 </a>
@@ -1971,38 +2091,73 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#50-link-state-operation">
+<a class="md-nav__link" href="#24-apply-a-standard-ipv4-acl">
 <span class="md-ellipsis">
       
-        5.0 Link-State Operation
+        2.4 Apply a Standard IPv4 ACL
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#60-single-area-and-multiarea-ospf">
-<span class="md-ellipsis">
-      
-        6.0 Single-Area and Multiarea OSPF
-      
-    </span>
-</a>
-<nav aria-label="6.0 Single-Area and Multiarea OSPF" class="md-nav">
+<nav aria-label="2.4 Apply a Standard IPv4 ACL" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#61-single-area-ospf">
+<a class="md-nav__link" href="#a-command-ip-access-group">
 <span class="md-ellipsis">
       
-        6.1 Single-Area OSPF
+        a. Command ip access-group
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-acl-modification-and-statistics">
+<span class="md-ellipsis">
+      
+        3. ACL Modification and Statistics
+      
+    </span>
+</a>
+<nav aria-label="3. ACL Modification and Statistics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-text-editor-method">
+<span class="md-ellipsis">
+      
+        3.1 Text Editor Method
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#62-multiarea-ospf">
+<a class="md-nav__link" href="#32-sequence-number-method">
 <span class="md-ellipsis">
       
-        6.2 Multiarea OSPF
+        3.2 Sequence Number Method
+      
+    </span>
+</a>
+<nav aria-label="3.2 Sequence Number Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#321-modify">
+<span class="md-ellipsis">
+      
+        3.2.1 Modify
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#322-append">
+<span class="md-ellipsis">
+      
+        3.2.2 Append
       
     </span>
 </a>
@@ -2011,19 +2166,84 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#70-ospf-operational-states">
+<a class="md-nav__link" href="#33-acl-statistics">
 <span class="md-ellipsis">
       
-        7.0 OSPF Operational States
+        3.3 ACL Statistics
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-secure-vty-access">
+<span class="md-ellipsis">
+      
+        4. Secure VTY Access
+      
+    </span>
+</a>
+<nav aria-label="4. Secure VTY Access" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-secure-vty-access-step-by-step">
+<span class="md-ellipsis">
+      
+        4.1 Secure VTY Access Step by Step
+      
+    </span>
+</a>
+<nav aria-label="4.1 Secure VTY Access Step by Step" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-set-username-and-password">
+<span class="md-ellipsis">
+      
+        Step 1 - Set username and password
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#80-hello-packet">
+<a class="md-nav__link" href="#step-2-set-access-list-standard-host">
 <span class="md-ellipsis">
       
-        8.0 Hello Packet
+        Step 2 - Set access-list standard Host
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-set-acl-details">
+<span class="md-ellipsis">
+      
+        Step 3 - Set ACL details
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-set-vty">
+<span class="md-ellipsis">
+      
+        Step 4 - Set VTY
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      
+        References
       
     </span>
 </a>
@@ -2035,232 +2255,706 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="module-1-single-area-open-shortest-path-first">Module - 1  Single  Area  Open  Shortest  Path First</h1>
-<p>2026-08-18 16:58
-Update: 2026-08-26 </p>
+<h1 id="module-5-acls-for-ipv4-configuration">Module - 5 ACLs For IPv4 Configuration</h1>
+<p>2026-09-29 17:15</p>
 <p>Tags: #enterpriseNetwork </p>
 <p>Author:  Duke Hsu</p>
 <hr>
 <h2 id="topic">Topic</h2>
 <ol>
-<li>OSPF Features and Characteristics</li>
-<li>Components of OSPF </li>
-<li>Three OSPF Databases</li>
-<li>SPF Algorithm</li>
-<li>Link-State Operation</li>
-<li>Single-Area and Multi-Area  OSPF</li>
-<li>OSPF Operational States</li>
-<li>Hello Packet</li>
-<li>DR / BDR / DROTHER</li>
-<li>OSPF Cost Calculation</li>
+<li>ACL Planning Concept </li>
+<li>Standard IPv4 ACLs Concept and Hands-on</li>
+<li>ACL Modification and Statistics</li>
+<li>Secure VTY Access and Hands-on</li>
+<li>Extended IPv4 ACLs Concept and Hands-on</li>
+<li>Verification and Practice</li>
 </ol>
-<h2 id="10-ospf-features-and-characteristics">1.0 OSPF Features and Characteristics</h2>
-<p>OSPF - Open Shortest Path First</p>
-<h3 id="11-core-concept">1.1 Core concept</h3>
-<ul>
-<li>OSPF is a Link-State Routing Protocol</li>
-<li>OSPF has faster convergence than RIP</li>
-<li>OSPF is more scalable</li>
-<li>OSPF user <strong>areas</strong></li>
-<li>Link-State information includes:<ul>
-<li>Network Prefix</li>
-<li>Prefix Length</li>
-<li>Cost</li>
-</ul>
-</li>
-</ul>
-<p>OSPF learns the network topology and calculates the shortest path.</p>
-<h2 id="20-components-of-ospf">2.0 Components of OSPF</h2>
-<p>OSPF routers exchange routing information with each other through OSPF messages.</p>
-<p>OSPF has five packet types:</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Packet name</th>
-<th>Description</th>
-<th>Memorize</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Hello</td>
-<td>Discovers neighbors and builds adjacencies between them</td>
-<td>find other</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Database Description(DBD)</td>
-<td>Checks for database synchronization between routers</td>
-<td>informed other</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Link-State Request(LSR)</td>
-<td>Requests specific link-state records from router to router</td>
-<td>ask status</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Link-State Update(LSU)</td>
-<td>Sends specifically requested link-state records</td>
-<td>reply  status</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Link-State Acknowledgment(LSAck)</td>
-<td>Acknowledges the other packet types</td>
-<td>noted</td>
-</tr>
-</tbody>
-</table>
-<div class="mermaid">graph LR
-A[Hello] --&gt; B[DBD] --&gt; C[LSR] --&gt; D[LSU] --&gt; E[LSAck]
+<div class="mermaid">flowchart TB
+    M["Module 5 · Week 8<br>IPv4 ACL Configuration<br>Access Control Lists"]
 
+    M --&gt; A["1. ACL Planning<br>pp. 2–3"]
+    A --&gt; B["2. Standard IPv4 ACLs<br>pp. 4–12"]
+    B --&gt; C["3. ACL Modification and Statistics<br>pp. 13–18"]
+    C --&gt; D["4. Secure VTY Access<br>pp. 19–21"]
+    D --&gt; E["5. Extended IPv4 ACLs<br>pp. 22–36"]
+    E --&gt; F["6. Verification and Practice<br>pp. 37–43"]
+
+    AC["Concept<br>Define permitted and denied traffic<br>Translate requirements into ACEs"]
+    AH["Hands-on Practice<br>Plan policies and commands<br>Add documentation using remark<br>Test after configuration"]
+    A --- AC
+    A --- AH
+
+    BC["Concept<br>Filter by source IPv4 address<br>Numbered ACLs<br>Named ACLs"]
+    BH["Hands-on Practice<br>access-list<br>ip access-list standard<br>ip access-group<br>Select the interface and direction: in / out"]
+    B --- BC
+    B --- BH
+
+    CC["Concept<br>Sequence Numbers: identify ACEs<br>Implicit Deny: reject unmatched traffic<br>Matches: count ACE hits"]
+    CH["Hands-on Practice<br>Prepare ACL changes in a text editor<br>Remove an ACE using no sequence-number<br>Insert an ACE using a sequence number<br>clear access-list counters"]
+    C --- CC
+    C --- CH
+
+    DC["Concept<br>Restrict remote management by source host<br>Distinguish access restrictions from authentication"]
+    DH["Hands-on Practice<br>Create a Standard ACL<br>line vty<br>login local<br>Apply the ACL using access-class"]
+    D --- DC
+    D --- DH
+
+    EC["Concept<br>Match source, destination, protocol, and port<br>Usually apply close to the source<br>established: match TCP ACK or RST flags<br>Does not provide full connection tracking"]
+    EH["Hands-on Practice<br>Numbered or Named ACLs<br>ip access-list extended<br>permit / deny tcp<br>eq 80 / eq 443<br>SURFING / BROWSING examples"]
+    E --- EC
+    E --- EH
+
+    FC["Concept<br>Configuration alone does not prove correct operation<br>Test both permitted and denied traffic"]
+    FH["Hands-on Practice<br>show running-config<br>show ip interface<br>show access-lists<br>Generate traffic and observe counters<br>Packet Tracer activities and lab"]
+    F --- FC
+    F --- FH
 </div>
-<h2 id="30-three-ospf-databases">3.0 Three OSPF Databases</h2>
-<table>
-<thead>
-<tr>
-<th>Database</th>
-<th>Table</th>
-<th>Command</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Adjacency Database</td>
-<td>Neighbor table</td>
-<td><code>show ip ospf neighbor</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Link-State Database(LSDB)</td>
-<td>Topology Table</td>
-<td><code>show ip ospf database</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Forwarding Database</td>
-<td>Routing Table</td>
-<td><code>show ip route</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<div class="mermaid">graph LR
-A[Neighbor] --&gt; B[Topology] --&gt; C[RoutingTable]
-</div>
-<h2 id="40-spf-algorithm">4.0 SPF Algorithm</h2>
-<h3 id="ospf-path-selection">OSPF Path Selection</h3>
-<p>OSPF uses the <strong>Dijkstra Shortest Path First (SPF) Algorithm</strong> to calculate the best path.</p>
-<p>OSPF uses <strong>Cumulative Cost</strong> to compare different paths.</p>
-<p><strong>Lower Cost = Better Path</strong></p>
-<p>Example:</p>
-<p>Path A: R1 → R2 → R4
-Cost:      10 + 10 = 20</p>
-<p>Path B: R1 → R3 → R4
-Cost:      5  + 10 = 15</p>
-<p><strong>Path B → Cost 15</strong> ✅</p>
-<h2 id="50-link-state-operation">5.0 Link-State Operation</h2>
-<div class="mermaid">graph TD
-A[Establish Neighbor Adjacencies] --&gt; B[Exchange Link-State Advertisements] --&gt; C[Build the Link-State Datase] --&gt; D[Execute the SPF Algorithm] --&gt; E[Choose the Best Route]
-</div>
-<h2 id="60-single-area-and-multiarea-ospf">6.0 Single-Area and Multiarea OSPF</h2>
-<h3 id="61-single-area-ospf">6.1 Single-Area OSPF</h3>
-<p>All routers are in the same OSPF area.</p>
-<p>Usually, we use <strong>Area 0</strong>.</p>
-<p>Example:</p>
-<p>R1 ─── R2 ─── R3
-     Area 0</p>
-<h3 id="62-multiarea-ospf">6.2 Multiarea OSPF</h3>
-<p>There are multiple OSPF areas.</p>
-<p>All other areas must connect to the <strong>Backbone Area (Area 0)</strong>.</p>
-<p>A router that connects Area 0 to another area is called an:</p>
-<p><strong>ABR = Area Border Router</strong></p>
-<p>Example:</p>
-<p>Area 1                              Area 0                               Area 2
-  R1 ─── [ABR] ─── R2 ─── [ABR] ─── R3</p>
-<h2 id="70-ospf-operational-states">7.0 OSPF Operational States</h2>
-<p>Down → Init → Two-Way → ExStart → Exchange → Loading → Full</p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>中文理解</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Down</td>
-<td>還沒收到 Hello</td>
-</tr>
-<tr>
-<td>Init</td>
-<td>收到對方 Hello</td>
-</tr>
-<tr>
-<td>Two-Way</td>
-<td>雙方已經互相認識</td>
-</tr>
-<tr>
-<td>ExStart</td>
-<td>決定誰先開始交換 DBD</td>
-</tr>
-<tr>
-<td>Exchange</td>
-<td>交換 DBD</td>
-</tr>
-<tr>
-<td>Loading</td>
-<td>用 LSR / LSU 補齊資訊</td>
-</tr>
-<tr>
-<td>Full</td>
-<td>LSDB 完全同步</td>
-</tr>
-</tbody>
-</table>
-<h2 id="80-hello-packet">8.0 Hello Packet</h2>
-<h1 id="hello-packet">Hello Packet</h1>
-<p>The default OSPFv2 Hello interval on multiaccess and point-to-point networks is 10 seconds, while the default Dead interval is 40 seconds.</p>
-<p>The OSPF Hello Packet has several important functions:</p>
+<h2 id="1-acl-planning-concept-and-hands-on">1. ACL Planning Concept and Hands-on</h2>
+<h3 id="11-acl-planning">1.1 ACL Planning</h3>
+<p>All access control lists (ACLs) must be planned. When configuring a complex ACL, it is suggested that you </p>
 <ul>
-<li><strong>Discover Neighbors</strong></li>
-<li>
-<p>Discover other OSPF routers.</p>
-</li>
-<li>
-<p><strong>Establish Adjacency</strong></p>
-</li>
-<li>
-<p>Establish and maintain OSPF neighbor relationships.</p>
-</li>
-<li>
-<p><strong>Advertise Parameters</strong></p>
-</li>
-<li>
-<p>Exchange parameters required to become OSPF neighbors.</p>
-</li>
-<li>
-<p><strong>Elect DR and BDR</strong></p>
-</li>
-<li>Elect a <strong>Designated Router (DR)</strong> and <strong>Backup Designated Router (BDR)</strong> on multiaccess networks.</li>
+<li>Use a text editor and write out the specifics of the policy to be implemented.</li>
+<li>Add the IOS configuration commands to accomplish those tasks</li>
+<li>Include remarks to document the ACL</li>
+<li>Copy and pasts the commands onto the device</li>
+<li>Always thoroughly test and ACL to ensure that it correctly applies the desired policy</li>
 </ul>
-<h2 id="point-to-point-links">Point-to-Point Links</h2>
-<p>Point-to-point links <strong>do not require DR/BDR election</strong>.</p>
-<h2 id="ospfv2-hello-multicast-address">OSPFv2 Hello Multicast Address</h2>
-<p>OSPFv2 Hello packets use the following IPv4 multicast address:</p>
-<p><strong>224.0.0.5 = AllSPFRouters (All OSPF Routers)</strong></p>
-<hr>
-<h2 id="class-note">Class note</h2>
-<h2 id="-use-lec-module-to-in-lab-this-week">- Use LEC module to in LAB  / This week</h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/blackboard/20260818175511140.webp"><img alt="image.png" src="https://img.dukehsu.com/blackboard/20260818175511140.webp"></a></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20260818175625525.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/20260818175625525.webp"></a></p>
+<h2 id="2-standard-ipv4-acls-and-hands-on">2. Standard IPv4 ACLs  and Hands-on</h2>
+<h3 id="21-access-list-command">2.1 <code>access-list</code> command</h3>
+<p><strong>Syntax</strong></p>
+<p><code>R1(config)# access-list &lt;access-list-number&gt; {deny | permit | remark [text]} {host |source [source-wildcard]| any}</code></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/access-lists.webp"><img alt="access-list.png" src="https://img.dukehsu.com/study_note/access-lists.webp"></a></p>
+<h3 id="22-parameter-table">2.2 Parameter table</h3>
+<div class="admonition tip">
+<p class="admonition-title">Notes</p>
+<p>Use the <code>no access-list &lt;access-list-number&gt;</code> global configuration command to remove a numbered standard ACL</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access-list-number</td>
+<td>Number range is 1 to 99 or 1300 to 1999</td>
+</tr>
+<tr>
+<td>deny</td>
+<td>Denies access if the condition is matched</td>
+</tr>
+<tr>
+<td>permit</td>
+<td>Permits access if the condition is matched</td>
+</tr>
+<tr>
+<td>remark text</td>
+<td>Optional text entry for documentation purposes</td>
+</tr>
+<tr>
+<td>source</td>
+<td>Identifies the source network or host address to filter</td>
+</tr>
+<tr>
+<td>source-wildcard</td>
+<td>Optional 32-bit wildcard mask that is applied to the source</td>
+</tr>
+<tr>
+<td>log</td>
+<td>Optional Generates and sends an informational message when the ACE is matched</td>
+</tr>
+<tr>
+<td>### 2.3  Named and Numbered Standard IPv4 ACL</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="a-command-ip-access-list-standard">a. Command <code>ip access-list standard</code></h4>
+<p>Use the <code>ip access-list standard</code> command to create a named standard ACL.</p>
+<ul>
+<li>ACL names are alphanumeric, case sensitive, and must be unique</li>
+<li>Capitalizing ACL names is not required but makes them stand out when viewing the <code>running-config</code> output</li>
+</ul>
+<p><code>R1(config)# ip access-list standard &lt;access-list-name&gt;</code></p>
+<p>Example:  </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1">R1(config)#access-list 1 remark ALLOW-ACESS any
+</span><span id="__span-0-2">R1(config)#ip access-list standard ALLOW-ACESS
+</span><span id="__span-0-3">R1(config-std-nacl)#?
+</span><span id="__span-0-4">    &lt;1-2147483647&gt; Sequence Number
+</span><span id="__span-0-5">
+</span><span id="__span-0-6">    default Set a command to its defaults
+</span><span id="__span-0-7">
+</span><span id="__span-0-8">    deny Specify packets to reject
+</span><span id="__span-0-9">
+</span><span id="__span-0-10">    exit Exit from access-list configuration mode
+</span><span id="__span-0-11">
+</span><span id="__span-0-12">    no Negate a command or set its defaults
+</span><span id="__span-0-13">
+</span><span id="__span-0-14">    permit Specify packets to forward
+</span><span id="__span-0-15">
+</span><span id="__span-0-16">    remark Access list entry comment
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example 1:</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1">R1#config t
+</span><span id="__span-1-2">R1(config)#ip access-list standard DENY-ACCESS
+</span><span id="__span-1-3">R1(config-std-nacl)#?
+</span><span id="__span-1-4">
+</span><span id="__span-1-5">    &lt;1-2147483647&gt; Sequence Number
+</span><span id="__span-1-6">    default Set a command to its defaults
+</span><span id="__span-1-7">    deny Specify packets to reject
+</span><span id="__span-1-8">    exit Exit from access-list configuration mode
+</span><span id="__span-1-9">    no Negate a command or set its defaults
+</span><span id="__span-1-10">    permit Specify packets to forward
+</span><span id="__span-1-11">    remark Access list entry comment
+</span><span id="__span-1-12">
+</span><span id="__span-1-13">    R1(config-std-nacl)#remark ACE DENY host 192.168.110.101
+</span><span id="__span-1-14">    R1(config-std-nacl)#deny host 192.168.110.101
+</span><span id="__span-1-15">    R1(config-std-nacl)#exit
+</span><span id="__span-1-16">
+</span><span id="__span-1-17">R1(config)#interface serial 0/0/0
+</span><span id="__span-1-18">    R1(config-if)#ip access-group DENY-ACCESS out
+</span><span id="__span-1-19">    R1(config-if)#end
+</span><span id="__span-1-20">R1#
+</span><span id="__span-1-21">R1#show running-config | section access
+</span><span id="__span-1-22">    ip access-group DENY-ACCESS out
+</span><span id="__span-1-23">    ip access-list standard DENY-ACCESS
+</span><span id="__span-1-24">    remark ACE DENY host 192.168.110.101
+</span><span id="__span-1-25">    deny host 192.168.110.101
+</span><span id="__span-1-26">
+</span><span id="__span-1-27">R1#
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Verify</strong></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20260930173559904.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/20260930173559904.webp"></a></p>
+<h4 id="b-numbered-standard-acl">b. Numbered Standard ACL</h4>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20260930164949376.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/20260930164949376.webp"></a></p>
+<p>Example: </p>
+<p>Permit traffic from host 192.168.110.101  and 192.168.254.0/24 network out interface serial 0/0/0 on router R1 </p>
+<p><strong>IOS command</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1">R1#config t
+</span><span id="__span-2-2">R1(config)#access-list 10 remark ACE permit ONLY host 192.168.110.101 to the internet
+</span><span id="__span-2-3">R1(config)#access-list 10 permit host 192.168.110.101
+</span><span id="__span-2-4">
+</span><span id="__span-2-5">R1(config)#do show access-lists
+</span><span id="__span-2-6">    Standard IP access list 10
+</span><span id="__span-2-7">    10 permit host 192.168.110.101
+</span><span id="__span-2-8">
+</span><span id="__span-2-9">R1(config)#access-list 10 remark ACE permit all host in LAN254
+</span><span id="__span-2-10">R1(config)#access-list 10 permit 192.168.254.0 0.0.0.255
+</span><span id="__span-2-11">R1(config)#do show access-lists
+</span><span id="__span-2-12">    Standard IP access list 10
+</span><span id="__span-2-13">    10 permit host 192.168.110.101
+</span><span id="__span-2-14">    20 permit 192.168.254.0 0.0.0.255
+</span><span id="__span-2-15">
+</span><span id="__span-2-16">    R1(config)#interface serial 0/0/0
+</span><span id="__span-2-17">    R1(config-if)#ip access-group 10 out
+</span><span id="__span-2-18">    R1(config-if)#end
+</span><span id="__span-2-19">
+</span><span id="__span-2-20">
+</span><span id="__span-2-21">R1#show running-config | section access
+</span><span id="__span-2-22">
+</span><span id="__span-2-23">    ip access-group 10 out
+</span><span id="__span-2-24">    access-list 10 remark ACE permit ONLY host 192.168.110.101 to the internet
+</span><span id="__span-2-25">    access-list 10 permit host 192.168.110.101
+</span><span id="__span-2-26">    access-list 10 remark ACE permit all host in LAN254
+</span><span id="__span-2-27">    access-list 10 permit 192.168.254.0 0.0.0.255
+</span><span id="__span-2-28">
+</span><span id="__span-2-29">R1#show running-config
+</span><span id="__span-2-30">
+</span><span id="__span-2-31">Building configuration...
+</span><span id="__span-2-32">version 15.1
+</span><span id="__span-2-33">no service timestamps log datetime msec
+</span><span id="__span-2-34">no service timestamps debug datetime msec
+</span><span id="__span-2-35">no service password-encryption
+</span><span id="__span-2-36">
+</span><span id="__span-2-37">
+</span><span id="__span-2-38">interface Serial0/0/0
+</span><span id="__span-2-39">ip address 172.168.10.9 255.255.255.252
+</span><span id="__span-2-40">ip access-group 10 out
+</span><span id="__span-2-41">clock rate 2000000
+</span><span id="__span-2-42">
+</span><span id="__span-2-43">    access-list 10 remark ACE permit ONLY host 192.168.110.101 to the internet
+</span><span id="__span-2-44">    access-list 10 permit host 192.168.110.101
+</span><span id="__span-2-45">    access-list 10 remark ACE permit all host in LAN254
+</span><span id="__span-2-46">    access-list 10 permit 192.168.254.0 0.0.0.255
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Verify</strong></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/ACL.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/ACL.webp"></a>
+Figure -1  PC 110.101 -ACL tester</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20260930170719252.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/20260930170719252.webp"></a>
+Figure -2  PC 110.102 -ACL tester</p>
+<h3 id="24-apply-a-standard-ipv4-acl">2.4 Apply a Standard IPv4 ACL</h3>
+<h4 id="a-command-ip-access-group">a. Command <code>ip access-group</code></h4>
+<p>After a standard IPv4 ACL is configured , it  must be linked to an interface or feature</p>
+<ul>
+<li>The <code>ip access-group</code> command is used to bind a numbered or named standard IPv4 ACL to an interface. </li>
+<li>To remove an ACL from an interface , first enter the  <code>no ip access-group</code> interface configuration command .</li>
+</ul>
+<p><code>R1(config-if)# ip access-group &lt;access-list-number | access-list-name&gt; {in | out}</code></p>
+<p>Example: </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1">R1(config)#interface gigabitEthernet 0/0
+</span><span id="__span-3-2">R1(config-if)#ip access-group 1 in
+</span><span id="__span-3-3">R1(config-if)#end
+</span><span id="__span-3-4">
+</span><span id="__span-3-5">R1#show running-config | section access-group
+</span><span id="__span-3-6">    ip access-group 1 in
+</span><span id="__span-3-7">
+</span><span id="__span-3-8">R1#show running-config | section access
+</span><span id="__span-3-9">    ip access-group 1 in
+</span><span id="__span-3-10">    access-list 1 remark ALLOW-ACESS any
+</span><span id="__span-3-11">    ip access-list standard ALLOW-ACESS
+</span></code></pre></div></td></tr></tbody></table></div>
+<h2 id="3-acl-modification-and-statistics">3. ACL Modification and Statistics</h2>
+<p>After an ACL is configured , it may need to be modified. ACLs with multiple ACEs can be complex to configure. Sometimes the configured ACE does not yield the expected behaviors. </p>
+<p>Two methods to use when modifying an ACL:</p>
+<ul>
+<li>Use a text editor</li>
+<li>Use sequence numbers</li>
+</ul>
+<h3 id="31-text-editor-method">3.1 Text Editor Method</h3>
+<p>ACLs with multiple ACEs should be created in a text editor. This allows you to plan the required ACEs, create the ACL, and then paste it into the router interface. It also simplifies the tasks to edit and fix an ACL. </p>
+<p>To correct an error in an ACL:</p>
+<ul>
+<li><strong>Step 1</strong>  Copy the ACL from the running configuration and paste it into the text editor.</li>
+<li><strong>Step 2</strong>  Make the necessary edits or changes. </li>
+<li><strong>Step 3</strong> Remove the perviously configured ACL on the router. </li>
+<li><strong>Step 4</strong> Copy and paste the edited ACL back to the router. </li>
+</ul>
+<h3 id="32-sequence-number-method">3.2 Sequence Number Method</h3>
+<p>An ACL ACE can be deleted or added using the ACL sequence numbers. </p>
+<ul>
+<li>Use the <code>ip access-list standard</code> command to edit an ACL</li>
+<li>Statements cannot be overwritten using an existing sequence number</li>
+<li>The current statement must be deleted first with the  <code>no 10</code>  command .</li>
+<li>Then the correct ACE can be added using sequence number.</li>
+</ul>
+<h4 id="321-modify">3.2.1 Modify</h4>
+<p>Example:  </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1">R1(config)#ip access-list standard DENY-ACCESS
+</span><span id="__span-4-2">R1(config-std-nacl)#?
+</span><span id="__span-4-3">
+</span><span id="__span-4-4">    &lt;1-2147483647&gt; Sequence Number
+</span><span id="__span-4-5">    default Set a command to its defaults
+</span><span id="__span-4-6">    deny Specify packets to reject
+</span><span id="__span-4-7">    exit Exit from access-list configuration mode
+</span><span id="__span-4-8">    no Negate a command or set its defaults
+</span><span id="__span-4-9">    permit Specify packets to forward
+</span><span id="__span-4-10">    remark Access list entry comment
+</span><span id="__span-4-11">
+</span><span id="__span-4-12">R1(config-std-nacl)#no 10
+</span><span id="__span-4-13">R1(config-std-nacl)#10 permit host 192.168.110.101
+</span><span id="__span-4-14">R1(config-std-nacl)#remark ACE Permit host 192.168.110.101 - by duke
+</span><span id="__span-4-15">R1(config-std-nacl)#end
+</span><span id="__span-4-16">
+</span><span id="__span-4-17">R1#show ip access-lists
+</span><span id="__span-4-18">    Standard IP access list DENY-ACCESS
+</span><span id="__span-4-19">    10 permit host 192.168.110.101
+</span><span id="__span-4-20">    Standard IP access list PERMIT-ACCESS
+</span><span id="__span-4-21">    10 permit host 192.168.110.102 (6 match(es))
+</span><span id="__span-4-22">
+</span><span id="__span-4-23">R1#config t
+</span><span id="__span-4-24">R1(config)#interface serial 0/0/0
+</span><span id="__span-4-25">R1(config-if)#ip access-group 10 out
+</span><span id="__span-4-26">R1(config-if)#end
+</span><span id="__span-4-27">
+</span><span id="__span-4-28">
+</span><span id="__span-4-29">R1#show running-config | section access-list
+</span><span id="__span-4-30">    ip access-list standard DENY-ACCESS
+</span><span id="__span-4-31">    remark ACE DENY host 192.168.110.101
+</span><span id="__span-4-32">    permit host 192.168.110.101
+</span><span id="__span-4-33">    remark ACE Permit host 192.168.110.101 - by duke
+</span><span id="__span-4-34">    ip access-list standard PERMIT-ACCESS
+</span><span id="__span-4-35">    remark ACE PERMIT host 192.168.110.102
+</span><span id="__span-4-36">    permit host 192.168.110.102
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="322-append">3.2.2 Append</h4>
+<p>Example：</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1">R1#config t
+</span><span id="__span-5-2">
+</span><span id="__span-5-3">R1(config)#ip access-list standard 1
+</span><span id="__span-5-4">R1(config-std-nacl)#?
+</span><span id="__span-5-5">
+</span><span id="__span-5-6">    &lt;1-2147483647&gt; Sequence Number
+</span><span id="__span-5-7">    default Set a command to its defaults
+</span><span id="__span-5-8">    deny Specify packets to reject
+</span><span id="__span-5-9">    exit Exit from access-list configuration mode
+</span><span id="__span-5-10">    no Negate a command or set its defaults
+</span><span id="__span-5-11">    permit Specify packets to forward
+</span><span id="__span-5-12">    remark Access list entry comment
+</span><span id="__span-5-13">
+</span><span id="__span-5-14">R1(config-std-nacl)#15 deny ?
+</span><span id="__span-5-15">
+</span><span id="__span-5-16">    A.B.C.D Address to match
+</span><span id="__span-5-17">    any Any source host
+</span><span id="__span-5-18">    host A single host address
+</span><span id="__span-5-19">
+</span><span id="__span-5-20">R1(config-std-nacl)#15 deny host 192.168.110.103
+</span><span id="__span-5-21">R1(config-std-nacl)#end
+</span><span id="__span-5-22">
+</span><span id="__span-5-23">
+</span><span id="__span-5-24">R1#show access-lists
+</span><span id="__span-5-25">
+</span><span id="__span-5-26">    Standard IP access list DENY-ACCESS
+</span><span id="__span-5-27">    10 permit host 192.168.110.101
+</span><span id="__span-5-28">    Standard IP access list PERMIT-ACCESS
+</span><span id="__span-5-29">    10 permit host 192.168.110.102 (6 match(es))
+</span><span id="__span-5-30">    Standard IP access list 1
+</span><span id="__span-5-31">    15 deny host 192.168.110.103
+</span></code></pre></div></td></tr></tbody></table></div>
+<h3 id="33-acl-statistics">3.3 ACL Statistics</h3>
+<p>The <code>show access-lists</code> command in the example shows statistics for each statement that has been matched</p>
+<ul>
+<li>Matches </li>
+<li>Note that the implied deny any statement does not display any statistic</li>
+<li>To track how many implicit denied packets have been matched, you must manually configure the deny any command. </li>
+<li>Use the <code>clear access-list counters &lt;access-list-nam&gt;</code> to clear the ACL statistics.</li>
+</ul>
+<p>Example: </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1">R1#show ip access-lists
+</span><span id="__span-6-2">    Standard IP access list DENY-ACCESS
+</span><span id="__span-6-3">    10 permit host 192.168.110.101
+</span><span id="__span-6-4">    Standard IP access list PERMIT-ACCESS
+</span><span id="__span-6-5">    10 permit host 192.168.110.102 (6 match(es))
+</span><span id="__span-6-6">    Standard IP access list 1
+</span><span id="__span-6-7">    15 deny host 192.168.110.103 (3 match(es))
+</span><span id="__span-6-8">
+</span><span id="__span-6-9">
+</span><span id="__span-6-10">R1#clear ?
+</span><span id="__span-6-11">
+</span><span id="__span-6-12">    aaa Clear AAA values
+</span><span id="__span-6-13">    access-list Clear access list statistical information
+</span><span id="__span-6-14">    arp-cache Clear the entire ARP cache
+</span><span id="__span-6-15">    cdp Reset cdp information
+</span><span id="__span-6-16">    frame-relay Clear Frame Relay information
+</span><span id="__span-6-17">    ip IP
+</span><span id="__span-6-18">    ipv6 IPv6
+</span><span id="__span-6-19">    line Reset a terminal line
+</span><span id="__span-6-20">    mac-address-table MAC forwarding table
+</span><span id="__span-6-21">    vtp Clear VTP items
+</span><span id="__span-6-22">
+</span><span id="__span-6-23">
+</span><span id="__span-6-24">R1#clear access-list counters 1
+</span><span id="__span-6-25">
+</span><span id="__span-6-26">R1#show ip access-lists
+</span><span id="__span-6-27">    Standard IP access list DENY-ACCESS
+</span><span id="__span-6-28">    10 permit host 192.168.110.101
+</span><span id="__span-6-29">    Standard IP access list PERMIT-ACCESS
+</span><span id="__span-6-30">    10 permit host 192.168.110.102 (6 match(es))
+</span><span id="__span-6-31">    Standard IP access list 1
+</span><span id="__span-6-32">    15 deny host 192.168.110.103
+</span></code></pre></div></td></tr></tbody></table></div>
+<h2 id="4-secure-vty-access">4. Secure VTY Access</h2>
+<p>A standard ACL can secure remote administrative access to a device using the VTY lines by implementing the following two steps:</p>
+<ul>
+<li>Create an ACL to identify which administrative hosts should be allowed remote access. </li>
+<li>Apply the ACL to incoming traffic on the VTY lines.</li>
+</ul>
+<p><code>R1(config-line)# access-class &lt;access-list-number | access-list-name&gt; {in | out}</code></p>
+<h3 id="41-secure-vty-access-step-by-step">4.1  Secure VTY Access Step by Step</h3>
+<h4 id="step-1-set-username-and-password">Step 1 - Set  username and password</h4>
+<p><code>R1(config)# username &lt;user-name&gt; secret &lt;pass-word&gt;</code> </p>
+<h4 id="step-2-set-access-list-standard-host">Step 2 - Set access-list standard  Host</h4>
+<p><code>R1(config)# ip access-list standard &lt;access-list-name&gt;</code></p>
+<h4 id="step-3-set-acl-details">Step 3 - Set ACL details</h4>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1">R1(config-std-nacl)# remark &lt;remark-content&gt;
+</span><span id="__span-7-2">R1(config-std-nacl)# permit &lt;host-ip-address&gt;
+</span><span id="__span-7-3">R1(config-std-nacl)# deny any 
+</span><span id="__span-7-4">R1(config-std-nacl)# exit
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="step-4-set-vty">Step 4 - Set VTY</h4>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1">R1(config)# line vty &lt;number&gt;  &lt;number&gt; //example line vty 0 4
+</span><span id="__span-8-2">R1(config-line)# login local
+</span><span id="__span-8-3">R1(config-line)# transport input telnet
+</span><span id="__span-8-4">R1(config-line)# access-class &lt;acess-list-name&gt; in
+</span><span id="__span-8-5">R1(config-line)# end
+</span></code></pre></div></td></tr></tbody></table></div>
+<p>Example: </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1">R1#config t
+</span><span id="__span-9-2">R1(config)#username duke secret 12345
+</span><span id="__span-9-3">
+</span><span id="__span-9-4">R1(config)#ip access-list standard ADMIN-PC
+</span><span id="__span-9-5">    R1(config-std-nacl)#remark Only Admin-PC allow access this router
+</span><span id="__span-9-6">    R1(config-std-nacl)#permit 192.168.254.101
+</span><span id="__span-9-7">    R1(config-std-nacl)#deny any
+</span><span id="__span-9-8">    R1(config-std-nacl)#exit
+</span><span id="__span-9-9">
+</span><span id="__span-9-10">R1(config)#line
+</span><span id="__span-9-11">R1(config)#line vty 0 4
+</span><span id="__span-9-12">
+</span><span id="__span-9-13">R1(config-line)#login local
+</span><span id="__span-9-14">R1(config-line)#transport input telnet
+</span><span id="__span-9-15">R1(config-line)#access-class ADMIN-PC ?
+</span><span id="__span-9-16">
+</span><span id="__span-9-17">    in Filter incoming connections
+</span><span id="__span-9-18">    out Filter outgoing connections
+</span><span id="__span-9-19">
+</span><span id="__span-9-20">R1(config-line)#access-class ADMIN-PC in
+</span><span id="__span-9-21">R1(config-line)#exit
+</span><span id="__span-9-22">R1(config)#enable secret admin //開啟特權模式
+</span><span id="__span-9-23">R1(config)#end
+</span><span id="__span-9-24">
+</span><span id="__span-9-25">R1#
+</span><span id="__span-9-26">
+</span><span id="__span-9-27">
+</span><span id="__span-9-28">R1#show running-config | section line
+</span><span id="__span-9-29">
+</span><span id="__span-9-30">    line con 0
+</span><span id="__span-9-31">    line aux 0
+</span><span id="__span-9-32">    line vty 0 4
+</span><span id="__span-9-33">    access-class ADMIN-PC in
+</span><span id="__span-9-34">    login local
+</span><span id="__span-9-35">    transport input telnet
+</span><span id="__span-9-36">
+</span><span id="__span-9-37">R1#show access-lists
+</span><span id="__span-9-38">    Standard IP access list ADMIN-PC
+</span><span id="__span-9-39">    10 permit host 192.168.254.101
+</span><span id="__span-9-40">    20 deny any
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Verify</strong></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20260930214517438.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/20260930214517438.webp"></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/verify-securety-VTY.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/verify-securety-VTY.webp"></a></p>
 <hr>
 <h2 id="references">References</h2>
+<p><a href="https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html">https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html</a> </p>
 <script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDORE_dL84C2tg2" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="dukehug/mkdocs_dknotes" data-repo-id="R_kgDORE_dLw" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
 </script>
 </article>
@@ -2275,7 +2969,7 @@ A[Establish Neighbor Adjacencies] --&gt; B[Exchange Link-State Advertisements] -
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Knowledge Review" class="md-footer__link md-footer__link--prev" href="../0808-firstclass/">
+<a aria-label="Previous: Module - 4 ACL Concepts" class="md-footer__link md-footer__link--prev" href="../Module-4-ACL%20Concepts/">
 <div class="md-footer__button md-icon">
 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -2284,17 +2978,17 @@ A[Establish Neighbor Adjacencies] --&gt; B[Exchange Link-State Advertisements] -
                 Previous
               </span>
 <div class="md-ellipsis">
-                Knowledge Review
+                Module - 4 ACL Concepts
               </div>
 </div>
 </a>
-<a aria-label="Next: Module - 2 Single Area OSPF Config" class="md-footer__link md-footer__link--next" href="../Module-2_Single_Area_OSPF_Config/">
+<a aria-label="Next: Module - 1 Information Assurances Introduction" class="md-footer__link md-footer__link--next" href="../../IAS-1/WEEK1-PPT/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Module - 2 Single Area OSPF Config
+                Module - 1 Information Assurances Introduction
               </div>
 </div>
 <div class="md-footer__button md-icon">
