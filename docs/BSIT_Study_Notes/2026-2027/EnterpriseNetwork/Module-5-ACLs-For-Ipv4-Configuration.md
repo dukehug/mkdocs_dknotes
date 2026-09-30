@@ -100,6 +100,9 @@ All access control lists (ACLs) must be planned. When configuring a complex ACL,
 | source             | Identifies the source network or host address to filter                       |
 | source-wildcard    | Optional 32-bit wildcard mask that is applied to the source                   |
 | log                | Optional Generates and sends an informational message when the ACE is matched |
+
+
+
 ### 2.3  Named and Numbered Standard IPv4 ACL  
 
 #### a. Command `ip access-list standard`
