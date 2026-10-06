@@ -1552,6 +1552,59 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#5-extended-ipv4-acls">
+<span class="md-ellipsis">
+      
+        5. Extended IPv4 ACLs
+      
+    </span>
+</a>
+<nav aria-label="5. Extended IPv4 ACLs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-numbered-extended-acl">
+<span class="md-ellipsis">
+      
+        5.1 Numbered Extended ACL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-named-extended-acl">
+<span class="md-ellipsis">
+      
+        5.2 Named Extended ACL
+      
+    </span>
+</a>
+<nav aria-label="5.2 Named Extended ACL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#521-tcp-established-extended-acl">
+<span class="md-ellipsis">
+      
+        5.2.1 TCP Established Extended ACL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#522-verify-extended-acls-count">
+<span class="md-ellipsis">
+      
+        5.2.2 Verify Extended ACLs (Count)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#references">
 <span class="md-ellipsis">
       
@@ -2320,6 +2373,59 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#5-extended-ipv4-acls">
+<span class="md-ellipsis">
+      
+        5. Extended IPv4 ACLs
+      
+    </span>
+</a>
+<nav aria-label="5. Extended IPv4 ACLs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51-numbered-extended-acl">
+<span class="md-ellipsis">
+      
+        5.1 Numbered Extended ACL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52-named-extended-acl">
+<span class="md-ellipsis">
+      
+        5.2 Named Extended ACL
+      
+    </span>
+</a>
+<nav aria-label="5.2 Named Extended ACL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#521-tcp-established-extended-acl">
+<span class="md-ellipsis">
+      
+        5.2.1 TCP Established Extended ACL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#522-verify-extended-acls-count">
+<span class="md-ellipsis">
+      
+        5.2.2 Verify Extended ACLs (Count)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#references">
 <span class="md-ellipsis">
       
@@ -3029,6 +3135,130 @@ Figure -2  PC 110.102 -ACL tester</p>
 <p><strong>Verify</strong></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20260930214517438.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/20260930214517438.webp"></a></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/verify-securety-VTY.webp"><img alt="image.png" src="https://img.dukehsu.com/study_note/verify-securety-VTY.webp"></a></p>
+<h2 id="5-extended-ipv4-acls">5. Extended IPv4 ACLs</h2>
+<p>Extended ACLs provide a greater degree of control. They can filter on source address, destination address, protocol (eg. ICMP, TCP, UDP, IP), and port number</p>
+<p>Extended ACLs can filter on internet protocols and protst.  Use the <code>?</code> to get help when entering a complex ACE.</p>
+<p>The four highlighted protocols are the most popular options. 
+such as ICPM, IP, TCP, UDP.</p>
+<h3 id="51-numbered-extended-acl">5.1  Numbered Extended ACL</h3>
+<ul>
+<li>Created using the <code>access-list   &lt;access-list-number&gt;</code> global configuration command </li>
+</ul>
+<p>Example:  </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1">R1(config)# access-list 100 permit tcp any any eq 80
+</span><span id="__span-10-2">R1(config)# access-list 100 permit tcp any any eq 443
+</span><span id="__span-10-3">R1(config)# access-list 100 permit tcp any any eq 22
+</span><span id="__span-10-4">R1(config)# access-list 101 deny icmp host 192.168.110.101 host 192.168.110.254
+</span><span id="__span-10-5">R1(config)#access-list 101 permit icmp any any 
+</span><span id="__span-10-6">
+</span><span id="__span-10-7">R1(config)#interface G0/0
+</span><span id="__span-10-8">    R1(config-if)#ip access-group 110 in
+</span><span id="__span-10-9">    R1(config-if)#ip access-group 100 in
+</span></code></pre></div></td></tr></tbody></table></div>
+<h3 id="52-named-extended-acl">5.2 Named Extended ACL</h3>
+<ul>
+<li>Created using the <code>ip access-list extended  &lt;access-list-name&gt;</code></li>
+</ul>
+<p>Example: </p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1">R1#config t
+</span><span id="__span-11-2">
+</span><span id="__span-11-3">Enter configuration commands, one per line. End with CNTL/Z.
+</span><span id="__span-11-4">
+</span><span id="__span-11-5">R1(config)#ip access-list extended SURFING
+</span><span id="__span-11-6">    R1(config-ext-nacl)#remark Denys inside HTTP and HTTPS traffic
+</span><span id="__span-11-7">    R1(config-ext-nacl)#deny tcp 192.168.254.0 0.0.0.255 any eq www
+</span><span id="__span-11-8">    R1(config-ext-nacl)#deny tcp 192.168.254.0 0.0.0.255 any eq 443
+</span><span id="__span-11-9">    R1(config-ext-nacl)#exit
+</span><span id="__span-11-10">
+</span><span id="__span-11-11">
+</span><span id="__span-11-12">
+</span><span id="__span-11-13">R1(config)#ip access-list extended BROWSING
+</span><span id="__span-11-14">    R1(config-ext-nacl)#remark Denys returning HTTP and HTTPS traffic
+</span><span id="__span-11-15">    R1(config-ext-nacl)#deny tcp any 192.168.254.0 0.0.0.255 established
+</span><span id="__span-11-16">    R1(config-ext-nacl)#exit
+</span><span id="__span-11-17">
+</span><span id="__span-11-18">
+</span><span id="__span-11-19">R1(config)#interface gigabitEthernet 0/0
+</span><span id="__span-11-20">    R1(config-if)#ip access-group SURFING in
+</span><span id="__span-11-21">    R1(config-if)#ip access-group BOWSING out
+</span><span id="__span-11-22">    R1(config-if)#end
+</span><span id="__span-11-23">
+</span><span id="__span-11-24">R1#
+</span><span id="__span-11-25">
+</span><span id="__span-11-26">%SYS-5-CONFIG_I: Configured from console by console
+</span><span id="__span-11-27">
+</span><span id="__span-11-28">R1#show access-lists 
+</span><span id="__span-11-29">    Extended IP access list SURFING
+</span><span id="__span-11-30">        10 deny tcp 192.168.254.0 0.0.0.255 any eq www (39 match(es))
+</span><span id="__span-11-31">        20 deny tcp 192.168.254.0 0.0.0.255 any eq 443 (45 match(es))
+</span><span id="__span-11-32">    Extended IP access list BROWSING
+</span><span id="__span-11-33">        10 deny tcp any 192.168.254.0 0.0.0.255 established
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="521-tcp-established-extended-acl">5.2.1 TCP Established Extended ACL</h4>
+<p>TCP can also perform basic stateful firewall services using the TCP <code>established</code> keyword.</p>
+<ul>
+<li>
+<p>The <code>established</code> keyword enables inside traffic to exit the inside private network and permits the returning reply traffic to enter the inside private network. </p>
+</li>
+<li>
+<p>TCP traffic generated by an outside host and attempting to communicate with an inside host in denied.</p>
+</li>
+</ul>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1">R1(config)#ip access-list extended BROWSING
+</span><span id="__span-12-2">    R1(config-ext-nacl)#remark Denys returning HTTP and HTTPS traffic
+</span><span id="__span-12-3">    R1(config-ext-nacl)#deny tcp any 192.168.10.0 0.0.0.255 established
+</span><span id="__span-12-4">    R1(config-ext-nacl)#exit
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://img.dukehsu.com/study_note/20261006134248889.webp"><img alt="established.png" src="https://img.dukehsu.com/study_note/20261006134248889.webp"></a></p>
+<h4 id="522-verify-extended-acls-count">5.2.2  Verify Extended ACLs (Count)</h4>
+<p>The <code>show access-lists</code>  command can be used to confirm that the ACLs work as expected. The command displays statistic counters that increases whenever an ACE is matched</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Traffic must be generated to verify the operation of the ACL</p>
+</div>
 <hr>
 <h2 id="references">References</h2>
 <p><a href="https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html">https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html</a> </p>
