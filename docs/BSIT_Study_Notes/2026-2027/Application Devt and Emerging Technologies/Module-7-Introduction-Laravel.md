@@ -112,6 +112,18 @@ More details plz visit:  [https://laravel.com/framework/docs/structure](https://
 
 ## 3. MVC Architecture
 
+
+
+| Role | Responsibility | Real-life Example — Restaurant |
+|---|---|---|
+| Model | Stores, reads, and writes data | Warehouse staff who manage and store ingredients |
+| Controller | Receives requests, makes decisions, and returns results | A waiter who takes orders, sends them to the kitchen, and serves the food |
+| View | Displays information to the user | The plated dish presented to the customer |
+
+
+
+
+
 MVC separates an application into three parts so code is easier to understand, test, and maintain. 
 
 ### a. MODEL
