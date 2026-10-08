@@ -1,16 +1,16 @@
 
-# Laravel  Hands-On
+# Laravel CRUD  Hands-on
 
 2026-10-09 00:01
 
 Tags:  #Laravel #ADET 
 
-Author:  Duke Hsu
+Author:  Claude
 
 ---
 
 
-# Laravel CRUD 學習總結
+
 
 ## 1. 核心觀念：MVC 與一次請求的流程
 
