@@ -9,7 +9,7 @@ Author:  Duke Hsu
 
 ---
 
-![https://deutrix.com/wp-content/uploads/2026/02/Laravel-13-What-to-Expect-from-the-Next-Major-Release.jpeg](https://deutrix.com/wp-content/uploads/2026/02/Laravel-13-What-to-Expect-from-the-Next-Major-Release.jpeg)
+
 ## Topic 
 
 1. Laravel Framework  
@@ -25,13 +25,21 @@ Author:  Duke Hsu
 
 Laravel is an open-source PHP web application framework. It provides structure, tools, and conventions that make building modern web applications faster, cleaner, and more maintainable. 
 
-**Developer:**   Taylor Otwell
-**Release:**    June 2011
-**Stable release:**   13.35.0, Oct 6 2026
-**Type:**  Web Framework
-**License:**  MIT License
-**Website:**  [laravel.com](laravel.com)
+**Developer:**   Taylor Otwell  
+
+**Release:**    June 2011  
+
+**Stable release:**   13.35.0, Oct 6 2026  
+
+**Type:**  Web Framework  
+
+**License:**  MIT License   
+
+**Website:**  [laravel.com](laravel.com)  
+
 **Repository:** [github.com/laravel/framework](github.com/laravel/framework)
+
+
 
 ### 1.1 Advantages of Web Framework 
 
