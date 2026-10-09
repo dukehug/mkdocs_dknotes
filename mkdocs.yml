@@ -46,6 +46,7 @@ plugins:
     - search
     - mermaid2
     - glightbox
+    - mkdocs-video
 markdown_extensions:
   - admonition
   - pymdownx.mark

@@ -64,3 +64,15 @@ markdown_extensions:
 markdown_extensions:
   - pymdownx.mark
 ```
+
+
+10/09/2026 6:52PM
+
+- add
+
+```
+plguins:
+  - mkdocs-video
+```
+
+
