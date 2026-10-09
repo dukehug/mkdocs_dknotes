@@ -199,7 +199,8 @@ Route::get('users/{id}',function($id){
 
  
 
-**Operation System:**  Linux / Windows / Mac OS
+**Operation System:**  Linux / Windows / Mac OS  
+
 **Software / Package:**  PHP, Composer, VS Code, Terminal , Browser, Node.js & npm( optional)
 
 ### 5.2 Install  Laravel Framework 
@@ -226,6 +227,7 @@ cd laravel-project
 
 ```shell
 sudo composer create-project laravel/laravel my-laravel-app
+cd my-laravel-app
 ```
 
 
@@ -464,7 +466,7 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 [https://laravel.com/framework/docs/](https://laravel.com/framework/docs/)
 
-[https://kodytechnolab.com/blog/top-10-laravel-packages/]([0](https://kodytechnolab.com/blog/top-10-laravel-packages/)
+[https://kodytechnolab.com/blog/top-10-laravel-packages/](https://kodytechnolab.com/blog/top-10-laravel-packages/)
 
 [https://it.badykov.com/blog/2018/11/20/composer-dependency/](https://it.badykov.com/blog/2018/11/20/composer-dependency/)
 
