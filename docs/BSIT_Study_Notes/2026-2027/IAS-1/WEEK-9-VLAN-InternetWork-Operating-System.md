@@ -296,7 +296,7 @@ ip arp inspection vlan 50
 ```
 
 
-##### e. PortFast and BPDU Guard**
+##### e. PortFast and BPDU Guard
 
 **PortFast**
 
