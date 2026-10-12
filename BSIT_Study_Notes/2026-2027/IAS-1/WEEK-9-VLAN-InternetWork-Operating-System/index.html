@@ -24,7 +24,7 @@
     
     
       
-        <title>Module - 9 VLAN InternetWork Operating System - Duke's Study notes</title>
+        <title>WEEK - 9 VLAN InternetWork Operating System - Duke's Study notes</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-9-vlan-internetwork-operating-system" class="md-skip">
+        <a href="#week-9-vlan-internetwork-operating-system" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module - 9 VLAN InternetWork Operating System
+              WEEK - 9 VLAN InternetWork Operating System
             
           </span>
         </div>
@@ -3144,7 +3144,7 @@
   <span class="md-ellipsis">
     
   
-    Module - 9 VLAN InternetWork Operating System
+    WEEK - 9 VLAN InternetWork Operating System
   
 
     
@@ -3162,7 +3162,7 @@
   <span class="md-ellipsis">
     
   
-    Module - 9 VLAN InternetWork Operating System
+    WEEK - 9 VLAN InternetWork Operating System
   
 
     
@@ -3373,6 +3373,17 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-router-on-a-stick-inter-vlan-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Router-on-a-Stick Inter-VLAN Routing
+      
+    </span>
+  </a>
   
 </li>
         
@@ -4729,6 +4740,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#52-router-on-a-stick-inter-vlan-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Router-on-a-Stick Inter-VLAN Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4765,7 +4787,7 @@
   
 
 
-<h1 id="module-9-vlan-internetwork-operating-system">Module - 9  VLAN  InternetWork Operating System</h1>
+<h1 id="week-9-vlan-internetwork-operating-system">WEEK - 9  VLAN  InternetWork Operating System</h1>
 <p>2026-10-11 18:46</p>
 <p>Tags:  #IAS </p>
 <p>Author:  Duke Hsu</p>
@@ -5258,6 +5280,190 @@
 </span><span id="__span-8-11">    interface vlan 20
 </span><span id="__span-8-12">        ip access-group VLAN-ACCESS-SECURITY in !apply the ACL to the Guests VLAN
 </span><span id="__span-8-13">        exit
+</span></code></pre></div></td></tr></tbody></table></div>
+<h3 id="52-router-on-a-stick-inter-vlan-routing">5.2 Router-on-a-Stick Inter-VLAN Routing</h3>
+<p>Oct 12, 9PM UPDATE</p>
+<p>Topology </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://img.dukehsu.com/study_note/20261012204958490.webp" data-desc-position="bottom"><img alt="image.png" src="https://img.dukehsu.com/study_note/20261012204958490.webp"></a></p>
+<p><strong>Switch 0</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1">enable
+</span><span id="__span-9-2">config t
+</span><span id="__span-9-3">    vlan 10
+</span><span id="__span-9-4">        name IT-DEPARTMENT
+</span><span id="__span-9-5">        exit
+</span><span id="__span-9-6">    vlan 20
+</span><span id="__span-9-7">        name Customer
+</span><span id="__span-9-8">        exit
+</span><span id="__span-9-9">
+</span><span id="__span-9-10">    interface range fa0/1-3
+</span><span id="__span-9-11">        switchport mode access
+</span><span id="__span-9-12">        switchport access vlan 10
+</span><span id="__span-9-13">        spanning-tree portfast
+</span><span id="__span-9-14">        exit
+</span><span id="__span-9-15">
+</span><span id="__span-9-16">    interface Gig0/2
+</span><span id="__span-9-17">        switchport mode trunk
+</span><span id="__span-9-18">        switchport trunk allowed vlan 10
+</span><span id="__span-9-19">        switchport trunk allowed vlan 20
+</span><span id="__span-9-20">        exit
+</span><span id="__span-9-21">
+</span><span id="__span-9-22">    interface Gig0/1
+</span><span id="__span-9-23">        switchport mode trunk
+</span><span id="__span-9-24">        switchport trunk allowed vlan 20 
+</span><span id="__span-9-25">        exit
+</span><span id="__span-9-26">    end
+</span><span id="__span-9-27">
+</span><span id="__span-9-28">show vlan brief
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Switch 1</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1">enable
+</span><span id="__span-10-2">config t
+</span><span id="__span-10-3">    vlan 20
+</span><span id="__span-10-4">        name Customer
+</span><span id="__span-10-5">        exit
+</span><span id="__span-10-6">
+</span><span id="__span-10-7">    interface range fa0/1-3
+</span><span id="__span-10-8">        switchport mode access
+</span><span id="__span-10-9">        switchport access vlan 20
+</span><span id="__span-10-10">        spanning-tree portfast
+</span><span id="__span-10-11">        exit
+</span><span id="__span-10-12">
+</span><span id="__span-10-13">    interface Gig0/1
+</span><span id="__span-10-14">        switchport mode trunk
+</span><span id="__span-10-15">        switchport trunk allowed vlan 20
+</span><span id="__span-10-16">        exit
+</span><span id="__span-10-17">    end
+</span><span id="__span-10-18">
+</span><span id="__span-10-19">show vlan brief
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>Router</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1">enable
+</span><span id="__span-11-2">config t
+</span><span id="__span-11-3">    hostname R0
+</span><span id="__span-11-4">    interface Gig0/0
+</span><span id="__span-11-5">        no shutdown
+</span><span id="__span-11-6">        exit
+</span><span id="__span-11-7">    interface Gig0/0.10 !sub-interface
+</span><span id="__span-11-8">        encapsulation dot1Q 10
+</span><span id="__span-11-9">        ip address 192.168.10.1 255.255.255.0
+</span><span id="__span-11-10">        exit
+</span><span id="__span-11-11">    interface Gig0/0.20 
+</span><span id="__span-11-12">        encapsulation dot1Q 20
+</span><span id="__span-11-13">        ip address 192.168.20.1 255.255.255.0
+</span><span id="__span-11-14">        exit
+</span><span id="__span-11-15">    ip dhcp excluded-address 192.168.10.1
+</span><span id="__span-11-16">    ip dhcp excluded-address 192.168.20.1
+</span><span id="__span-11-17">
+</span><span id="__span-11-18">    ip dhcp pool VLAN-20-DHCP
+</span><span id="__span-11-19">        network 192.168.20.0 255.255.255.0
+</span><span id="__span-11-20">        default-router 192.168.20.1
+</span><span id="__span-11-21">        dns-server 1.1.1.1
+</span><span id="__span-11-22">        exit
+</span><span id="__span-11-23">
+</span><span id="__span-11-24">    ip dhcp pool VLAN-10-DHCP
+</span><span id="__span-11-25">        network 192.168.10.0 255.255.255.0
+</span><span id="__span-11-26">        default-router 192.168.10.1
+</span><span id="__span-11-27">        dns-server 8.8.8.8
+</span><span id="__span-11-28">        exit
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><strong>ACL</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1">!R0 ACL - Block VLAN 20 to VLAN 10
+</span><span id="__span-12-2">
+</span><span id="__span-12-3">enable
+</span><span id="__span-12-4">config t
+</span><span id="__span-12-5">    ip access-list extended BLOCK-VLAN20-TO-VLAN10
+</span><span id="__span-12-6">        deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+</span><span id="__span-12-7">        prmit ip any any
+</span><span id="__span-12-8">        exit
+</span><span id="__span-12-9">    interface gig0/0.20
+</span><span id="__span-12-10">        ip access-group BLOCK-VLAN20-TO-VLAN10
+</span><span id="__span-12-11">        end
+</span><span id="__span-12-12">
+</span><span id="__span-12-13">show access-lists
 </span></code></pre></div></td></tr></tbody></table></div>
 <hr>
 <h2 id="references">References</h2>
