@@ -1,5 +1,5 @@
 
-# Module - 9  VLAN  InternetWork Operating System
+# WEEK - 9  VLAN  InternetWork Operating System
 
 2026-10-11 18:46
 
@@ -395,6 +395,127 @@ config t
 ```
 
 
+### 5.2 Router-on-a-Stick Inter-VLAN Routing
+
+Oct 12, 9PM UPDATE
+
+
+Topology 
+
+![image.png](https://img.dukehsu.com/study_note/20261012204958490.webp)
+
+
+**Switch 0**
+
+```cisco-ios
+enable
+config t
+	vlan 10
+		name IT-DEPARTMENT
+		exit
+	vlan 20
+		name Customer
+		exit
+		
+	interface range fa0/1-3
+		switchport mode access
+		switchport access vlan 10
+		spanning-tree portfast
+		exit
+		
+	interface Gig0/2
+		switchport mode trunk
+		switchport trunk allowed vlan 10
+		switchport trunk allowed vlan 20
+		exit
+		
+	interface Gig0/1
+		switchport mode trunk
+		switchport trunk allowed vlan 20 
+		exit
+	end
+	
+show vlan brief
+
+```
+
+**Switch 1**
+
+```cisco-ios
+enable
+config t
+	vlan 20
+		name Customer
+		exit
+		
+	interface range fa0/1-3
+		switchport mode access
+		switchport access vlan 20
+		spanning-tree portfast
+		exit
+		
+	interface Gig0/1
+		switchport mode trunk
+		switchport trunk allowed vlan 20
+		exit
+	end
+
+show vlan brief
+	
+```
+
+**Router**
+
+```cisco-ios
+enable
+config t
+	hostname R0
+	interface Gig0/0
+		no shutdown
+		exit
+	interface Gig0/0.10 !sub-interface
+		encapsulation dot1Q 10
+		ip address 192.168.10.1 255.255.255.0
+		exit
+	interface Gig0/0.20 
+		encapsulation dot1Q 20
+		ip address 192.168.20.1 255.255.255.0
+		exit
+	ip dhcp excluded-address 192.168.10.1
+	ip dhcp excluded-address 192.168.20.1
+	
+	ip dhcp pool VLAN-20-DHCP
+		network 192.168.20.0 255.255.255.0
+		default-router 192.168.20.1
+		dns-server 1.1.1.1
+		exit
+	
+	ip dhcp pool VLAN-10-DHCP
+		network 192.168.10.0 255.255.255.0
+		default-router 192.168.10.1
+		dns-server 8.8.8.8
+		exit
+```
+
+**ACL**
+
+```cisco-ios
+!R0 ACL - Block VLAN 20 to VLAN 10
+
+enable
+config t
+	ip access-list extended BLOCK-VLAN20-TO-VLAN10
+		deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+		prmit ip any any
+		exit
+	interface gig0/0.20
+		ip access-group BLOCK-VLAN20-TO-VLAN10
+		end
+
+show access-lists
+
+
+```
 
 
 
