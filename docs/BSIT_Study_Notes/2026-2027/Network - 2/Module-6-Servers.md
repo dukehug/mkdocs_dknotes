@@ -56,7 +56,7 @@ Different servers provide different services.
 
 ### 2.1 DHCP Server
 
-![[https://dvijinfotech.com/wp-content/uploads/2021/09/components-and-advantages-of-dhcp-server.jpg](https://www.cloudns.net/blog/wp-content/uploads/2021/02/How-does-DHCP-work.png)
+![https://dvijinfotech.com/wp-content/uploads/2021/09/components-and-advantages-of-dhcp-server.jpg](https://www.cloudns.net/blog/wp-content/uploads/2021/02/How-does-DHCP-work.png)
 
 Dynamic Host Configuration Protocol 
 
