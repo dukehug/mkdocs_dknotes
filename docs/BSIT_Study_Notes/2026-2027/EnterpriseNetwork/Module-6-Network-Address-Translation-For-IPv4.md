@@ -82,9 +82,9 @@ Static NAT uses a one-to-one mapping of local and global addresses configured by
 !!! info "Information"
 	 Static NAT requires that enough public addresses are available to satisfy the total number of simultaneous user sessions. 
 
-**Static NAT configuration**
+**Static NAT Example**
 
-```
+```cisco-ios
 R2(config)#interface gigabitEthernet 0/1 #inside globe 
 	R2(config-if)#ip address 209.165.200.226 255.255.255.252
 	R2(config-if)#ip nat outside
@@ -99,7 +99,7 @@ R2(config)#ip nat inside source static 192.168.10.201 209.165.200.226
 
 ```
 
-```
+```cisco-ios
 ip nat inside source static 192.168.10.10 209.165.200.226
         │      │      │         │              │
         │      │      │         │              └ Inside Global
@@ -108,6 +108,107 @@ ip nat inside source static 192.168.10.10 209.165.200.226
         │      └ Source 
         └ For inside host
 ```
+
+
+
+
+### 3.2 Dynamic NAT
+
+Dynamic NAT uses a pool of public addresses and assigns them on a first-come , first-served basis. 
+
+- When an inside device requests access to an outside network, dynamic NAT assigns an available public IPv4 address from the pool 
+- The other addresses in the pool are still available for use. 
+
+!!!note "Note"
+	 Dynamic NAT requires that enough public addresses are available to satisfy the total number of simultaneous user sessions. 
+
+
+**Dynamic NAT Example**
+
+```cisco-ios
+enable
+config t 
+	interface gig0/0
+		ip nat inside
+		exit
+	interface gig0/1
+		ip nat outside
+		exit
+	access-list 10 permit 192.168.10.0 0.0.0.255
+	ip nat pool MYPOOL 209.165.200.2 209.165.200.30 netmask 255.255.255.224
+	ip nat inside source list 10 interface gig0/1  !if u want ,u can with overload
+	exit
+
+show ip nat translations verbose
+show ip nat translations 
+
+show ip nat statistics
+	
+```
+
+### 3.3 Port Address Translation
+
+Port Address Translation(PAT), also know as NAT overload, maps multiple private IPv4 address to a single public IPv4 address or a few addresses .
+
+- With PAT, when the NAT router receives a packet from the client, it uses the source port number to uniquely identify the specific NAT translation 
+
+ - PAT ensures that devices use a different TCP port number for each session with a server on the internet. 
+
+**Port Address Translation example:**
+
+```cisco-ios
+enable
+config t
+	interface gig0/0
+		ip nat inside
+		exit
+	interface gig0/1
+		ip nat outside
+		exit
+	ip nat 
+	ip nat inside source static tcp 10.0.0.250 80 209.165.100.30 80 overload !port nat port
+	exit
+
+show ip nat translations
+
+show ip nat statistics
+```
+
+
+## 4. NAT Advantages and Disadvantages 
+
+**Advantages**
+
+- NAT conservers the legally registered addressing scheme by allowing the privatization of intranets. 
+- NAT hides the IPv4 addresses of users and other devices. 
+- NAT allows the existing private IPv4 address scheme to remain while allowing for easy change to a new public addressing scheme. 
+- NAT conservers addresses through application port-level multiplexing
+- NAT increases the flexibility of connections to the public network
+
+**Disadvantages**
+
+- NAT increases forwarding delays
+- End-to-end addressing is lost
+- End-to-end IPv4 traceability is lost
+- NAT complicates the use of tunneling protocols, such as IPsec
+- Services that require the initiation of TCP connections from the outside network, or stateless protocols, such as those using UDP, can be disrupted. 
+
+## 5. NAT 64
+
+NAT for IPv6 should not be used as a  long-term strategy, but as a temporary  mechanism to assist in the migration  from IPv4 to IPv6.
+
+- IPv6 unique local addresses (ULA) are similar to RFC 1918 private addresses in  
+IPv4 but have a different purpose.  
+- ULA addresses are meant for only local communications within a site. ULA  
+addresses are not meant to provide additional IPv6 address space, nor to provide a  
+level of security.  
+- IPv6 does provide for protocol translation between IPv4 and IPv6 known as NAT64.
+
+
+## 6. NAT for IPv4 Hands-on
+
+**Logical Topology** 
+
 
 
 
