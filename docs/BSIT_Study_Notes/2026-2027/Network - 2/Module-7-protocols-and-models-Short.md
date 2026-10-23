@@ -9,6 +9,8 @@ Author:  Duke Hsu
 
 ---
 
+![](<https://img.dukehsu.com/study_note/Network Protocols and Models Infographic.webp>)
+
 ## Topic
 
 1. The Rules
@@ -26,6 +28,9 @@ Author:  Duke Hsu
 - Protocols mush have a sender and a receiver
 - Common computer protocols include these requirements: 
 	- message encoding, formatting and encapsulation, size, timing, and delivery options. 
+
+
+
 
 
 ## 2. Protocols
