@@ -27,7 +27,7 @@ VLSM stands for ==Variable Length Subnet Mask.==
 
 ![VLSM-Step-by-Step.png](https://img.dukehsu.com/study_note/VLSM-Step-by-Step.webp)
 
-###  2.1Step 1 : List all networks and  their hosts requirement 
+###  2.1 Step 1 : List all networks and  their hosts requirement 
 
 **Find  subnet size**
 - Host needs
@@ -38,7 +38,7 @@ VLSM stands for ==Variable Length Subnet Mask.==
 
 4000 hosts 
 
-$2^{11} - 2 =2044$  not enough
+$2^{11} - 2 =2048$  not enough
 $2^{12}-2=4094$  ok > 4000
 
 Host bits = 12 
