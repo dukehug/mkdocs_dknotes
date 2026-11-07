@@ -14,6 +14,7 @@ Author:  Duke Hsu
 1. VPN Technology
 2. Types of VPNs
 3. IPsec
+4. Common VPN Protocols
 
 ## 1. VPN Technology
 
@@ -117,19 +118,159 @@ Site-to-Site VPNs
 Remote Access VPNs
 
 - Client-based IPsec VPN connection
-- Clientless SSL connection
+- Client-less SSL connection
 ### 1.5 Service Provider VPNs
 
 - ISP created and managed  the network. 
-- The ISP uses Multipotocol Label Switching (MPLS) at Layer 2 or Layer 3 to create secure channels between and enterprise's sites, effectively segregating the traffic from other customer traffic. 
+- The ISP uses Multiprotocol Label Switching (MPLS) at Layer 2 or Layer 3 to create secure channels between and enterprise's sites, effectively segregating the traffic from other customer traffic. 
 
 
 ## 2. Types of VPNs
 
--
+They are split into primary types based on how they connect and who they server .
+
+A company can choose different types of VPNs based on its specific needs and use them in different scenarios.
+
+### 2.1  Remote-Access VPNs
+
+- Remote-access VPNs let remote and mobile users securely connect to the enterprise. 
+- Remote-access VPNs are typically enabled dynamically by the user when required and can be created using either IPsec or SSL.
+- Client-less VPN connection : The connection is secured using a web browser SSL connection . 
+- Client-based VPN connection: VPN client software such as Cisco AnyConnect Secure Mobility Client must be installed on the remote user's end device. 
+- Connects an individual user's device ( like a laptop or phone ) to a private corporate or school network ( work form home)
+
+### 2.2 SSL VPNs
+
+- SSL uses the public key infrastructure and digital certificates to authenticate peers. The type of VPN method implemented is based on the access requirements of the users and the organization's IT processes. 
+- Uses a standard web browser (via SSL/TLS encryption) to give remote users secure access to network tools.
+
+| Feature                 | IPsec                                                                    | SSL                                                    |
+| ----------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| Applications supported  | Extensive – All IP-based applications                                    | Limited – Only web-based applications and file sharing |
+| Authentication strength | Strong – Two-way authentication with shared keys or digital certificates | Moderate – one-way or two-way authentication           |
+| Encryption strength     | Strong – Key lengths 56 – 256 bits                                       | Moderate to strong - Key lengths 40 – 256 bits         |
+| Connection complexity   | Medium – Requires VPN client installed on a host                         | Low – Requires web browser on a host                   |
+| Connection option       | Limited – Only specific devices with specific configurations can connect | Extensive – Any device with a web browser can connect  |
+
+### 2.3  Site-to-Site IPsec VPNs
+
+![](https://img.dukehsu.com/blackboard/Site-to-Site_VPN.webp)
+
+- Site-to-Site VPNs connect networks across an untrusted network such as the internet. 
+- End hosts send and receive normal unencrypted TCP/IP traffic through a VPN gateway
+- The VPN gateway encapsulates and encrypts outbound traffic from a site and sends the traffic through the VPN tunnel to the VPN gateway at the target site. 
+- The receiving VPN gateway strips the headers, decrypts the content, and relays the packet toward the target host inside its private network .
+### 2.4 GRE over IPsec
+
+![](https://itexamanswers.net/wp-content/uploads/2020/04/GRE-over-IPsec-3.jpg)
+
+
+![](https://img.dukehsu.com/study_note/GRE-over-IPsec.webp)
+
+
+- Generic Routing Encapsulation(GRE) is a non-secure site-to-site VPN tunneling protocol.  A GRE tunnel can encapsulate various network layer protocols as well as multicast and broadcast traffic.  
+- GRE does not by default support encryption; and therefore, it does not provide a secure VPN tunnel.  
+- A GRE packet can be encapsulated into an IPsec packet to forward it securely to the destination VPN gateway.  
+- Standard IPsec VPNs(non-GRE) can only create secure tunnels for unicast traffic.  
+- Encapsulating GRE into IPsec allows multicast routing protocol updates to be secured through a VPN
 
 
 
+### 2.5  Dynamic Multipoint VPNs 
+
+![DMVPN.webp](https://img.dukehsu.com/study_note/Dynamic-Multipoint-VPN.webp)
+
+Dynamic Multipoint VPN is a Cisco software solution for building multiple VPNs in an easy, dynamic, and scalable manner. 
+
+- DMVPN simplifies the VPN tunnel configuration and provides a flexible option to connect a central site with branch sites.
+- It uses a hub-and-spoken configuration to establish a full mesh topology
+- Spoke sites establish secure VPN tunnels with the hub site
+- Each site is configure using mGRE  (Multipoint GRE)
+- The mGRE tunnel interface allows a single GRE interface to dynamically support multiple IPsec tunnels. 
+- Spoke sites can also obtain information about  each other, and alternatively build direct tunnels between themselves( spoke-to-spoke tunnels)
+
+
+
+### 2.6 IPsec Virtual Tunnel Interface
+
+![](https://img.dukehsu.com/study_note/IPsec-VTI-Routed-VPN.webp)
+
+IPsec VTI simplifies the configuration process required to support multiple sites and remote access. 
+
+- IPsec VTI configurations are applied to a virtual interface instead of static mapping the IPsec sessions to a physical interface
+- IPsec VTI is capable of sending and receiving both IP unicast and multicast encrypted traffic. Therefore, routing protocols are automatically supported without having to configure GRE tunnels. 
+- IPsec VTI can be configured between sites or in a hub-and-spoke topology. 
+
+**IPsec VTI vs GRE over IPsec**
+
+- **GRE over IPsec** 需要雙層封裝（先包一層 GRE 標頭，再包一層 IPsec），會造成額外的 **MTU/MSS** 負荷與頻寬浪費（封包變大容易造成分片）。
+  
+- **IPsec VTI** 通常是原生（Native）封裝，不需要額外的 GRE 標頭即可直接在介面上做 IPsec 處理，效率更高。
+
+[https://share.google/aimode/hDT4PkOgbJgEPxbpM](https://share.google/aimode/hDT4PkOgbJgEPxbpM)
+
+
+
+### 2.7. Service Provider MPLS VPNs
+
+![](https://img.dukehsu.com/study_note/Service-Provider-MPLS-VPNs.webp)
+
+
+ISP use MPLS in their core network. 
+
+- Traffic is forwarded through the MPLS backbone using labels. 
+- Traffic is secure because ISP customers cannot see each other's traffic
+- MPLS can provide clients with managed VPN solutions; therefore , securing traffic between client sites is the responsibility of the service provider. 
+- There are two types of MPLS VPN solutions supported by service providers
+- Layer 3 MPLS VPN: ISP participates in customer routing by establishing a peering betwwn the customer's routers and the provider's routers. 
+- Layer 2 MPLS VPN: ISP is not involved in the customer routing. Instead, the provider deploys a Virtual Private LAN service (VPLS) to emulate an Ethernet multiaccess LAN segment over the MPLS network.  No routing is involved. The customer's routers effectively belong to the same multiaccess network. 
+
+## 3. IPsec
+
+
+
+
+
+
+
+
+
+
+## 4. Common VPN Protocols
+
+Underneath these types, VPNs use different underlying technical rules (protocols) to handle speed and security:
+
+• WireGuard: Modern, lightweight, and very fast.
+• OpenVPN: Popular, open-source, and highly secure.
+• IPsec / IKEv2: Stable and great for mobile or site-to-site connections.
+• PPTP / L2TP: Older protocols; PPTP is mostly outdated and weak on security
+
+## 5. New 
+
+• Cisco Adaptive Security Appliance (ASA) firewall
+• SOHO
+• Cisco AnyConnect
+• Generic Routing Encapsulation (GRE)
+• Site-to-Site VPN
+• Remote access VPN
+• Multiprotocol Label Switching (MPLS)
+• SSL VPN
+• IPsec
+• Dynamic Multipoint VPN (DMVPN)
+• Multipoint Generic Routing Encapsulation (mGRE)
+• Virtual Tunnel Interface (VTI)
+• Diffie-Hellman
+• Security Association (SA)
+• Authentication Header (AH)
+• Encapsulation Security Protocol (ESP)
+• DES
+• 3DES
+• AES
+• SEAL
+• Secure Hash Algorithm (SHA)
+• Message-Digest 5 (MD5)
+• Rivest, Shamir, and Adleman (RSA)
+• pre-shared secret key (PSK)
 
 
 ----
