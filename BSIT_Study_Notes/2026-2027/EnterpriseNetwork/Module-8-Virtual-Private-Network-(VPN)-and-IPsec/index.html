@@ -3436,6 +3436,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. IPsec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ipsec-protocol-encapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 IPsec Protocol Encapsulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ipsec-confidentiality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 IPsec Confidentiality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ipsec-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 IPsec Integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ipsec-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 IPsec Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ipsec-secure-key-exchange-with-diffe-hellman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 IPsec Secure Key Exchange with Diffe-Hellman
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3450,10 +3511,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-new" class="md-nav__link">
+  <a href="#5-new-key-term" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. New
+        5. New Key Term
       
     </span>
   </a>
@@ -5016,6 +5077,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. IPsec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ipsec-protocol-encapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 IPsec Protocol Encapsulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ipsec-confidentiality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 IPsec Confidentiality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ipsec-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 IPsec Integrity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ipsec-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 IPsec Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ipsec-secure-key-exchange-with-diffe-hellman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 IPsec Secure Key Exchange with Diffe-Hellman
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5030,10 +5152,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-new" class="md-nav__link">
+  <a href="#5-new-key-term" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. New
+        5. New Key Term
       
     </span>
   </a>
@@ -5312,37 +5434,105 @@
 <li>Layer 2 MPLS VPN: ISP is not involved in the customer routing. Instead, the provider deploys a Virtual Private LAN service (VPLS) to emulate an Ethernet multiaccess LAN segment over the MPLS network.  No routing is involved. The customer's routers effectively belong to the same multiaccess network. </li>
 </ul>
 <h2 id="3-ipsec">3. IPsec</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://img.dukehsu.com/study_note/IPsec-Framework-Infographic.webp" data-desc-position="bottom"><img alt="IPsec-Framework" src="https://img.dukehsu.com/study_note/IPsec-Framework-Infographic.webp"></a></p>
+<p>IPsec is an IETF standard that defines how a VPN can be secured across IP networks. IPsec protects and authenticates IP packets between source and destination and provides these essential security functions:</p>
+<p><strong>CIA</strong></p>
+<ul>
+<li>Confidentiality - encryption algorithms (association：password)</li>
+<li>Integrity  - hashing algorithms (association：MD5)</li>
+<li>Origin authentication - Internet Key Exchange (IKE) (association：ID/ passport)</li>
+<li>Diffie-Hellman - Secure Key Exchange </li>
+</ul>
+<p><strong>IPsec Technologies</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://itexamanswers.net/wp-content/uploads/2020/04/IPsec-Technologies.jpg" data-desc-position="bottom"><img alt="IPsec-Tech" src="https://itexamanswers.net/wp-content/uploads/2020/04/IPsec-Technologies.jpg"></a></p>
+<ul>
+<li>IPsec is not bound to any specific rules for secure communications.</li>
+<li>IPsec can easily integrate new security technologies without updating existing IPsec standards.</li>
+<li>The open slots in the IPsec framework shown in the figure can be filled with any of the choices that are available for that IPsec function to create a unique security association .</li>
+</ul>
+<h3 id="31-ipsec-protocol-encapsulation">3.1 IPsec Protocol Encapsulation</h3>
+<p>Choosing the IPsec protocol encapsulation  is the first building block of the  IPsec framework </p>
+<ul>
+<li>IPsec encapsulates packets using Authentication Header (AH) or Encapsulation Security Protocol (ESP)</li>
+<li>The choice of AH or ESP establishes which other building blocks are available. </li>
+<li>AH is appropriate only when confidentiality is not required or permitted</li>
+<li>==ESP provides both confidentiality and authentication. ==</li>
+</ul>
+<h3 id="32-ipsec-confidentiality">3.2 IPsec Confidentiality</h3>
+<p>The degree of confidentiality depends on the encryption algorithm and the length of the key used in the encryption algorithm. </p>
+<ul>
+<li><strong>DES</strong> uses a 56-bit key. </li>
+<li><strong>3DES</strong> uses three independent 56-bit encryption keys per 64-bit block. </li>
+<li><strong>AES</strong> offers three different key lengths: 128 bits, 192 bits, and 256 bits. </li>
+<li><strong>SEAL</strong> is a stream cipher, which means it encrypts data continuously rather than encrypting blocks of data. SEAL uses a 160-bit key</li>
+</ul>
+<h3 id="33-ipsec-integrity">3.3 IPsec Integrity</h3>
+<p>Data integrity means that the data has not changed in transit.  A method of proving data integrity is required .</p>
+<ul>
+<li>HMAC (Hashed Message Authentication Code) is a data integrity algorithm that guarantees the integrity of the message using a hash value. </li>
+<li>MD5(Message-Digest 5) use a 128-bit shared-secret key</li>
+<li>SHA (Secure Hash Algorithm) uses a 160-bit secret key</li>
+</ul>
+<h3 id="34-ipsec-authentication">3.4  IPsec Authentication</h3>
+<p>There are two IPsec peer authentication methods:</p>
+<ol>
+<li>
+<p>Pre-shared key (PSK) - PSK value is entered into each peer manually .</p>
+<ul>
+<li>Easy to configure manually</li>
+<li>Does not scale well</li>
+<li>Must be configured on every peer</li>
+</ul>
+</li>
+<li>
+<p>Rivest, Shamir, and Adleman(RSA) - authentication uses digital certificates to authenticate the peers </p>
+<ul>
+<li>Each peer must authenticate its opposite peer before the tunnel is considered secure. </li>
+</ul>
+</li>
+</ol>
+<h3 id="35-ipsec-secure-key-exchange-with-diffe-hellman">3.5 IPsec Secure Key Exchange with Diffe-Hellman</h3>
+<p>DH provides allows two peers to establish a shared secret key over insecure channel</p>
+<ul>
+<li>DH groups 1, 2, and 5 should no longer be used. </li>
+<li>DH groups 14, 15, and 16 use larger key sizes with 2048 bits, 3072 bits, and 4096 bits, respectively </li>
+<li>DH groups 19, 20, 21 and 24 with respective key sizes of 256 bits, 384 bits, 521 bits, and 2048 bits support Elliptical Curve Cryptography (ECC), which reduces the time needed to generate keys.</li>
+</ul>
 <h2 id="4-common-vpn-protocols">4. Common VPN Protocols</h2>
 <p>Underneath these types, VPNs use different underlying technical rules (protocols) to handle speed and security:</p>
-<p>• WireGuard: Modern, lightweight, and very fast.
-• OpenVPN: Popular, open-source, and highly secure.
-• IPsec / IKEv2: Stable and great for mobile or site-to-site connections.
-• PPTP / L2TP: Older protocols; PPTP is mostly outdated and weak on security</p>
-<h2 id="5-new">5. New</h2>
-<p>• Cisco Adaptive Security Appliance (ASA) firewall
-• SOHO
-• Cisco AnyConnect
-• Generic Routing Encapsulation (GRE)
-• Site-to-Site VPN
-• Remote access VPN
-• Multiprotocol Label Switching (MPLS)
-• SSL VPN
-• IPsec
-• Dynamic Multipoint VPN (DMVPN)
-• Multipoint Generic Routing Encapsulation (mGRE)
-• Virtual Tunnel Interface (VTI)
-• Diffie-Hellman
-• Security Association (SA)
-• Authentication Header (AH)
-• Encapsulation Security Protocol (ESP)
-• DES
-• 3DES
-• AES
-• SEAL
-• Secure Hash Algorithm (SHA)
-• Message-Digest 5 (MD5)
-• Rivest, Shamir, and Adleman (RSA)
-• pre-shared secret key (PSK)</p>
+<ul>
+<li>WireGuard: Modern, lightweight, and very fast.</li>
+<li>OpenVPN: Popular, open-source, and highly secure.</li>
+<li>IPsec / IKEv2: Stable and great for mobile or site-to-site connections.</li>
+<li>PPTP / L2TP: Older protocols; PPTP is mostly outdated and weak on security</li>
+</ul>
+<h2 id="5-new-key-term">5. New  Key Term</h2>
+<ul>
+<li>Cisco Adaptive Security Appliance (ASA firewall</li>
+<li>SOHO(Small office , Home office)</li>
+<li>Cisco AnyConnect</li>
+<li>Generic Routing Encapsulation (GRE)</li>
+<li>Site-to-Site VPN</li>
+<li>Remote access VPN</li>
+<li>Multiprotocol Label Switching (MPLS)</li>
+<li>SSL VPN</li>
+<li>IPsec</li>
+<li>Dynamic Multipoint VPN (DMVPN)</li>
+<li>Multipoint Generic Routing Encapsulation (mGRE)</li>
+<li>Virtual Tunnel Interface (VTI)</li>
+<li>Diffie-Hellman</li>
+<li>Security Association (SA)</li>
+<li>Authentication Header (AH)</li>
+<li>Encapsulation Security Protocol (ESP)</li>
+<li>DES</li>
+<li>3DES</li>
+<li>AES</li>
+<li>SEAL</li>
+<li>Secure Hash Algorithm (SHA)</li>
+<li>Message-Digest 5 (MD5)</li>
+<li>Rivest, Shamir, and Adleman (RSA)</li>
+<li>pre-shared secret key (PSK)</li>
+</ul>
 <hr>
 <h2 id="references">References</h2>
 
