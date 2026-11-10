@@ -227,50 +227,114 @@ ISP use MPLS in their core network.
 
 ## 3. IPsec
 
+![IPsec-Framework](https://img.dukehsu.com/study_note/IPsec-Framework-Infographic.webp)
+
+IPsec is an IETF standard that defines how a VPN can be secured across IP networks. IPsec protects and authenticates IP packets between source and destination and provides these essential security functions:
+
+**CIA**
+
+- Confidentiality - encryption algorithms (association：password)
+- Integrity  - hashing algorithms (association：MD5)
+- Origin authentication - Internet Key Exchange (IKE) (association：ID/ passport)
+- Diffie-Hellman - Secure Key Exchange 
+
+
+**IPsec Technologies**
+
+
+![IPsec-Tech](https://itexamanswers.net/wp-content/uploads/2020/04/IPsec-Technologies.jpg)
+
+
+- IPsec is not bound to any specific rules for secure communications.
+- IPsec can easily integrate new security technologies without updating existing IPsec standards.
+- The open slots in the IPsec framework shown in the figure can be filled with any of the choices that are available for that IPsec function to create a unique security association .
 
 
 
+### 3.1 IPsec Protocol Encapsulation
+
+Choosing the IPsec protocol encapsulation  is the first building block of the  IPsec framework 
+
+- IPsec encapsulates packets using Authentication Header (AH) or Encapsulation Security Protocol (ESP)
+- The choice of AH or ESP establishes which other building blocks are available. 
+- AH is appropriate only when confidentiality is not required or permitted
+- ==ESP provides both confidentiality and authentication. ==
+
+### 3.2 IPsec Confidentiality 
+
+The degree of confidentiality depends on the encryption algorithm and the length of the key used in the encryption algorithm. 
+
+- **DES** uses a 56-bit key. 
+- **3DES** uses three independent 56-bit encryption keys per 64-bit block. 
+- **AES** offers three different key lengths: 128 bits, 192 bits, and 256 bits. 
+- **SEAL** is a stream cipher, which means it encrypts data continuously rather than encrypting blocks of data. SEAL uses a 160-bit key
+
+### 3.3 IPsec Integrity 
+
+Data integrity means that the data has not changed in transit.  A method of proving data integrity is required .
+
+- HMAC (Hashed Message Authentication Code) is a data integrity algorithm that guarantees the integrity of the message using a hash value. 
+- MD5(Message-Digest 5) use a 128-bit shared-secret key
+- SHA (Secure Hash Algorithm) uses a 160-bit secret key
+
+### 3.4  IPsec Authentication 
+
+There are two IPsec peer authentication methods:
+
+1.  Pre-shared key (PSK) - PSK value is entered into each peer manually .
+	 - Easy to configure manually
+	 - Does not scale well
+	 - Must be configured on every peer
+
+2. Rivest, Shamir, and Adleman(RSA) - authentication uses digital certificates to authenticate the peers 
+	- Each peer must authenticate its opposite peer before the tunnel is considered secure. 
 
 
 
+### 3.5 IPsec Secure Key Exchange with Diffe-Hellman
 
+DH provides allows two peers to establish a shared secret key over insecure channel
+
+- DH groups 1, 2, and 5 should no longer be used. 
+- DH groups 14, 15, and 16 use larger key sizes with 2048 bits, 3072 bits, and 4096 bits, respectively 
+- DH groups 19, 20, 21 and 24 with respective key sizes of 256 bits, 384 bits, 521 bits, and 2048 bits support Elliptical Curve Cryptography (ECC), which reduces the time needed to generate keys.
 
 
 ## 4. Common VPN Protocols
 
 Underneath these types, VPNs use different underlying technical rules (protocols) to handle speed and security:
 
-• WireGuard: Modern, lightweight, and very fast.
-• OpenVPN: Popular, open-source, and highly secure.
-• IPsec / IKEv2: Stable and great for mobile or site-to-site connections.
-• PPTP / L2TP: Older protocols; PPTP is mostly outdated and weak on security
+- WireGuard: Modern, lightweight, and very fast.
+- OpenVPN: Popular, open-source, and highly secure.
+- IPsec / IKEv2: Stable and great for mobile or site-to-site connections.
+- PPTP / L2TP: Older protocols; PPTP is mostly outdated and weak on security
 
-## 5. New 
+## 5. New  Key Term
 
-• Cisco Adaptive Security Appliance (ASA) firewall
-• SOHO
-• Cisco AnyConnect
-• Generic Routing Encapsulation (GRE)
-• Site-to-Site VPN
-• Remote access VPN
-• Multiprotocol Label Switching (MPLS)
-• SSL VPN
-• IPsec
-• Dynamic Multipoint VPN (DMVPN)
-• Multipoint Generic Routing Encapsulation (mGRE)
-• Virtual Tunnel Interface (VTI)
-• Diffie-Hellman
-• Security Association (SA)
-• Authentication Header (AH)
-• Encapsulation Security Protocol (ESP)
-• DES
-• 3DES
-• AES
-• SEAL
-• Secure Hash Algorithm (SHA)
-• Message-Digest 5 (MD5)
-• Rivest, Shamir, and Adleman (RSA)
-• pre-shared secret key (PSK)
+- Cisco Adaptive Security Appliance (ASA firewall
+- SOHO(Small office , Home office)
+- Cisco AnyConnect
+- Generic Routing Encapsulation (GRE)
+- Site-to-Site VPN
+- Remote access VPN
+- Multiprotocol Label Switching (MPLS)
+- SSL VPN
+- IPsec
+- Dynamic Multipoint VPN (DMVPN)
+- Multipoint Generic Routing Encapsulation (mGRE)
+- Virtual Tunnel Interface (VTI)
+- Diffie-Hellman
+- Security Association (SA)
+- Authentication Header (AH)
+- Encapsulation Security Protocol (ESP)
+- DES
+- 3DES
+- AES
+- SEAL
+- Secure Hash Algorithm (SHA)
+- Message-Digest 5 (MD5)
+- Rivest, Shamir, and Adleman (RSA)
+- pre-shared secret key (PSK)
 
 
 ----
